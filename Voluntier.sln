@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADNETVoluntier", "SWADNETVoluntier\", "{A2730B27-06E2-42BA-BD7C-36393DF7B606}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51939"
+		Debug.AspNetCompiler.PhysicalPath = "SWADNETVoluntier\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51939\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51939"
+		Release.AspNetCompiler.PhysicalPath = "SWADNETVoluntier\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51939\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51939"
+		SlnRelativePath = "SWADNETVoluntier\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNVoluntier", "SWLNVoluntier\", "{2EBFDFD7-D10E-4893-AB62-A50821AC13D3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51956"
+		Debug.AspNetCompiler.PhysicalPath = "SWLNVoluntier\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51956\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51956"
+		Release.AspNetCompiler.PhysicalPath = "SWLNVoluntier\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51956\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51956"
+		SlnRelativePath = "SWLNVoluntier\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WAVoluntier", "WAVoluntier\", "{00F24A24-F142-453E-8FE8-5BEFD4D0ACFA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51957"
+		Debug.AspNetCompiler.PhysicalPath = "WAVoluntier\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51957\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51957"
+		Release.AspNetCompiler.PhysicalPath = "WAVoluntier\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51957\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51957"
+		SlnRelativePath = "WAVoluntier\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2730B27-06E2-42BA-BD7C-36393DF7B606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2730B27-06E2-42BA-BD7C-36393DF7B606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBFDFD7-D10E-4893-AB62-A50821AC13D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBFDFD7-D10E-4893-AB62-A50821AC13D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F24A24-F142-453E-8FE8-5BEFD4D0ACFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F24A24-F142-453E-8FE8-5BEFD4D0ACFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E690169-D90D-4D9A-A88D-50B99D4B43B2}
+	EndGlobalSection
+EndGlobal
