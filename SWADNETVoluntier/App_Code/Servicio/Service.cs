@@ -23,7 +23,8 @@ public class Service : IService
 		if (composite.BoolValue)
 		{
 			composite.StringValue += "Suffix";
-		}
+		}else
+			composite.StringValue += "No Suffix";
 		return composite;
 	}
 }

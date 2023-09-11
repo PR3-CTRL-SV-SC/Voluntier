@@ -26,4 +26,27 @@ public class Service : IService
 		}
 		return composite;
 	}
+
+
+    //Añadidas
+    public string Descifrado(string Texto, string Tipo)
+    {
+        return "";
+    }
+    public string Cifrar_Cadena(string TextoACifrar)
+    {
+        return "";
+    }
+    public Tuple<EEmpleado, EMensajeError> Obtener_Empleado_Id_Emp_SedeAcademica(string Id_Emp, string SedeAcademica)
+    {
+        Tuple<EEmpleado, EMensajeError> result;
+        result = null;
+        return result;
+    }
+    public Tuple<byte[], EMensajeError> Obtener_EmpleadoFotografia(string Id_Emp, string SedeAcademica)
+    {
+        Tuple<byte[], EMensajeError> result;
+        result = null;
+        return result;
+    }
 }
