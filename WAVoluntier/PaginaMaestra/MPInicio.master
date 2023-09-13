@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPInicio.master.cs" Inherits="PaginaMaestra_MPInicio" %>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Estilo/General/SPaginaMaestra.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <div id="main_container">
+                <div id="header">
+                    <div id="logo">
+                        <a href="#">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/logo.png" />
+                        </a>
+                    </div>
+                    <div id="closeSession">
+                        <ul>
+                            <li>
+                                <a href="../../WebForm/General/PLogin.aspx">Cerrar Sesíon</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <table class="info_Usuario">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table class="datosEstudiante" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table style="width: 100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="35%">
+                                                                    <a id="LBLNombreUsuario" class="LabelInicio" style="font-weight: bold; margin-left: 17px;">Juan Perez</a>
+                                                                </td>
+                                                                <td width="45%" align="left">
+                                                                    <span id="LBLFecha" class="LabelSesion" style="font-weight: normal; margin-right: 5px; margin-left: 5px">Cochabamba, viernes 11 de marzo de 2022</span>
+                                                                    <span id="LBLHora" class="LabelSesion" style="font-weight: normal;">0:00 p.m.</span>
+                                                                </td>
+                                                                <td width="20%" align="right">
+                                                                    <a id="LKBManual" class="LabelInicio" style="padding-right: 3px">Manual de Usuario</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3" style="width: 100%">
+                                                                    <table style="width: 100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="width: 50%; text-align: left">
+                                                                                    <span id="LBLCarrera" class="LabelSesion" style="padding-left: 15px">ING. DE SISTEMAS INFORMATICOS</span><br />
+
+                                                                                </td>
+                                                                                <td style="width: 50%; text-align: right">
+                                                                                    <span id="LBLSedeAcademica" class="LabelSesion" style="padding-left: 15px">SEDE ACADÉMICA COCHABAMBA</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="center_content">
+                <table style="width: 750px; text-align: center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul class="mainmenu">
+                                    <li id="ContentPlaceHolder1_liSiu">
+                                        <a id="ContentPlaceHolder1_LKBSiu" title="Gestiona tu información personal" style="display: inline-block; font-size: 13px; height: 50px; width: 80px;"><b style="font-size: 35px">S</b>OCIAL</a>
+                                    </li>
+                                    <li id="ContentPlaceHolder1_liMateria">
+                                        <a id="ContentPlaceHolder1_LKBMateria" title="Gestiona tus materias" style="display: inline-block; font-size: 13px; height: 50px; width: 85px;"><b style="font-size: 35px">M</b>ATERIA</a>
+                                    </li>
+                                    <li id="ContentPlaceHolder1_liAcademica">
+                                        <a id="ContentPlaceHolder1_LKBAcademica" title="Consulta tu información académica" style="display: inline-block; font-size: 13px; height: 50px; width: 95px;"><b style="font-size: 35px">A</b>CADÉMICA</a>
+                                    </li>
+                                    <li id="ContentPlaceHolder1_liRecursos" class="current">
+                                        <a id="ContentPlaceHolder1_LKBRecursos" title="Accede a recursos" href="PMenu.aspx" style="display: inline-block; font-size: 13px; height: 50px; width: 90px;"><b style="font-size: 35px">R</b>ECURSOS</a>
+                                    </li>
+                                    <li id="ContentPlaceHolder1_liTips">
+                                        <a id="ContentPlaceHolder1_LKBTips" title="Tips para tomar en cuenta" style="display: inline-block; font-size: 13px; height: 50px; width: 80px;"><b style="font-size: 35px">T</b>IPS</a>
+                                    </li>
+                                    <li id="ContentPlaceHolder1_li1">
+                                        <a id="ContentPlaceHolder1_LKBPerfil" title="Revisa tu perfil de usuario" style="display: inline-block; font-size: 13px; height: 50px; width: 95px; padding-left: 15px; padding-right: 15px">
+                                            <asp:Image ID="Image2" runat="server" Style="height: 35px; width: 35px; border: 0 none; margin-top: 5px" ImageUrl="~/Imagenes/perfil.png" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="caja">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_image_left">
+        </div>
+        <h5 class="home_footer" dir="ltr">
+            <span id="LBLAnio">2022</span> Netvalle - Universidad Privada del Valle - Bolivia
+        </h5>
+        <div class="footer_image_right">
+        </div>
+    </div>
+</body>
+</html>

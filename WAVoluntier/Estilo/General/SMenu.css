@@ -1,0 +1,11 @@
+﻿.Opcion {
+    text-decoration: none;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 12px;
+    color: black;
+}
+
+.LBLContenido {
+    text-align: left;
+    margin-bottom: 10px;
+}

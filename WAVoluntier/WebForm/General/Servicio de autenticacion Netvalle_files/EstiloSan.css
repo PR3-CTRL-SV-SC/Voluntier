@@ -1,0 +1,477 @@
+﻿body {
+}
+/* Inicio Master Page*/
+
+.TituloMasterPage {
+    font-family: verdana;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.FooterMasterPage {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    color: #58585A;
+}
+
+/* Fin Master Page*/
+
+/* Inicio Login*/
+
+.TituloLogin {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFF;
+}
+
+.TextoLogin {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFF;
+}
+
+.BordeLogin {
+    background-Color: #151515;
+    width: 310px;
+    height: 410px;
+}
+
+.PaddingLogin {
+    padding: 2px;
+    margin: 8px 0px 0px 0px;
+    vertical-align: top;
+}
+
+
+.linkLogin {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    color: #00AFF0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.linkLoginGuindo {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    font-style: normal;
+    color: #0872C9;
+    text-decoration: none;
+}
+
+.linkLoginTitulado {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    font-style: normal;
+    color: #00AFF0;
+    text-decoration: underline;
+}
+
+/* Fin Login*/
+
+@media screen and (max-width: 700px) {
+    #pRecordarPIN, #pDesbloquearCuenta {
+        left: calc(50% - 250px) !important;
+        top: 25% !important;
+        width: 500px !important;
+        height: auto;
+        position: fixed;
+        z-index: 10001;
+        border: none;
+        background: none !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #pRecordarPIN {
+        left: calc(50% - 175px) !important;
+        top: calc(50% - 300px) !important;
+        width: 400px !important;
+        height: auto;
+        position: fixed;
+        z-index: 10001;
+        border: none;
+        background: none !important;
+    }
+}
+
+.ModalDesbloquearRecuperar {
+    padding: 10px;
+    margin-top: 25%;
+    border-radius: 15px;
+    border: solid 3px rgb(111, 9, 51);
+    width: 100%;
+    background-color: rgba(201, 201, 201, 1);
+    height: 355px;
+}
+
+.BtnCerrarModal {
+    border: none;
+    float: right;
+    text-decoration: none;
+    font-family: Tahoma;
+    background: rgb(111,9,51);
+    border-radius: 5px;
+    line-height: 22px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+
+    .BtnCerrarModal:hover {
+        font-family: Tahoma;
+        background: white;
+        color: rgb(111,9,51);
+    }
+
+.wrapper {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.lnkImagenBoton:hover {
+    color: #11B640;
+    background-color: #FFFFFF;
+    box-shadow: inset 0px 0px 0px 1px #4dee7b, inset 0px 0px 0px 2px rgba(255,255,255,0.15), 0px 8px 0px 0px rgba(77,238,123,0.7), 0px 8px 0px 1px rgba(0,0,0,0.4), 0px 8px 8px 1px rgba(0,0,0,0.5);
+}
+
+.lnkImagenBoton {
+    cursor: pointer;
+    padding: 23px 33px 207px 33px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    font-size: 15px;
+    padding: 20px 60px;
+    color: #cc000a;
+    margin: 0;
+    border-radius: 10px;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.15);
+    background-repeat: no-repeat;
+    background-position-y: 65px;
+    background-position-x: center;
+    background-size: 250px;
+    background-color: #FFFFFF;
+    box-shadow: inset 0px 0px 0px 1px #ff5e65, inset 0px 0px 0px 2px rgba(255,255,255,0.15), 0px 8px 0px 0px rgba(255,94,101,0.7), 0px 8px 0px 1px rgba(0,0,0,0.4), 0px 8px 8px 1px rgba(0,0,0,0.5);
+}
+
+    .lnkImagenBoton:active {
+        top: 9px;
+        color: #11B640;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 0 1px #11B640 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 0 0 1px rgba(0,0,0,0.4);
+    }
+
+.lnkDesbloquearCuenta {
+    background-image: url('../Imagenes/RecorderPIN/CuentaDesbloquearUno.png');
+    padding: 23px 33px 207px 33px;
+    margin-left: 20px;
+}
+
+    .lnkDesbloquearCuenta:hover {
+        background-image: url('../Imagenes/RecorderPIN/CuentaDesbloquearDos.png');
+    }
+
+    .lnkDesbloquearCuenta:active {
+        background-image: url('../Imagenes/RecorderPIN/CuentaDesbloquearDos.png');
+    }
+
+
+.lnkOlvidePIN {
+    background-image: url('../Imagenes/RecorderPIN/CuentaPinUno.png');
+    padding: 23px 21px 207px 21px;
+}
+
+    .lnkOlvidePIN:hover {
+        background-image: url('../Imagenes/RecorderPIN/CuentaPinDos.png');
+    }
+
+    .lnkOlvidePIN:active {
+        background-image: url('../Imagenes/RecorderPIN/CuentaPinDos.png');
+    }
+
+.DivCenterModal {
+    margin: 48px auto 20px auto;
+    width: 100%;
+    display: block;
+}
+
+.TituloModal {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFF;
+    width: 90%;
+    text-align: center;
+    float: left;
+    padding-left: 5%;
+}
+
+/* Fin Recordar PIN*/
+
+/* Inicio Lista Aplicaciones*/
+
+.ListaSupIzquierda {
+    background-image: url('../Imagenes/ListaAplicaciones/SuperiorIzquierdo.png');
+}
+
+.ListaSupCentral {
+    background-image: url('../Imagenes/ListaAplicaciones/SuperiorCentral.png');
+}
+
+.ListaSupDerecha {
+    background-image: url('../Imagenes/ListaAplicaciones/SuperiorDerecho.png');
+}
+
+.ListaInfIzquierda {
+    background-image: url('../Imagenes/ListaAplicaciones/InferiorIzquierdo.png');
+}
+
+.ListaInfCentral {
+    background-color: #1E1E1E;
+}
+
+.ListaInfDerecha {
+    background-image: url('../Imagenes/ListaAplicaciones/InferiorDerecho.png');
+}
+
+.ListaCentral {
+    background-color: #1E1E1E;
+}
+
+.ListaIzquierda {
+    background-color: #1E1E1E;
+}
+
+.ListaDerecha {
+    background-color: #1E1E1E;
+}
+
+
+/* Fin Lista Aplicaciones*/
+
+.TextoArialXSmallBoldFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #FFECCF;
+}
+
+.TextoArialSmallFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    color: #FFECCF;
+}
+
+.TextoArialXSmallFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: normal;
+    color: #FFECCF;
+}
+
+.TextoArial11FFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #FFECCF;
+}
+
+.TextoArialXXFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #FFECCF;
+}
+
+.TextoArialSmallBoldFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFECCF;
+}
+
+.TextoArialMediumFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    color: #FFECCF;
+}
+
+.TextoArialSmallWhite {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.TextoArialSmallBoldWhite {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.TextoArialXSmallBoldWhite {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.TextBox {
+    text-transform: uppercase;
+    font-family: arial, Helvetica, sans-serif;
+}
+
+.PaddingListaAplicaciones {
+    padding: 5px;
+}
+
+.TextoArialXSmallBoldFFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.TextoArialSmallFFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.TextoArialXSmallFFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.TextoArial11FFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.TextoArialXXFFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.TextoArialSmallBoldFFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.TextoArialMediumFFF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.trSpacing {
+    margin-top: 200px !important;
+}
+
+/*20150707 RVH*/
+/*Estilo Modal Popup*/
+.modal_background {
+    background-color: #4D4D4D;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    position: absolute;
+}
+
+.modal_panel_background {
+    background-color: #F4F4F4;
+    border: 1px solid #000;
+}
+
+.sub_content_alert {
+    width: 120px;
+    color: #6e6e6e !important;
+    font-size: 14px;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    padding-right: 20px;
+    vertical-align: top;
+}
+
+.sub_content_alert_bold {
+    width: 120px;
+    color: Black !important;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    padding-right: 30px;
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sub_content_alert_normal {
+    width: 120px;
+    color: Black !important;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    padding-right: 30px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.btn_ok {
+    background: url('../Botones/Aceptar.png') no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 39px !important;
+    text-indent: -3000px;
+    width: 39px;
+    float: none;
+    margin: 3px 5px 0 5px;
+}
+
+    .btn_ok:hover {
+        background: url('../Botones/Aceptar.png') no-repeat 0 -39px;
+    }
+
+.btn_cancel {
+    background: url('../Botones/Cancelar.png') no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 38.5px !important;
+    text-indent: -3000px;
+    width: 39px;
+    float: none;
+    margin: 3px 5px 0 5px;
+}
+
+    .btn_cancel:hover {
+        background: url('../Botones/Cancelar.png') no-repeat 0 -38.5px;
+    }

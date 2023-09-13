@@ -1,0 +1,30 @@
+﻿function volverAlPasoUno() {
+    window.location = "PRegistrarSolicitud.aspx";
+}
+
+function EnvioCorrecto() {
+    setTimeout(okay, 9000);
+}
+
+function Error() {
+    setTimeout(volverAlPasoUno, 5000);
+}
+
+function okay() {
+    window.parent.document.getElementById('btnOkay').click();
+    volverAlPasoUno();
+}
+
+function cancel() {
+    window.parent.document.getElementById('btnCancel').click();
+}
+
+function DisableCtrlKey(e) {
+    var code = (document.all) ? event.keyCode : e.which;
+    //var message = "No se puede pegar a este Cuatro de texto";
+    // look for CTRL key press
+    if (parseInt(code) == 17) {
+        //alert(message); 
+        window.event.returnValue = false;
+    }
+}

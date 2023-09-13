@@ -1,0 +1,213 @@
+﻿html, body {
+    height: 100%;
+    overflow: inherit;
+    background: #2A2A2A;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    color: #000000;
+}
+
+#wrapper {
+    min-height: 100%;
+    width: 840px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#main_container {
+    width: 790px;
+    background: url(../Images/MPInicio/center_bg_repeat.gif) repeat-y center;
+}
+
+#header {
+    width: 840px;
+    margin: auto;
+    height: 49px;
+    background-image: url('../../Imagenes/header_background.png');
+}
+
+#logo {
+    padding: 0px;
+    float: left;
+}
+
+#closeSession {
+    width: 350px;
+    float: right;
+    padding: 10px 0 0 0;
+}
+
+    #closeSession ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+    }
+
+        #closeSession ul li {
+            width: 70px;
+            list-style: none;
+            display: inline;
+            float: left;
+            width: auto;
+            padding: 0px;
+            font-size: 12px;
+        }
+
+            #closeSession ul li a {
+                float: left;
+                text-decoration: none;
+                padding: 0px 10px 0 200px;
+                margin: 0px 4px 0 4px;
+                color: #fff;
+                text-align: center;
+                height: 31px;
+                line-height: 31px;
+                font-weight: bold;
+                width: 110px;
+            }
+
+.info_Usuario {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+.LabelSesion {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 11px;
+    /* font-style: italic; */
+    font-weight: bold;
+}
+
+.LabelInicio {
+    font-size: 100%;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-weight: bold;
+    color: Black;
+}
+
+/*Content*/
+.center_content {
+    width: 810px;
+    clear: both;
+    margin: auto;
+    padding: 0px 20px 10px 10px;
+    background-color: #fff;
+    margin-top: 70px;
+}
+
+.mainmenu {
+    padding: 3px 5px 30px 5px;
+    margin: 0;
+    height: 40px;
+    list-style: none;
+    position: relative;
+    font-size: 11px;
+    letter-spacing: 1px;
+    width: 800px;
+}
+
+    .mainmenu li {
+        float: left;
+        /* margin-right: 1px; */
+        text-align: center;
+        vertical-align: text-top;
+    }
+
+        .mainmenu li a {
+            background-color: #64072D;
+            border: 1px solid #610827;
+            display: inline-block;
+            color: #ffffff;
+            font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+            font-size: 15px;
+            padding: 6px 23px 6px 23px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            .mainmenu li a:hover {
+                background-color: #85465F;
+            }
+
+        .mainmenu li.current a {
+            background-color: #85465F;
+            color: #ffffff;
+            text-align: center;
+        }
+/*Footer*/
+.footer {
+    height: 40px;
+    width: 840px;
+    margin: 0 auto 0;
+    background: url('../../Imagenes/footer_background.png') repeat-x center;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+}
+
+h5.home_footer {
+    float: right;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0px;
+    color: #FFF !important;
+    position: fixed;
+    left: 38%;
+    width: 700px;
+    margin-left: -200px;
+    padding: 15px 5px 5px 5px;
+}
+
+.footer_image_left {
+    float: left;
+    width: 140px;
+    height: 40px;
+    background: url('../../Imagenes/footer_image_left.png') no-repeat center;
+}
+
+.footer_image_right {
+    float: right;
+    width: 160px;
+    height: 40px;
+    background: url(../../Images/MPImage/footer_image_right.png) no-repeat center;
+}
+/* Menu */
+.cssLegend {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 11px;
+    /* font-style: italic; */
+    font-weight: bold;
+}
+
+.LBLContenido {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 11px;
+    /* font-style: italic; */
+    padding: 6px;
+    margin: 5px;
+}
+
+.datosEstudiante {
+    border: 0;
+    width: 800px;
+}
+/*Boton*/
+.btn_todos {
+    background-color: #610827;
+    color: #FFF;
+    border: 1px;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.boton {
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+﻿.LblContenido {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #64072D;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+}
+.LblDescripcion {
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 41px;
+    color: #2A2A2A;
+}
+.ContentTitle{
+    text-align: center;
+}

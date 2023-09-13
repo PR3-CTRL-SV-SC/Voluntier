@@ -1,0 +1,170 @@
+﻿body {
+}
+
+.SolicitarUsuario_body
+{
+    padding-bottom: 30px;
+    background-color: #3D3D3D;
+}
+
+.CUContenedor {	
+	padding: 0px 0px 0px 0px;
+}
+
+.Titulo {	
+	height: 29px;
+}
+
+.TituloIzquierda
+{
+    float: left;
+    padding-left: 5px;
+    padding-top: 0px;
+    font-family: arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.TituloDerecha
+{
+    background: url('../Imagenes/RecorderPIN/BotonCerrar14x14.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 14px;
+    width: 14px;
+    float: right;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 0px;
+}
+
+.ContenedorMultiView
+{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000000;
+    line-height: 15pt;
+    clear: both;
+    padding: 5px;
+}
+
+.ArialSmallFFECCF
+{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.ArialSmallBoldFFECCF
+{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFECCF;
+    text-transform: uppercase;
+}
+.ArialNombreCompleto
+{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.ArialXSmallFFECCF
+{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.FondoMensaje
+{
+    padding: 3px;
+    border: 1px solid #5C5C5C;
+    /*background-image: url('../Imagenes/RecorderPIN/FondoRecordarPIN1x88.png');*/
+    background-repeat: repeat-x;
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.EspacioBlanco
+{
+    margin-top:120px;    
+}
+
+.MargenBoton
+{
+	margin:10px;
+	text-align:center;
+}
+
+.TextBox_Solicitar
+{    
+    font-family: arial, Helvetica, sans-serif;
+    color: #393939;  
+    font-size: 90%;
+    width: 270px;
+    text-transform: uppercase;
+}
+
+.watermark_text
+{
+	color: #A1A1A1;
+	font-size: 90%;
+	text-transform: none;    
+	font-family:arial, Helvetica, sans-serif;
+	font-style:italic;
+	width: 270px;
+	text-transform: uppercase;	
+}
+
+.MesajeEstilo
+{
+    text-align: right;     
+}
+
+.sub_content_message
+{
+   color:#FFF !important;
+	font-size:95%;    
+	font-family:arial, Helvetica, sans-serif;
+	padding-right:20px;
+	vertical-align:top;
+	font-weight:bold;     
+}
+
+.ddl_texto
+{
+    font-family: arial, Helvetica, sans-serif;
+    color: #393939;  
+    font-size: 90%;
+    width: 274px;   
+}
+
+.TextBox_Solicitar_lower
+{    
+    font-family: arial, Helvetica, sans-serif;
+    color: #393939;  
+    font-size: 90%;
+    width: 270px;
+    text-transform: lowercase;
+}
+
+.watermark_text_lower
+{
+	color: #A1A1A1;
+	font-size: 90%;
+	text-transform: none;    
+	font-family:arial, Helvetica, sans-serif;
+	font-style:italic;
+	width: 270px;
+	text-transform: uppercase;	
+}

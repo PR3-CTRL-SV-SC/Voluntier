@@ -1,0 +1,64 @@
+﻿.bold {
+    font-weight: bold;
+}
+
+.tabla, .gridview {
+    margin-bottom: 15px;
+}
+
+.lblFecha {
+    margin-left: 10px;
+}
+
+.txtFecha {
+    margin-left: 23px;
+}
+
+.txtHora {
+    margin-left: 17px;
+}
+
+.lblHora {
+    margin-left: 100px;
+}
+
+.formulario {
+    width: 100%;
+}
+
+    .formulario tr td {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+.fila {
+    width: 100%;
+}
+
+.lblCodigo {
+    margin-left: 20px;
+}
+
+.lblGramos {
+    margin-left: 70px;
+}
+
+.lbNombre, .lbCodigo, .lbGramos {
+    margin-left: 10px;
+}
+
+.gridview {
+    width: 100%;
+}
+
+    .gridview th {
+        color: white;
+        background-color: #64072D;
+        padding: 5px;
+    }
+
+    .gridview tr td {
+        padding: 5px;
+        text-align: center;
+    }

@@ -1,0 +1,80 @@
+﻿.card {
+    width: 30%;
+    margin: 50px 0.5%;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.title {
+    margin-top: 30px;
+    padding: 15px;
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.contenedorProgressBar {
+    margin: 10px;
+    text-align: left;
+    background-color: white;
+    height: 19px;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 20px;
+    color: #64072D;
+    cursor: pointer;
+}
+
+    .contenedorProgressBar div {
+        height: 100%;
+        background-color: #028B10;
+        border-radius: 10px;
+    }
+
+.imagen {
+    margin: 15px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.contenedorBoton {
+    text-align: center;
+    margin: 10px;
+}
+
+.botonVotar {
+    background-color: #64072D;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    color: white;
+    font: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+.botonSi {
+    background-color: #15fb04;
+    color: white;
+    width: 20px;
+    border: none;
+    border-radius: 10px;
+    font: bold;
+    padding: 5px;
+    cursor: pointer;
+    margin-top:5px;
+}

@@ -1,0 +1,485 @@
+﻿body {
+}
+
+.RecuperarCuentaPin_Form {
+    margin: 0;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+    .RecuperarCuentaPin_Form::after {
+        content: ".";
+        color: transparent;
+        margin: 0;
+        border-radius: 0 0 20px 20px;
+        position: absolute;
+        background-image: url('../Imagenes/RecorderPIN/Footer1.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
+        top: 0px;
+        z-index: -1;
+        left: 0px;
+        height: 109%;
+        width: 100%;
+    }
+
+.CUContenedor {
+    padding: 0px 0px 0px 0px;
+}
+
+.Titulo {
+    height: 29px;
+}
+
+.TituloIzquierda {
+    float: left;
+    margin: 10px 0 10px 0px;
+    width: 90%;
+    text-align: center;
+    padding-left: 5%;
+    padding-top: 0px;
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #6F0933;
+}
+
+
+.TituloDerecha {
+    background: url('../Imagenes/RecorderPIN/BotonCerrar14x14.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 14px;
+    width: 14px;
+    float: right;
+    cursor: pointer;
+    margin: 10px auto 0px auto;
+}
+
+.BtnCerrar {
+    float: right;
+    text-decoration: none;
+    font-family: Tahoma;
+    background: rgb(111,9,51);
+    border-radius: 5px;
+    line-height: 22px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+
+    .BtnCerrar:hover {
+        font-family: Tahoma;
+        background: white;
+        color: rgb(111,9,51);
+        border: 1px solid #6F0933;
+    }
+
+.ContenedorMultiView {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000000;
+    line-height: 15pt;
+    clear: both;
+    padding: 5px;
+}
+
+.ArialSmallFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.ArialFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #FFECCF;
+}
+
+.ArialGris {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #232323;
+}
+
+.ArialSmallBoldFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFECCF;
+    text-transform: uppercase;
+}
+
+.ArialNombreCompleto {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.ArialXSmallFFECCF {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.FondoMensaje {
+    padding: 3px;
+    border: 1px solid #5C5C5C;
+    background-image: url('../Imagenes/RecorderPIN/FondoRecordarPIN1x88.png');
+    background-repeat: repeat-x;
+    font-family: arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.EspacioBlanco {
+    margin-top: 120px;
+}
+
+.MargenBoton {
+    margin: 10px;
+    text-align: center;
+}
+
+.TextBox {
+    text-transform: uppercase;
+    font-family: arial, Helvetica, sans-serif;
+}
+
+
+.ModalPopupRecordarPIN {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.TdPadding {
+    padding: 5px 5px 5px 0;
+}
+
+#pRecordarPIN {
+    left: 40% !important;
+    top: 15% !important;
+    width: 100%;
+    height: 378px;
+    position: fixed;
+    z-index: 10001;
+}
+
+.linkNormal {
+    font-size: 14px;
+    color: #00AFF0;
+    text-decoration: underline;
+}
+
+.paddingTopBottomSmall {
+    padding: 10px 0 10px 0;
+}
+
+.Calendar .ajax__calendar_container {
+    background: white;
+    position: relative;
+    border: solid 1px rgb(111,9,51);
+    padding: 2px 2px 7px 2px;
+    width: 181px;
+    position: relative;
+}
+
+.Calendar .ajax__calendar_body {
+    background: white;
+    width: 175px;
+    height: 130px; 
+    position: relative;
+}
+
+.Calendar .ajax__calendar_day {
+    font-family: Tahoma, Calibri, sans-serif;
+    font-size: 10px;
+    line-height: 13px;
+    vertical-align: middle;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #D3D3D3;
+    text-align: center !important;
+    border: solid 1px #E0E0E0;
+    text-transform: uppercase;
+    margin: 1px;
+    width: 17px !important;
+    padding: 0;
+    height: 15px;
+}
+
+.Calendar .ajax__calendar_year {
+    border: solid 1px #E0E0E0;
+    font-family: Tahoma, Calibri, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #D3D3D3;
+    text-align: center !important;
+    vertical-align: middle;
+    margin: 1px;
+    height: 40px;
+}
+
+.Calendar .ajax__calendar_month {
+    border: solid 1px #E0E0E0;
+    font-family: Tahoma, Calibri, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #D3D3D3;
+    text-align: center !important;
+    vertical-align: middle;
+    margin: 1px;
+}
+
+.Calendar .ajax__calendar_footer.ajax__calendar_today,
+.Calendar .ajax__calendar_title {
+    color: rgb(111, 9, 51);
+    margin: 2px;
+}
+
+.ddl-Css {
+    height: 23px;
+}
+
+.txb-Css {
+    height: 17px;
+}
+
+input.BtnCss {
+    padding: 0 18px;
+    font-size: 16px;
+    height: 32px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.BtnCss {
+    cursor: pointer;
+    background: rgb(111,9,51);
+    color: white;
+    border-radius: 5px;
+    height: auto;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 18px;
+    line-height: 36px;
+    margin-right: 23px;
+    border: 1px solid transparent;
+}
+
+    .BtnCss:hover {
+        background: white;
+        color: rgb(111,9,51);
+        border: 1px solid rgb(111, 9, 51);
+    }
+
+*[style*='hidden'] {
+    display: none;
+}
+
+.LblBold {
+    font-weight: bold;
+}
+
+.MensajeError {
+    color: red;
+    padding-right: 4px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+    .MensajeError::before {
+        content: ".";
+        padding-bottom: 4px;
+        padding-right: 18px;
+        color: rgba(0, 0, 0, 0);
+        background-image: url(../Imagenes/RecorderPIN/iconoError.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        font-size: 18px;
+    }
+
+.loader {
+    position: relative;
+    top: 25%;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #9D0044;
+    border-bottom: 16px solid #9D0044;
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.backdrop {
+    border-radius: 15px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 109%;
+}
+
+
+.MensajeConfirmacion {
+    color: #454545;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+    .MensajeConfirmacion ul li {
+        list-style-type: none;
+        list-style-position: inside;
+    }
+
+        .MensajeConfirmacion ul li::before {
+            content: ".";
+            padding-right: 9px;
+            font-size: 43px;
+            color: transparent;
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-bottom: 17px;
+            background-size: 18px;
+        }
+
+        .MensajeConfirmacion ul li.correo:before {
+            background-image: url("../Imagenes/RecorderPIN/EmailGuindo.png");
+        }
+
+        .MensajeConfirmacion ul li.telefono:before {
+            background-image: url(../Imagenes/RecorderPIN/CelularGuindo.png);
+        }
+
+.aspNetDisabled.linkNormal {
+    color: rgb(128,128,128) !important;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+.linkNormal:hover {
+    color: #9D0044;
+    text-decoration: none;
+}
+
+.informacion {
+    color: yellow;
+}
+
+.ajax__validatorcallout.ajax__validatorcallout_popup_table {
+    display: none !important;
+}
+
+.MensajeAlerta {
+    padding: 3px;
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.divCodigoVerificacion {
+    margin-left: 93px;
+    position: relative;
+    width: 58%;
+    border: 2px solid #6F0933;
+    border-radius: 5px;
+}
+
+    .divCodigoVerificacion .TxbCodigoVerificacion {
+        margin-left: 53px;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        outline: 0;
+        padding: 6.5px 3.5px 6.5px 6px;
+        font-size: 20px;
+        height: 19px;
+        width: 79.5%;
+    }
+
+.divCodigoVerificacion .floatLabel {
+    transition: all 0.3s;
+    color: rgba(111, 9, 51, 0.8);
+    position: absolute;
+    font-size: 15px;
+    transform: translate(68px, 13px) scale(1);
+}
+
+    .divCodigoVerificacion.active .floatLabel {
+        color: rgba(111, 9, 51, 1);
+        transform: translate(50px, -16px) scale(0.9);
+        background-color: white;
+        padding: 0 4px;
+    }
+
+    .divCodigoVerificacion .PreCodigo {
+        position: absolute;
+        left: -2px;
+        top: -1px;
+        font-weight: bold;
+        color: white;
+        background-color: rgb(111, 1, 59);
+        padding: 8.5px 5px 0px 5px;
+        border-radius: 5px 0 0 5px;
+        height: 25px;
+        font-size: 20px;
+        outline: 0;
+    }
+
+
+.imgBandera {
+    background-color: rgba(200, 200, 200, 1);
+    border: 1px solid rgba(112, 112, 112, 1);
+    width: 35px;
+    height: 21px;
+    background-image: url("../Imagenes/RecorderPIN/BanderaNeutra.png");
+    background-size: 35px;
+    background-repeat: no-repeat;
+}

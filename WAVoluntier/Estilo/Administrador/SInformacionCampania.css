@@ -1,0 +1,118 @@
+﻿.contenedor {
+    padding: 15px;
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 20px;
+    color: #64072D;
+    cursor: pointer;
+}
+
+.titulo {
+    font-size: 20px;
+    color: #64072D;
+    margin: 5px 0;
+}
+
+.recaudacion {
+    font-size: 15px;
+    color: #64072D;
+    margin: 10px 0;
+}
+
+.boton {
+    text-align: center;
+}
+
+
+
+.btnFinalizar {
+    background-color: #64072D;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    color: white;
+    font: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+/*Mensaje de confirmación*/
+.modal-container-notificacion {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+    .modal-container-notificacion.show {
+        transition: opacity 1s ease;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+.modal-notificacion {
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    padding-left: 5px;
+    text-align: left;
+    width: 170px;
+    height: 120px;
+    max-width: 100%;
+    transform: translateY(-200%);
+    transition: transform 1s ease;
+    border: solid 1px;
+}
+
+.show {
+    transform: translateY(0);
+}
+
+.btnCerrar {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btnAceptar {
+    cursor: pointer;
+}
+
+.centrar {
+    text-align: center
+}
+

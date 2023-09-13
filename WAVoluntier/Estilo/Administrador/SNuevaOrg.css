@@ -1,0 +1,124 @@
+﻿body {
+}
+
+.lblTitle {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    color: #6b0830;
+}
+
+.left {
+    text-align: left;
+    padding: 10px;
+    margin: auto;
+}
+
+.right {
+    text-align: right;
+    padding: 10px;
+    margin: auto;
+}
+
+.title {
+    margin-top: 30px;
+    padding: 15px;
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 20px;
+    color: #64072D;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+}
+
+.marginLeft {
+    margin-left: 20px;
+}
+
+.bodyText {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
+
+.BackGroundTxt {
+    background: #e9e9e9;
+}
+
+.color {
+    color: #6b0830;
+}
+
+.boton {
+    border-radius: 10px;
+    border-color: #e9e9e9;
+    background: #b4850d;
+    color: #e9e9e9;
+}
+
+.boton1 {
+    border-radius: 10px;
+    border-color: #e9e9e9;
+    background: #196517;
+    color: #e9e9e9;
+}
+
+.hidden {
+    display:none;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+}
+
+    .file-select::before {
+        background-color: #b4850d;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border-color: white;
+        content: 'Seleccionar'; /* testo por defecto */
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .file-select input[type="file"] {
+        opacity: 0;
+        width: 100px;
+        height: 32px;
+        display: inline-block;
+    }
+
+#src-file1::before {
+    content: 'AÑADIR';
+}
+
+#src-file2::before {
+    content: 'AÑADIR';
+}
