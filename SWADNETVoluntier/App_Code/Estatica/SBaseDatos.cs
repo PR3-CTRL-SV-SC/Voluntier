@@ -9,5 +9,5 @@ using System.Web;
 public class SBaseDatos
 {
     [DataMember]
-    public static Database BDSWADNETReciclado = DatabaseFactory.CreateDatabase("BDVoluntierConnectionString");
+    public static Database BDSWADNETVoluntier = DatabaseFactory.CreateDatabase("BDVoluntierConnectionString");
 }
