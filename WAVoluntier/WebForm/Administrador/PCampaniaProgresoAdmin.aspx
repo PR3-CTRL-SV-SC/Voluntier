@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PCampaniasAdmin.aspx.cs" Inherits="WebForm_Administrador_PCampaniasAdmin" MasterPageFile="~/PaginaMaestra/MPInicio.master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PCampaniaProgresoAdmin.aspx.cs" Inherits="WebForm_Administrador_PCampaniaProgresoAdmin" MasterPageFile="~/PaginaMaestra/MPInicio.master"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Estilo/Administrador/SAgregarCampania.css" rel="stylesheet" />
