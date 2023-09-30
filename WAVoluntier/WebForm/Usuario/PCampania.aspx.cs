@@ -20,7 +20,7 @@ public partial class WebForm_Usuario_PCampania : System.Web.UI.Page
             // Asigna los valores a los controles en la vista
             lblTitulo.Text = titulo;
             lblDescripcion.Text = descripcion;
-            lblFechas.Text = $"Fecha de Inicio: {fechaInicio:dd/MM/yyyy} - Fecha de Cierre: {fechaCierre:dd/MM/yyyy}";
+            //lblFechas.Text = $"Fecha de Inicio: {fechaInicio:dd/MM/yyyy} - Fecha de Cierre: {fechaCierre:dd/MM/yyyy}";
         }
     }
 }

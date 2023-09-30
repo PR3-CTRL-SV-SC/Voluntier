@@ -5,24 +5,21 @@ using System.Web;
 using System.Runtime.Serialization;
 
 /// <summary>
-/// Descripción breve de ERUsuario
+/// Descripción breve de ECUsuario
 /// </summary>
 [DataContract]
-public class ERUsuario
+public class ECUsuario
 {
     #region Atributos
     [DataMember]
-    public string CodigoUsuario { get; set; }
-    [DataMember]
-    public string CreditosUsuario { get; set; }
+    public string IdUsuario { get; set; }
     [DataMember]
     public string RolUsuario { get; set; }
     #endregion
 
-    public ERUsuario()
+    public ECUsuario()
     {
-        CodigoUsuario = string.Empty;
-        CreditosUsuario = string.Empty;
+        IdUsuario = string.Empty;
         RolUsuario = string.Empty;
     }
 }

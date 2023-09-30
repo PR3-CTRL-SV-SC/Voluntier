@@ -5,10 +5,10 @@ using System.Web;
 using System.Runtime.Serialization;
 
 /// <summary>
-/// Descripción breve de ERUsuarioNetvalle
+/// Descripción breve de ECUsuarioNetvalle
 /// </summary>
 [DataContract]
-public class ERUsuarioNetvalle
+public class ECUsuarioNetvalle
 {
     #region Atributos
     [DataMember]
@@ -30,7 +30,7 @@ public class ERUsuarioNetvalle
     [DataMember]
     public char EstadoUsuarioNetvalle { get; set; }
     #endregion
-    public ERUsuarioNetvalle()
+    public ECUsuarioNetvalle()
     {
         CodigoUsuarioNetvalle = string.Empty;
         NombresUsuarioNetvalle = string.Empty;

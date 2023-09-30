@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DTOCampania" targetNamespace="http://tempuri.org/DTOCampania.xsd" xmlns:mstns="http://tempuri.org/DTOCampania.xsd" xmlns="http://tempuri.org/DTOCampania.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DTOCCampania" targetNamespace="http://tempuri.org/DTOCCampania.xsd" xmlns:mstns="http://tempuri.org/DTOCCampania.xsd" xmlns="http://tempuri.org/DTOCCampania.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BDVoluntierConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDVoluntierConnectionString1 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BDVoluntierConnectionString1.ConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BDVoluntierConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDVoluntierConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BDVoluntierConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CCampaniaTableAdapter" GeneratorDataComponentClassName="CCampaniaTableAdapter" Name="CCampania" UserDataComponentName="CCampaniaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BDVoluntierConnectionString2 (Web.config)" DbObjectName="BDVoluntier.dbo.CCampania" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BDVoluntierConnectionString1 (Web.config)" DbObjectName="BDVoluntier.dbo.CCampania" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[CCampania] WHERE (([IdCampania] = @Original_IdCampania))</CommandText>
@@ -81,7 +80,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DTOCampania" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCampania" msprop:Generator_DataSetName="DTOCampania">
+  <xs:element name="DTOCCampania" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCCampania" msprop:Generator_DataSetName="DTOCCampania">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="CCampania" msprop:Generator_RowEvHandlerName="CCampaniaRowChangeEventHandler" msprop:Generator_RowDeletedName="CCampaniaRowDeleted" msprop:Generator_RowDeletingName="CCampaniaRowDeleting" msprop:Generator_RowEvArgName="CCampaniaRowChangeEvent" msprop:Generator_TablePropName="CCampania" msprop:Generator_RowChangedName="CCampaniaRowChanged" msprop:Generator_RowChangingName="CCampaniaRowChanging" msprop:Generator_TableClassName="CCampaniaDataTable" msprop:Generator_RowClassName="CCampaniaRow" msprop:Generator_TableVarName="tableCCampania" msprop:Generator_UserTableName="CCampania">

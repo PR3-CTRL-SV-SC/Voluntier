@@ -6,12 +6,14 @@ using System.Web;
 
 
 /// <summary>
-/// Descripción breve de ERCampania
+/// Descripción breve de ECCampania
 /// </summary>
 [DataContract]
-public class ERCampania
+public class ECCampania
 {
     #region Atributos
+    [DataMember]
+    public int IdCampania { get; set; }
     [DataMember]
     public string NombreCampania { get; set; }
     [DataMember]
@@ -31,7 +33,7 @@ public class ERCampania
     
     #endregion
 
-    public ERCampania()
+    public ECCampania()
     {
         NombreCampania = string.Empty;
         DescripcionCampania = string.Empty;
