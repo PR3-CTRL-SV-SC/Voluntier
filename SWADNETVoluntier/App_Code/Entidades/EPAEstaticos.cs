@@ -25,7 +25,7 @@ public class EPAEstaticos
     [DataMember]
     static public DateTime FechaRegistro = DateTime.Now;
     [DataMember]
-    static public double DonacionVoto = 0;
+    static public int HorasUsuario = 0;
 
     public EPAEstaticos()
     {

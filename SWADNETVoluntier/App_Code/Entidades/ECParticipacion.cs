@@ -7,6 +7,7 @@ using System.Web;
 /// <summary>
 /// Summary description for ECParticipacion
 /// </summary>
+[DataContract]
 public class ECParticipacion
 {
     #region Atributos

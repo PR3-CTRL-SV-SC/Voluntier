@@ -61,7 +61,7 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="CodigoUsuarioNetvalle" DataSetColumn="CodigoUsuarioNetvalle" />
-              <Mapping SourceColumn="NombreUsuarioNetvalle" DataSetColumn="NombreUsuarioNetvalle" />
+              <Mapping SourceColumn="NombreUsuarioNetvalle" DataSetColumn="NombresUsuarioNetvalle" />
               <Mapping SourceColumn="ApellidosUsuarioNetvalle" DataSetColumn="ApellidosUsuarioNetvalle" />
               <Mapping SourceColumn="CargoUsuarioNetvalle" DataSetColumn="CargoUsuarioNetvalle" />
               <Mapping SourceColumn="TarjetaUsuarioNetvalle" DataSetColumn="TarjetaUsuarioNetvalle" />
@@ -80,48 +80,54 @@
   <xs:element name="DTOCUsuarioNetvalle" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCUsuarioNetvalle" msprop:Generator_DataSetName="DTOCUsuarioNetvalle">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CUsuarioNetvalle" msprop:Generator_RowEvHandlerName="CUsuarioNetvalleRowChangeEventHandler" msprop:Generator_RowDeletedName="CUsuarioNetvalleRowDeleted" msprop:Generator_RowDeletingName="CUsuarioNetvalleRowDeleting" msprop:Generator_RowEvArgName="CUsuarioNetvalleRowChangeEvent" msprop:Generator_TablePropName="CUsuarioNetvalle" msprop:Generator_RowChangedName="CUsuarioNetvalleRowChanged" msprop:Generator_RowChangingName="CUsuarioNetvalleRowChanging" msprop:Generator_TableClassName="CUsuarioNetvalleDataTable" msprop:Generator_RowClassName="CUsuarioNetvalleRow" msprop:Generator_TableVarName="tableCUsuarioNetvalle" msprop:Generator_UserTableName="CUsuarioNetvalle">
+        <xs:element name="CUsuarioNetvalle" msprop:Generator_RowEvHandlerName="CUsuarioNetvalleRowChangeEventHandler" msprop:Generator_RowDeletedName="CUsuarioNetvalleRowDeleted" msprop:Generator_RowDeletingName="CUsuarioNetvalleRowDeleting" msprop:Generator_RowEvArgName="CUsuarioNetvalleRowChangeEvent" msprop:Generator_TablePropName="CUsuarioNetvalle" msprop:Generator_RowChangedName="CUsuarioNetvalleRowChanged" msprop:Generator_UserTableName="CUsuarioNetvalle" msprop:Generator_RowChangingName="CUsuarioNetvalleRowChanging" msprop:Generator_RowClassName="CUsuarioNetvalleRow" msprop:Generator_TableClassName="CUsuarioNetvalleDataTable" msprop:Generator_TableVarName="tableCUsuarioNetvalle">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CodigoUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="CodigoUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="CodigoUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnCodigoUsuarioNetvalle" msprop:Generator_UserColumnName="CodigoUsuarioNetvalle" type="xs:int" />
-              <xs:element name="NombreUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="NombreUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="NombreUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnNombreUsuarioNetvalle" msprop:Generator_UserColumnName="NombreUsuarioNetvalle">
+              <xs:element name="CodigoUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="CodigoUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="CodigoUsuarioNetvalle" msprop:Generator_UserColumnName="CodigoUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnCodigoUsuarioNetvalle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombresUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="NombresUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="NombresUsuarioNetvalle" msprop:Generator_UserColumnName="NombresUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnNombresUsuarioNetvalle">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ApellidosUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="ApellidosUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="ApellidosUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnApellidosUsuarioNetvalle" msprop:Generator_UserColumnName="ApellidosUsuarioNetvalle">
+              <xs:element name="ApellidosUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="ApellidosUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="ApellidosUsuarioNetvalle" msprop:Generator_UserColumnName="ApellidosUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnApellidosUsuarioNetvalle">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CargoUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="CargoUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="CargoUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnCargoUsuarioNetvalle" msprop:Generator_UserColumnName="CargoUsuarioNetvalle">
+              <xs:element name="CargoUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="CargoUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="CargoUsuarioNetvalle" msprop:Generator_UserColumnName="CargoUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnCargoUsuarioNetvalle">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TarjetaUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="TarjetaUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="TarjetaUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnTarjetaUsuarioNetvalle" msprop:Generator_UserColumnName="TarjetaUsuarioNetvalle" minOccurs="0">
+              <xs:element name="TarjetaUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="TarjetaUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="TarjetaUsuarioNetvalle" msprop:Generator_UserColumnName="TarjetaUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnTarjetaUsuarioNetvalle" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SedeUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="SedeUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="SedeUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnSedeUsuarioNetvalle" msprop:Generator_UserColumnName="SedeUsuarioNetvalle">
+              <xs:element name="SedeUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="SedeUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="SedeUsuarioNetvalle" msprop:Generator_UserColumnName="SedeUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnSedeUsuarioNetvalle">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FechaRegistroUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="FechaRegistroUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="FechaRegistroUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroUsuarioNetvalle" msprop:Generator_UserColumnName="FechaRegistroUsuarioNetvalle" type="xs:dateTime" />
-              <xs:element name="FechaModificacionUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="FechaModificacionUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="FechaModificacionUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionUsuarioNetvalle" msprop:Generator_UserColumnName="FechaModificacionUsuarioNetvalle" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="EstadoUsuarioNetvalle" msprop:Generator_ColumnPropNameInRow="EstadoUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="EstadoUsuarioNetvalleColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoUsuarioNetvalle" msprop:Generator_UserColumnName="EstadoUsuarioNetvalle">
+              <xs:element name="FechaRegistroUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="FechaRegistroUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistroUsuarioNetvalle" msprop:Generator_UserColumnName="FechaRegistroUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroUsuarioNetvalle" type="xs:dateTime" />
+              <xs:element name="FechaModificacionUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="FechaModificacionUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="FechaModificacionUsuarioNetvalle" msprop:Generator_UserColumnName="FechaModificacionUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionUsuarioNetvalle" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EstadoUsuarioNetvalle" msprop:Generator_ColumnPropNameInTable="EstadoUsuarioNetvalleColumn" msprop:Generator_ColumnPropNameInRow="EstadoUsuarioNetvalle" msprop:Generator_UserColumnName="EstadoUsuarioNetvalle" msprop:Generator_ColumnVarNameInTable="columnEstadoUsuarioNetvalle">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />

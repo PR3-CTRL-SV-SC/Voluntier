@@ -12,14 +12,17 @@ public class ECUsuario
 {
     #region Atributos
     [DataMember]
-    public string IdUsuario { get; set; }
+    public string CodigoUsuario { get; set; }
     [DataMember]
     public string RolUsuario { get; set; }
+    [DataMember]
+    public int HorasUsuario { get; set; }
     #endregion
 
     public ECUsuario()
     {
-        IdUsuario = string.Empty;
+        CodigoUsuario = string.Empty;
         RolUsuario = string.Empty;
+        HorasUsuario = 0;
     }
 }

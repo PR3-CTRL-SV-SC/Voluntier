@@ -83,43 +83,49 @@
   <xs:element name="DTOCCampania" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCCampania" msprop:Generator_DataSetName="DTOCCampania">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CCampania" msprop:Generator_RowEvHandlerName="CCampaniaRowChangeEventHandler" msprop:Generator_RowDeletedName="CCampaniaRowDeleted" msprop:Generator_RowDeletingName="CCampaniaRowDeleting" msprop:Generator_RowEvArgName="CCampaniaRowChangeEvent" msprop:Generator_TablePropName="CCampania" msprop:Generator_RowChangedName="CCampaniaRowChanged" msprop:Generator_RowChangingName="CCampaniaRowChanging" msprop:Generator_TableClassName="CCampaniaDataTable" msprop:Generator_RowClassName="CCampaniaRow" msprop:Generator_TableVarName="tableCCampania" msprop:Generator_UserTableName="CCampania">
+        <xs:element name="CCampania" msprop:Generator_RowClassName="CCampaniaRow" msprop:Generator_RowEvHandlerName="CCampaniaRowChangeEventHandler" msprop:Generator_RowDeletedName="CCampaniaRowDeleted" msprop:Generator_RowDeletingName="CCampaniaRowDeleting" msprop:Generator_RowEvArgName="CCampaniaRowChangeEvent" msprop:Generator_TablePropName="CCampania" msprop:Generator_RowChangedName="CCampaniaRowChanged" msprop:Generator_UserTableName="CCampania" msprop:Generator_RowChangingName="CCampaniaRowChanging" msprop:Generator_TableClassName="CCampaniaDataTable" msprop:Generator_TableVarName="tableCCampania">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdCampania" msprop:Generator_ColumnPropNameInRow="IdCampania" msprop:Generator_ColumnPropNameInTable="IdCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnIdCampania" msprop:Generator_UserColumnName="IdCampania" type="xs:int" />
-              <xs:element name="NombreCampania" msprop:Generator_ColumnPropNameInRow="NombreCampania" msprop:Generator_ColumnPropNameInTable="NombreCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnNombreCampania" msprop:Generator_UserColumnName="NombreCampania">
+              <xs:element name="IdCampania" msprop:Generator_UserColumnName="IdCampania" msprop:Generator_ColumnPropNameInTable="IdCampaniaColumn" msprop:Generator_ColumnPropNameInRow="IdCampania" msprop:Generator_ColumnVarNameInTable="columnIdCampania" type="xs:int" />
+              <xs:element name="NombreCampania" msprop:Generator_UserColumnName="NombreCampania" msprop:Generator_ColumnPropNameInTable="NombreCampaniaColumn" msprop:Generator_ColumnPropNameInRow="NombreCampania" msprop:Generator_ColumnVarNameInTable="columnNombreCampania">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DescripcionCampania" msprop:Generator_ColumnPropNameInRow="DescripcionCampania" msprop:Generator_ColumnPropNameInTable="DescripcionCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnDescripcionCampania" msprop:Generator_UserColumnName="DescripcionCampania">
+              <xs:element name="DescripcionCampania" msprop:Generator_UserColumnName="DescripcionCampania" msprop:Generator_ColumnPropNameInTable="DescripcionCampaniaColumn" msprop:Generator_ColumnPropNameInRow="DescripcionCampania" msprop:Generator_ColumnVarNameInTable="columnDescripcionCampania">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FechaInicioCampania" msprop:Generator_ColumnPropNameInRow="FechaInicioCampania" msprop:Generator_ColumnPropNameInTable="FechaInicioCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaInicioCampania" msprop:Generator_UserColumnName="FechaInicioCampania" type="xs:dateTime" />
-              <xs:element name="FechaFinCampania" msprop:Generator_ColumnPropNameInRow="FechaFinCampania" msprop:Generator_ColumnPropNameInTable="FechaFinCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaFinCampania" msprop:Generator_UserColumnName="FechaFinCampania" type="xs:dateTime" />
-              <xs:element name="EstadoCampania" msprop:Generator_ColumnPropNameInRow="EstadoCampania" msprop:Generator_ColumnPropNameInTable="EstadoCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoCampania" msprop:Generator_UserColumnName="EstadoCampania">
+              <xs:element name="FechaInicioCampania" msprop:Generator_UserColumnName="FechaInicioCampania" msprop:Generator_ColumnPropNameInTable="FechaInicioCampaniaColumn" msprop:Generator_ColumnPropNameInRow="FechaInicioCampania" msprop:Generator_ColumnVarNameInTable="columnFechaInicioCampania" type="xs:dateTime" />
+              <xs:element name="FechaFinCampania" msprop:Generator_UserColumnName="FechaFinCampania" msprop:Generator_ColumnPropNameInTable="FechaFinCampaniaColumn" msprop:Generator_ColumnPropNameInRow="FechaFinCampania" msprop:Generator_ColumnVarNameInTable="columnFechaFinCampania" type="xs:dateTime" />
+              <xs:element name="EstadoCampania" msprop:Generator_UserColumnName="EstadoCampania" msprop:Generator_ColumnPropNameInTable="EstadoCampaniaColumn" msprop:Generator_ColumnPropNameInRow="EstadoCampania" msprop:Generator_ColumnVarNameInTable="columnEstadoCampania">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SedeCampania" msprop:Generator_ColumnPropNameInRow="SedeCampania" msprop:Generator_ColumnPropNameInTable="SedeCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnSedeCampania" msprop:Generator_UserColumnName="SedeCampania">
+              <xs:element name="SedeCampania" msprop:Generator_UserColumnName="SedeCampania" msprop:Generator_ColumnPropNameInTable="SedeCampaniaColumn" msprop:Generator_ColumnPropNameInRow="SedeCampania" msprop:Generator_ColumnVarNameInTable="columnSedeCampania">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
+                    <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FechaRegistroCampania" msprop:Generator_ColumnPropNameInRow="FechaRegistroCampania" msprop:Generator_ColumnPropNameInTable="FechaRegistroCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroCampania" msprop:Generator_UserColumnName="FechaRegistroCampania" type="xs:dateTime" />
-              <xs:element name="FechaModificacionCampania" msprop:Generator_ColumnPropNameInRow="FechaModificacionCampania" msprop:Generator_ColumnPropNameInTable="FechaModificacionCampaniaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionCampania" msprop:Generator_UserColumnName="FechaModificacionCampania" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="IdUsuarioCreador" msprop:Generator_ColumnPropNameInRow="IdUsuarioCreador" msprop:Generator_ColumnPropNameInTable="IdUsuarioCreadorColumn" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioCreador" msprop:Generator_UserColumnName="IdUsuarioCreador" type="xs:int" />
+              <xs:element name="FechaRegistroCampania" msprop:Generator_UserColumnName="FechaRegistroCampania" msprop:Generator_ColumnPropNameInTable="FechaRegistroCampaniaColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistroCampania" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroCampania" type="xs:dateTime" />
+              <xs:element name="FechaModificacionCampania" msprop:Generator_UserColumnName="FechaModificacionCampania" msprop:Generator_ColumnPropNameInTable="FechaModificacionCampaniaColumn" msprop:Generator_ColumnPropNameInRow="FechaModificacionCampania" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionCampania" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IdUsuarioCreador" msprop:Generator_UserColumnName="IdUsuarioCreador" msprop:Generator_ColumnPropNameInTable="IdUsuarioCreadorColumn" msprop:Generator_ColumnPropNameInRow="IdUsuarioCreador" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioCreador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

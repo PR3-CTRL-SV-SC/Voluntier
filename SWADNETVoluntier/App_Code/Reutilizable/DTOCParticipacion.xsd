@@ -75,22 +75,28 @@
   <xs:element name="DTOCParticipacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCParticipacion" msprop:Generator_DataSetName="DTOCParticipacion">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CParticipacion" msprop:Generator_RowEvHandlerName="CParticipacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CParticipacionRowDeleted" msprop:Generator_RowDeletingName="CParticipacionRowDeleting" msprop:Generator_RowEvArgName="CParticipacionRowChangeEvent" msprop:Generator_TablePropName="CParticipacion" msprop:Generator_RowChangedName="CParticipacionRowChanged" msprop:Generator_RowChangingName="CParticipacionRowChanging" msprop:Generator_TableClassName="CParticipacionDataTable" msprop:Generator_RowClassName="CParticipacionRow" msprop:Generator_TableVarName="tableCParticipacion" msprop:Generator_UserTableName="CParticipacion">
+        <xs:element name="CParticipacion" msprop:Generator_RowClassName="CParticipacionRow" msprop:Generator_RowEvHandlerName="CParticipacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CParticipacionRowDeleted" msprop:Generator_RowDeletingName="CParticipacionRowDeleting" msprop:Generator_RowEvArgName="CParticipacionRowChangeEvent" msprop:Generator_TablePropName="CParticipacion" msprop:Generator_RowChangedName="CParticipacionRowChanged" msprop:Generator_UserTableName="CParticipacion" msprop:Generator_RowChangingName="CParticipacionRowChanging" msprop:Generator_TableClassName="CParticipacionDataTable" msprop:Generator_TableVarName="tableCParticipacion">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdParticipacion" msprop:Generator_ColumnPropNameInRow="IdParticipacion" msprop:Generator_ColumnPropNameInTable="IdParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnIdParticipacion" msprop:Generator_UserColumnName="IdParticipacion" type="xs:int" />
-              <xs:element name="IdCampaniaParticipacion" msprop:Generator_ColumnPropNameInRow="IdCampaniaParticipacion" msprop:Generator_ColumnPropNameInTable="IdCampaniaParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnIdCampaniaParticipacion" msprop:Generator_UserColumnName="IdCampaniaParticipacion" type="xs:int" />
-              <xs:element name="IdUsuarioParticipacion" msprop:Generator_ColumnPropNameInRow="IdUsuarioParticipacion" msprop:Generator_ColumnPropNameInTable="IdUsuarioParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioParticipacion" msprop:Generator_UserColumnName="IdUsuarioParticipacion" type="xs:int" />
-              <xs:element name="FechaRegistroParticipacion" msprop:Generator_ColumnPropNameInRow="FechaRegistroParticipacion" msprop:Generator_ColumnPropNameInTable="FechaRegistroParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroParticipacion" msprop:Generator_UserColumnName="FechaRegistroParticipacion" type="xs:dateTime" />
-              <xs:element name="FechaModificacionParticipacion" msprop:Generator_ColumnPropNameInRow="FechaModificacionParticipacion" msprop:Generator_ColumnPropNameInTable="FechaModificacionParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionParticipacion" msprop:Generator_UserColumnName="FechaModificacionParticipacion" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="EstadoParticipacion" msprop:Generator_ColumnPropNameInRow="EstadoParticipacion" msprop:Generator_ColumnPropNameInTable="EstadoParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoParticipacion" msprop:Generator_UserColumnName="EstadoParticipacion">
+              <xs:element name="IdParticipacion" msprop:Generator_UserColumnName="IdParticipacion" msprop:Generator_ColumnPropNameInTable="IdParticipacionColumn" msprop:Generator_ColumnPropNameInRow="IdParticipacion" msprop:Generator_ColumnVarNameInTable="columnIdParticipacion" type="xs:int" />
+              <xs:element name="IdCampaniaParticipacion" msprop:Generator_UserColumnName="IdCampaniaParticipacion" msprop:Generator_ColumnPropNameInTable="IdCampaniaParticipacionColumn" msprop:Generator_ColumnPropNameInRow="IdCampaniaParticipacion" msprop:Generator_ColumnVarNameInTable="columnIdCampaniaParticipacion" type="xs:int" />
+              <xs:element name="IdUsuarioParticipacion" msprop:Generator_UserColumnName="IdUsuarioParticipacion" msprop:Generator_ColumnPropNameInTable="IdUsuarioParticipacionColumn" msprop:Generator_ColumnPropNameInRow="IdUsuarioParticipacion" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioParticipacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaRegistroParticipacion" msprop:Generator_UserColumnName="FechaRegistroParticipacion" msprop:Generator_ColumnPropNameInTable="FechaRegistroParticipacionColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistroParticipacion" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroParticipacion" type="xs:dateTime" />
+              <xs:element name="FechaModificacionParticipacion" msprop:Generator_UserColumnName="FechaModificacionParticipacion" msprop:Generator_ColumnPropNameInTable="FechaModificacionParticipacionColumn" msprop:Generator_ColumnPropNameInRow="FechaModificacionParticipacion" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionParticipacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EstadoParticipacion" msprop:Generator_UserColumnName="EstadoParticipacion" msprop:Generator_ColumnPropNameInTable="EstadoParticipacionColumn" msprop:Generator_ColumnPropNameInRow="EstadoParticipacion" msprop:Generator_ColumnVarNameInTable="columnEstadoParticipacion">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HorasParticipacion" msprop:Generator_ColumnPropNameInRow="HorasParticipacion" msprop:Generator_ColumnPropNameInTable="HorasParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnHorasParticipacion" msprop:Generator_UserColumnName="HorasParticipacion" type="xs:int" />
+              <xs:element name="HorasParticipacion" msprop:Generator_UserColumnName="HorasParticipacion" msprop:Generator_ColumnPropNameInTable="HorasParticipacionColumn" msprop:Generator_ColumnPropNameInRow="HorasParticipacion" msprop:Generator_ColumnVarNameInTable="columnHorasParticipacion" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

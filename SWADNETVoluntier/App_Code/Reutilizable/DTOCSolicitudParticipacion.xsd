@@ -65,16 +65,22 @@
   <xs:element name="DTOCSolicitudParticipacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCSolicitudParticipacion" msprop:Generator_DataSetName="DTOCSolicitudParticipacion">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CSolicitudParticipacion" msprop:Generator_RowEvHandlerName="CSolicitudParticipacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CSolicitudParticipacionRowDeleted" msprop:Generator_RowDeletingName="CSolicitudParticipacionRowDeleting" msprop:Generator_RowEvArgName="CSolicitudParticipacionRowChangeEvent" msprop:Generator_TablePropName="CSolicitudParticipacion" msprop:Generator_RowChangedName="CSolicitudParticipacionRowChanged" msprop:Generator_RowChangingName="CSolicitudParticipacionRowChanging" msprop:Generator_TableClassName="CSolicitudParticipacionDataTable" msprop:Generator_RowClassName="CSolicitudParticipacionRow" msprop:Generator_TableVarName="tableCSolicitudParticipacion" msprop:Generator_UserTableName="CSolicitudParticipacion">
+        <xs:element name="CSolicitudParticipacion" msprop:Generator_RowClassName="CSolicitudParticipacionRow" msprop:Generator_RowEvHandlerName="CSolicitudParticipacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CSolicitudParticipacionRowDeleted" msprop:Generator_RowDeletingName="CSolicitudParticipacionRowDeleting" msprop:Generator_RowEvArgName="CSolicitudParticipacionRowChangeEvent" msprop:Generator_TablePropName="CSolicitudParticipacion" msprop:Generator_RowChangedName="CSolicitudParticipacionRowChanged" msprop:Generator_UserTableName="CSolicitudParticipacion" msprop:Generator_RowChangingName="CSolicitudParticipacionRowChanging" msprop:Generator_TableClassName="CSolicitudParticipacionDataTable" msprop:Generator_TableVarName="tableCSolicitudParticipacion">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdSolicitud" msprop:Generator_ColumnPropNameInRow="IdSolicitud" msprop:Generator_ColumnPropNameInTable="IdSolicitudColumn" msprop:Generator_ColumnVarNameInTable="columnIdSolicitud" msprop:Generator_UserColumnName="IdSolicitud" type="xs:int" />
-              <xs:element name="IdUsuarioSolicitud" msprop:Generator_ColumnPropNameInRow="IdUsuarioSolicitud" msprop:Generator_ColumnPropNameInTable="IdUsuarioSolicitudColumn" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioSolicitud" msprop:Generator_UserColumnName="IdUsuarioSolicitud" type="xs:int" />
-              <xs:element name="IdCampaniaSolicitud" msprop:Generator_ColumnPropNameInRow="IdCampaniaSolicitud" msprop:Generator_ColumnPropNameInTable="IdCampaniaSolicitudColumn" msprop:Generator_ColumnVarNameInTable="columnIdCampaniaSolicitud" msprop:Generator_UserColumnName="IdCampaniaSolicitud" type="xs:int" />
-              <xs:element name="EstadoSolicitud" msprop:Generator_ColumnPropNameInRow="EstadoSolicitud" msprop:Generator_ColumnPropNameInTable="EstadoSolicitudColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoSolicitud" msprop:Generator_UserColumnName="EstadoSolicitud">
+              <xs:element name="IdSolicitud" msprop:Generator_UserColumnName="IdSolicitud" msprop:Generator_ColumnPropNameInTable="IdSolicitudColumn" msprop:Generator_ColumnPropNameInRow="IdSolicitud" msprop:Generator_ColumnVarNameInTable="columnIdSolicitud" type="xs:int" />
+              <xs:element name="IdUsuarioSolicitud" msprop:Generator_UserColumnName="IdUsuarioSolicitud" msprop:Generator_ColumnPropNameInTable="IdUsuarioSolicitudColumn" msprop:Generator_ColumnPropNameInRow="IdUsuarioSolicitud" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioSolicitud">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCampaniaSolicitud" msprop:Generator_UserColumnName="IdCampaniaSolicitud" msprop:Generator_ColumnPropNameInTable="IdCampaniaSolicitudColumn" msprop:Generator_ColumnPropNameInRow="IdCampaniaSolicitud" msprop:Generator_ColumnVarNameInTable="columnIdCampaniaSolicitud" type="xs:int" />
+              <xs:element name="EstadoSolicitud" msprop:Generator_UserColumnName="EstadoSolicitud" msprop:Generator_ColumnPropNameInTable="EstadoSolicitudColumn" msprop:Generator_ColumnPropNameInRow="EstadoSolicitud" msprop:Generator_ColumnVarNameInTable="columnEstadoSolicitud">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

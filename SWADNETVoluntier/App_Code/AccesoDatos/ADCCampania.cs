@@ -23,7 +23,6 @@ public class ADCCampania
     /// <param name="excepcion"></param>
     /// <param name="mensaje"></param>
     /// <returns></returns>
-    
     private EDefecto ConstruirErrorServicio(TTipoError tipoError, string metodo, string excepcion, string mensaje)
     {
         EDefecto eDefectoAD = new EDefecto();
@@ -35,9 +34,7 @@ public class ADCCampania
         eDefectoAD.Mensaje = mensaje;
         return eDefectoAD;
     }
-
     #endregion
-
     #region Metodos publicos
 
     /// <summary>
@@ -102,6 +99,7 @@ public class ADCCampania
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_A");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, eCCampania.IdCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "nombreCampania", DbType.String, eCCampania.NombreCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "descripcionCampania", DbType.String, eCCampania.DescripcionCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaInicioCampania", DbType.DateTime, eCCampania.FechaInicioCampania);
@@ -123,13 +121,13 @@ public class ADCCampania
     /// Actualiza el estado de una campaña a 'FINALIAZADA'
     /// </summary>
     /// <param name="eCCampania"></param>
-    public void Actualizar_CCampania_A_Estado(string nombreCampania)
+    public void Actualizar_CCampania_A_Estado(string idCampania)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_A_Estado");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "nombreCampania", DbType.String, nombreCampania);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.String, idCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampaniaF", DbType.String, EPAEstaticos.EstadoFinalizada);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
@@ -146,13 +144,13 @@ public class ADCCampania
     /// Actualizar el estado de una campaña a cancelado
     /// </summary>
     /// <param name="nombreCampania"></param>
-    public void Actualizar_CCampania_A_Estado_Cancelado(string nombreCampania)
+    public void Actualizar_CCampania_A_Estado_Cancelado(string idCampania)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_A_Estado_Cancelado");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "nombreCampania", DbType.String, nombreCampania);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.String, idCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, EPAEstaticos.EstadoCancelada);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);

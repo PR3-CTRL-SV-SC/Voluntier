@@ -48,7 +48,7 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="IdUsuario" DataSetColumn="IdUsuario" />
+              <Mapping SourceColumn="IdUsuario" DataSetColumn="CodigoUsuario" />
               <Mapping SourceColumn="HorasUsuario" DataSetColumn="HorasUsuario" />
               <Mapping SourceColumn="RolUsuario" DataSetColumn="RolUsuario" />
             </Mappings>
@@ -62,12 +62,18 @@
   <xs:element name="DTOCUsuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCUsuario" msprop:Generator_DataSetName="DTOCUsuario">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CUsuario" msprop:Generator_RowEvHandlerName="CUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="CUsuarioRowDeleted" msprop:Generator_RowDeletingName="CUsuarioRowDeleting" msprop:Generator_RowEvArgName="CUsuarioRowChangeEvent" msprop:Generator_TablePropName="CUsuario" msprop:Generator_RowChangedName="CUsuarioRowChanged" msprop:Generator_RowChangingName="CUsuarioRowChanging" msprop:Generator_TableClassName="CUsuarioDataTable" msprop:Generator_RowClassName="CUsuarioRow" msprop:Generator_TableVarName="tableCUsuario" msprop:Generator_UserTableName="CUsuario">
+        <xs:element name="CUsuario" msprop:Generator_RowEvHandlerName="CUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="CUsuarioRowDeleted" msprop:Generator_RowDeletingName="CUsuarioRowDeleting" msprop:Generator_RowEvArgName="CUsuarioRowChangeEvent" msprop:Generator_TablePropName="CUsuario" msprop:Generator_RowChangedName="CUsuarioRowChanged" msprop:Generator_UserTableName="CUsuario" msprop:Generator_RowChangingName="CUsuarioRowChanging" msprop:Generator_RowClassName="CUsuarioRow" msprop:Generator_TableClassName="CUsuarioDataTable" msprop:Generator_TableVarName="tableCUsuario">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdUsuario" msprop:Generator_ColumnPropNameInRow="IdUsuario" msprop:Generator_ColumnPropNameInTable="IdUsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnIdUsuario" msprop:Generator_UserColumnName="IdUsuario" type="xs:int" />
-              <xs:element name="HorasUsuario" msprop:Generator_ColumnPropNameInRow="HorasUsuario" msprop:Generator_ColumnPropNameInTable="HorasUsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnHorasUsuario" msprop:Generator_UserColumnName="HorasUsuario" type="xs:int" />
-              <xs:element name="RolUsuario" msprop:Generator_ColumnPropNameInRow="RolUsuario" msprop:Generator_ColumnPropNameInTable="RolUsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnRolUsuario" msprop:Generator_UserColumnName="RolUsuario">
+              <xs:element name="CodigoUsuario" msprop:Generator_ColumnPropNameInTable="CodigoUsuarioColumn" msprop:Generator_ColumnPropNameInRow="CodigoUsuario" msprop:Generator_UserColumnName="CodigoUsuario" msprop:Generator_ColumnVarNameInTable="columnCodigoUsuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HorasUsuario" msprop:Generator_ColumnPropNameInTable="HorasUsuarioColumn" msprop:Generator_ColumnPropNameInRow="HorasUsuario" msprop:Generator_UserColumnName="HorasUsuario" msprop:Generator_ColumnVarNameInTable="columnHorasUsuario" type="xs:int" />
+              <xs:element name="RolUsuario" msprop:Generator_ColumnPropNameInTable="RolUsuarioColumn" msprop:Generator_ColumnPropNameInRow="RolUsuario" msprop:Generator_UserColumnName="RolUsuario" msprop:Generator_ColumnVarNameInTable="columnRolUsuario">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -81,7 +87,7 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:CUsuario" />
-      <xs:field xpath="mstns:IdUsuario" />
+      <xs:field xpath="mstns:CodigoUsuario" />
     </xs:unique>
   </xs:element>
 </xs:schema>
