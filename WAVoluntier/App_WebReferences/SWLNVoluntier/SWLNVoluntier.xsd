@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:complexType name="TupleOfEEmpleadoEMensajeErroraI91Yjnm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EEmpleado" Namespace="http://schemas.datacontract.org/2004/07/" />
+          <GenericParameter Name="EMensajeError" Namespace="http://schemas.datacontract.org/2004/07/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" name="m_Item1" nillable="true" type="q1:EEmpleado" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" name="m_Item2" nillable="true" type="q2:EMensajeError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfEEmpleadoEMensajeErroraI91Yjnm" nillable="true" type="tns:TupleOfEEmpleadoEMensajeErroraI91Yjnm" />
+  <xs:complexType name="TupleOfbase64BinaryEMensajeErrorlLTIrbuF">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="base64Binary" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="EMensajeError" Namespace="http://schemas.datacontract.org/2004/07/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="m_Item1" nillable="true" type="xs:base64Binary" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" name="m_Item2" nillable="true" type="q3:EMensajeError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfbase64BinaryEMensajeErrorlLTIrbuF" nillable="true" type="tns:TupleOfbase64BinaryEMensajeErrorlLTIrbuF" />
+</xs:schema>

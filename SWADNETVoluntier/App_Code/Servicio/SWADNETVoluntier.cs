@@ -10,12 +10,12 @@ using System.Text;
 public class SWADNETVoluntier : ISWADNETVoluntier
 {
     #region Tabla : CCampania
-    public ECCampania Obtener_CCampania_O_Sede(string sedeCampania)
+    public List<ECCampania> Obtener_CCampania_O_Sede(string sedeCampania)
     {
         CCCampania cCCampania = new CCCampania();
-        ECCampania eCCampania = new ECCampania();
-        eCCampania = cCCampania.Obtener_CCampania_O_Sede(sedeCampania);
-        return eCCampania;
+        List<ECCampania> lstCCampania = new List<ECCampania>();
+        lstCCampania = cCCampania.Obtener_CCampania_O_Sede(sedeCampania);
+        return lstCCampania;
 
     }
 
@@ -25,6 +25,14 @@ public class SWADNETVoluntier : ISWADNETVoluntier
         List<ECCampania> lstCCampania = new List<ECCampania>();
         lstCCampania = cCCampania.Obtener_CCampania_O();
         return lstCCampania;
+    }
+
+    public ECCampania Obtener_CCampania_O_IdCampania(int idCampania)
+    {
+        CCCampania cCCampania = new CCCampania();
+        ECCampania eCCampania = new ECCampania();
+        eCCampania = cCCampania.Obtener_CCampania_O_IdCampania(idCampania);
+        return eCCampania;
     }
 
     public void Insertar_CCampania_I(ECCampania eCCampania)
@@ -39,18 +47,85 @@ public class SWADNETVoluntier : ISWADNETVoluntier
         cCCampania.Actualizar_CCampania_A(eCCampania);
     }
 
-    public void Actualizar_CCampania_A_Estado(string idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania)
     {
         CCCampania cCCampania = new CCCampania();
         cCCampania.Actualizar_CCampania_A_Estado(idCampania);
     }
 
-    public void Actualizar_CCampania_A_Estado_Cancelado(string idCampania)
+    public void Actualizar_CCampania_A_Estado_Cancelado(int idCampania)
     {
         CCCampania cCCampania = new CCCampania();
         cCCampania.Actualizar_CCampania_A_Estado_Cancelado(idCampania);
     }
     #endregion
+    #region Tabla: CCParticipacion
+    public List<ECParticipacion> Obtener_CParticipacion_O()
+    {
+        CCParticipacion cCParticipacion = new CCParticipacion();
+        List<ECParticipacion> lstCCParticipacion = new List<ECParticipacion>();
+        lstCCParticipacion = cCParticipacion.Obtener_CParticipacion_O();
+        return lstCCParticipacion;
+    }
+
+    public List<ECParticipacion> Obtener_CParticipacion_O_PorUsuario(string idUsuario)
+    {
+        CCParticipacion cCParticipacion = new CCParticipacion();
+        List<ECParticipacion> lstCCParticipacion = new List<ECParticipacion>();
+        lstCCParticipacion = cCParticipacion.Obtener_CParticipacion_O_PorUsuario(idUsuario);
+        return lstCCParticipacion;
+    }
+
+    public List<ECParticipacion> Obtener_CParticipacion_O_PorCampania(int idCampania)
+    {
+        CCParticipacion cCParticipacion = new CCParticipacion();
+        List<ECParticipacion> lstCCParticipacion = new List<ECParticipacion>();
+        lstCCParticipacion = cCParticipacion.Obtener_CParticipacion_O_PorCampania(idCampania);
+        return lstCCParticipacion;
+    }
+
+    public void Insertar_CParticipacion_I(ECParticipacion eCCParticipacion)
+    {
+        CCParticipacion cCParticipacion = new CCParticipacion();
+        cCParticipacion.Insertar_CParticipacion_I(eCCParticipacion);
+    }
+
+    public void Actualizar_CParticipacion_A(ECParticipacion eCCParticipacion)
+    {
+        CCParticipacion cCParticipacion = new CCParticipacion();
+        cCParticipacion.Actualizar_CParticipacion_A(eCCParticipacion);
+    }
+    #endregion
+    #region Tabla: CCSolicitudParticipacion
+    public List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Campania(int idCampania)
+    {
+        CCSolicitudParticipacion cCSolicitudParticipacion = new CCSolicitudParticipacion();
+        List<ECSolicitudParticipacion> lstCSolicitudParticipacion = new List<ECSolicitudParticipacion>();
+        lstCSolicitudParticipacion = cCSolicitudParticipacion.Obtener_CSolicitudes_O_Campania(idCampania);
+        return lstCSolicitudParticipacion;
+    }
+
+    public List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Usuario(string idUsuario)
+    {
+        CCSolicitudParticipacion cCSolicitudParticipacion = new CCSolicitudParticipacion();
+        List<ECSolicitudParticipacion> lstCSolicitudParticipacion = new List<ECSolicitudParticipacion>();
+        lstCSolicitudParticipacion = cCSolicitudParticipacion.Obtener_CSolicitudes_O_Usuario(idUsuario);
+        return lstCSolicitudParticipacion;
+    }
+
+    public void Insertar_CSolicitud_I(ECSolicitudParticipacion eCSolicitudParticipacion)
+    {
+        CCSolicitudParticipacion cCSolicitudParticipacion = new CCSolicitudParticipacion();
+        cCSolicitudParticipacion.Insertar_CSolicitud_I(eCSolicitudParticipacion);
+    }
+
+    public void Actualizar_CSolicitud_A_Estado(int idSolicitud, string nuevoEstado)
+    {
+        CCSolicitudParticipacion cCSolicitudParticipacion = new CCSolicitudParticipacion();
+        cCSolicitudParticipacion.Actualizar_CSolicitud_A_Estado(idSolicitud, nuevoEstado);
+    }
+    #endregion
+
     #region Tabla : CUsuario
     public ECUsuario Obtener_CUsuario_O_Codigo(string codigoUsuario)
     {
@@ -118,22 +193,4 @@ public class SWADNETVoluntier : ISWADNETVoluntier
         sedeUsuarioNetvalle);
     }
     #endregion
-    //public string GetData(int value)
-    //{
-    //	return string.Format("You entered: {0}", value);
-    //}
-
-    //public CompositeType GetDataUsingDataContract(CompositeType composite)
-    //{
-    //	if (composite == null)
-    //	{
-    //		throw new ArgumentNullException("composite");
-    //	}
-    //	if (composite.BoolValue)
-    //	{
-    //		composite.StringValue += "Suffix";
-    //	}else
-    //		composite.StringValue += "No Suffix";
-    //	return composite;
-    //}
 }

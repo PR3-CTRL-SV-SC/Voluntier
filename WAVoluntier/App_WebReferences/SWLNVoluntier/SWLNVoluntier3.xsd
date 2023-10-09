@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:import schemaLocation="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="Obtener_CCampania_O">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CCampania_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CCampania_OResult" nillable="true" type="q1:ArrayOfECCampania" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CCampania_O_Sede">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CCampania_O_SedeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CCampania_O_SedeResult" nillable="true" type="q2:ArrayOfECCampania" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CCampania_O_IdCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCampania" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CCampania_O_IdCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CCampania_O_IdCampaniaResult" nillable="true" type="q3:ECCampania" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CCampania_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eCCampania" nillable="true" type="q4:ECCampania" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CCampania_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CCampania_A">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eCCampania" nillable="true" type="q5:ECCampania" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CCampania_AResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CCampania_A_Estado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCampania" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CCampania_A_EstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CCampania_A_Estado_Cancelado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCampania" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CCampania_A_Estado_CanceladoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CParticipacion_O">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CParticipacion_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CParticipacion_OResult" nillable="true" type="q6:ArrayOfECParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CParticipacion_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eCParticipacion" nillable="true" type="q7:ECParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CParticipacion_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CParticipacion_A">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eCParticipacion" nillable="true" type="q8:ECParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CParticipacion_AResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CParticipacion_O_PorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CParticipacion_O_PorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CParticipacion_O_PorUsuarioResult" nillable="true" type="q9:ArrayOfECParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CParticipacion_O_PorCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCampania" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CParticipacion_O_PorCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CParticipacion_O_PorCampaniaResult" nillable="true" type="q10:ArrayOfECParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CSolicitudes_O_Campania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCampania" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CSolicitudes_O_CampaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CSolicitudes_O_CampaniaResult" nillable="true" type="q11:ArrayOfECSolicitudParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CSolicitudes_O_Usuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CSolicitudes_O_UsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CSolicitudes_O_UsuarioResult" nillable="true" type="q12:ArrayOfECSolicitudParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CSolicitud_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eCSolicitudParticipacion" nillable="true" type="q13:ECSolicitudParticipacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CSolicitud_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CSolicitud_A_Estado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSolicitud" type="xs:int" />
+        <xs:element minOccurs="0" name="nuevoEstado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CSolicitud_A_EstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuario_O_Codigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuario_O_CodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CUsuario_O_CodigoResult" nillable="true" type="q14:ECUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuarios_O_Top_Horas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sedeUsuarioNetvalle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuarios_O_Top_HorasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CUsuarios_O_Top_HorasResult" nillable="true" type="q15:ArrayOfECUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuarios_O_Sede">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sedeUsuarioNetvalle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuarios_O_SedeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CUsuarios_O_SedeResult" nillable="true" type="q16:ArrayOfECUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CUsuario_A_Horas_Codigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="horas" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_CUsuario_A_Horas_CodigoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuarioNetvalle_O_Codigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoUsuarioNetvalle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CUsuarioNetvalle_O_CodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_CUsuarioNetvalle_O_CodigoResult" nillable="true" type="q17:ECUsuarioNetvalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CUsuarioNetvalle_y_CUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rolUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoUsuarioNetvalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombresUsuarioNetvalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidosUsuarioNetvalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cargoUsuarioNetvalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tarjetaUsuarioNetvalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sedeUsuarioNetvalle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_CUsuarioNetvalle_y_CUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EUsuarioCompleja_O_Sede">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EUsuarioCompleja_O_SedeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_EUsuarioCompleja_O_SedeResult" nillable="true" type="q18:ArrayOfEUsuarioCompleja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CUsuarioNetvalle_CUsuario_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tarjeta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CUsuarioNetvalle_CUsuario_IResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="CUsuarioNetvalle_CUsuario_IResult" nillable="true" type="q19:ECUsuarioNetvalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Descifrado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescifradoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescifradoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cifrar_Cadena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TextoACifrar" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cifrar_CadenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cifrar_CadenaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Empleado_Id_Emp_SedeAcademica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEmp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Empleado_Id_Emp_SedeAcademicaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Obtener_Empleado_Id_Emp_SedeAcademicaResult" nillable="true" type="q20:TupleOfEEmpleadoEMensajeErroraI91Yjnm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EmpleadoFotografia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEmp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EmpleadoFotografiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Obtener_EmpleadoFotografiaResult" nillable="true" type="q21:TupleOfbase64BinaryEMensajeErrorlLTIrbuF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

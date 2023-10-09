@@ -30,6 +30,8 @@ public class ECCampania
     public DateTime FechaRegistroCampania { get; set; }
     [DataMember]
     public DateTime FechaModificacionCampania { get; set; }
+    [DataMember]
+    public string IdUsuarioCreador { get; set; }
     
     #endregion
 
@@ -43,7 +45,7 @@ public class ECCampania
         SedeCampania = string.Empty;
         FechaRegistroCampania = DateTime.MinValue;
         FechaModificacionCampania = DateTime.MinValue;
-        
+        IdUsuarioCreador = string.Empty;        
     }
 
 

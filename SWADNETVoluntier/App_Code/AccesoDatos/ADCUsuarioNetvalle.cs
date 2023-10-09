@@ -113,7 +113,7 @@ public class ADCUsuarioNetvalle
 
     #region Insertar_CUsuarioNetvalle_y_CUsuario
     public void Insertar_CUsuarioNetvalle_y_CUsuario(
-        string roleUsuario,
+        string rolUsuario,
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
@@ -125,8 +125,8 @@ public class ADCUsuarioNetvalle
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
-            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CUsuarioNetvalle_RUsuaro_I");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "roleUsuario", DbType.String, roleUsuario);
+            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CUsuarioNetvalle_CUsuaro_I");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "rolUsuario", DbType.String, rolUsuario);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "codigoUsuarioNetvalle", DbType.String, codigoUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "nombresUsuarioNetvalle", DbType.String, nombresUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "apellidosUsuarioNetvalle", DbType.String, apellidosUsuarioNetvalle);

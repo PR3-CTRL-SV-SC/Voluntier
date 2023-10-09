@@ -14,7 +14,7 @@ public class ECUsuarioNetvalle
     [DataMember]
     public string CodigoUsuarioNetvalle { get; set; }
     [DataMember]
-    public string NombresUsuarioNetvalle { get; set; }
+    public string NombreUsuarioNetvalle { get; set; }
     [DataMember]
     public string ApellidosUsuarioNetvalle { get; set; }
     [DataMember]
@@ -33,7 +33,7 @@ public class ECUsuarioNetvalle
     public ECUsuarioNetvalle()
     {
         CodigoUsuarioNetvalle = string.Empty;
-        NombresUsuarioNetvalle = string.Empty;
+        NombreUsuarioNetvalle = string.Empty;
         ApellidosUsuarioNetvalle = string.Empty;
         CargoUsuarioNetvalle = string.Empty;
         TarjetaUsuarioNetvalle = string.Empty;

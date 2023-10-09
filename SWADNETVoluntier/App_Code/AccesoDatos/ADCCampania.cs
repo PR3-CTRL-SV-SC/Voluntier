@@ -62,6 +62,33 @@ public class ADCCampania
 
 
     /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="idCampania"></param>
+    /// <returns></returns>
+    /// <exception cref="FaultException{EDefecto}"></exception>
+    public DTOCCampania Obtener_CCampania_O_IdCampania(int idCampania)
+    {
+
+        DTOCCampania dTOCCampania = new DTOCCampania();
+        try
+        {
+            Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
+            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_O_IdCampania");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, idCampania);
+            BDSWADNETVoluntier.LoadDataSet(dbCommand, dTOCCampania, "CCampania");
+        }
+
+        catch (SqlException SQLEx)
+        {
+            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Obtener_CCampania_O_IdCampania", SQLEx.ToString(), SQLEx.Message);
+            throw new FaultException<EDefecto>(eDefectoAD);
+        }
+        return dTOCCampania;
+    }
+
+
+    /// <summary>
     /// Metodo para insertar una Campaña
     /// </summary>
     /// <param name="eCCampania"></param>
@@ -77,8 +104,9 @@ public class ADCCampania
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaFinCampania", DbType.DateTime, eCCampania.FechaFinCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "sedeCampania", DbType.String, eCCampania.SedeCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, EPAEstaticos.EstadoActiva);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaRegistroCampania", DbType.String, EPAEstaticos.FechaRegistro);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.DateTime, EPAEstaticos.FechaModificacion);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaRegistroCampania", DbType.DateTime, EPAEstaticos.FechaRegistro);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioCreador", DbType.String, eCCampania.IdUsuarioCreador);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }
 
@@ -121,18 +149,17 @@ public class ADCCampania
     /// Actualiza el estado de una campaña a 'FINALIAZADA'
     /// </summary>
     /// <param name="eCCampania"></param>
-    public void Actualizar_CCampania_A_Estado(string idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_A_Estado");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.String, idCampania);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, idCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampaniaF", DbType.String, EPAEstaticos.EstadoFinalizada);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }
-
         catch (SqlException SQLEx)
         {
             EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Actualizar_CCampania_A_Estado", SQLEx.ToString(), SQLEx.Message);
@@ -144,13 +171,13 @@ public class ADCCampania
     /// Actualizar el estado de una campaña a cancelado
     /// </summary>
     /// <param name="nombreCampania"></param>
-    public void Actualizar_CCampania_A_Estado_Cancelado(string idCampania)
+    public void Actualizar_CCampania_A_Estado_Cancelado(int idCampania)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_A_Estado_Cancelado");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.String, idCampania);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, idCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, EPAEstaticos.EstadoCancelada);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
@@ -165,7 +192,6 @@ public class ADCCampania
 
 
     }
-
 
     /// <summary>
     /// Obtener campaña activa por sede

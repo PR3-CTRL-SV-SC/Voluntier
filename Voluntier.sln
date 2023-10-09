@@ -26,6 +26,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADNETVoluntier", "SWADNET
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNVoluntier", "SWLNVoluntier\", "{2EBFDFD7-D10E-4893-AB62-A50821AC13D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2730B27-06E2-42BA-BD7C-36393DF7B606} = {A2730B27-06E2-42BA-BD7C-36393DF7B606}
+	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51956"
@@ -48,6 +51,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNVoluntier", "SWLNVolunt
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WAVoluntier", "WAVoluntier\", "{00F24A24-F142-453E-8FE8-5BEFD4D0ACFA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2EBFDFD7-D10E-4893-AB62-A50821AC13D3} = {2EBFDFD7-D10E-4893-AB62-A50821AC13D3}
+	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51957"

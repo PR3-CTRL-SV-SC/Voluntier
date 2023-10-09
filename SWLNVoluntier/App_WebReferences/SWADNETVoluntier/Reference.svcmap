@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ea407b02-2153-4965-8342-752468cc1813" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51939/SWADNETVoluntier.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SWADNETVoluntier.xsd" MetadataType="Schema" ID="028f80e0-36f9-4317-a7ae-99c72c84cd2e" SourceId="1" SourceUrl="http://localhost:51939/SWADNETVoluntier.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWADNETVoluntier1.xsd" MetadataType="Schema" ID="eec8ac41-3780-4d74-96fe-25943caa6d17" SourceId="1" SourceUrl="http://localhost:51939/SWADNETVoluntier.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWADNETVoluntier.disco" MetadataType="Disco" ID="4585e63a-e5ce-4277-b99f-fe89981af6cf" SourceId="1" SourceUrl="http://localhost:51939/SWADNETVoluntier.svc?disco" />
+    <MetadataFile FileName="SWADNETVoluntier.wsdl" MetadataType="Wsdl" ID="db6920dc-e32f-4b51-ad96-7117b0efa9a2" SourceId="1" SourceUrl="http://localhost:51939/SWADNETVoluntier.svc?wsdl" />
+    <MetadataFile FileName="SWADNETVoluntier2.xsd" MetadataType="Schema" ID="3409f3b2-c063-4a50-a126-1ff29c233964" SourceId="1" SourceUrl="http://localhost:51939/SWADNETVoluntier.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -65,6 +65,30 @@ public class ADCSolicitudParticipacion
     }
 
     /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="idUsuario"></param>
+    /// <returns></returns>
+    /// <exception cref="FaultException{EDefecto}"></exception>
+    public DTOCSolicitudParticipacion Obtener_CSolicitudes_O_Usuario(string idUsuario)
+    {
+        DTOCSolicitudParticipacion dtoCSolicitud = new DTOCSolicitudParticipacion();
+        try
+        {
+            Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
+            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("Obtener_CSolicitudes_O_Usuario");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuario", DbType.String, idUsuario);
+            BDSWADNETVoluntier.LoadDataSet(dbCommand, dtoCSolicitud, "CSolicitudParticipacion");
+        }
+        catch (SqlException SQLEx)
+        {
+            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Obtener_CSolicitudes_O_Usuario", SQLEx.ToString(), SQLEx.Message);
+            throw new FaultException<EDefecto>(eDefectoAD);
+        }
+        return dtoCSolicitud;
+    }
+
+    /// <summary>
     /// Insertar una nueva solicitud de participación
     /// </summary>
     /// <param name="nuevaSolicitud">La nueva solicitud de participación</param>
@@ -74,7 +98,7 @@ public class ADCSolicitudParticipacion
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CSolicitud_I");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioSolicitud", DbType.Int32, nuevaSolicitud.IdUsuarioSolicitud);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioSolicitud", DbType.String, nuevaSolicitud.IdUsuarioSolicitud);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampaniaSolicitud", DbType.Int32, nuevaSolicitud.IdCampaniaSolicitud);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoSolicitud", DbType.String, nuevaSolicitud.EstadoSolicitud);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
@@ -98,7 +122,6 @@ public class ADCSolicitudParticipacion
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CSolicidud_A_Estado");
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idSolicitud", DbType.Int32, idSolicitud);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionSolicitud", DbType.DateTime, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoSolicitud", DbType.String, nuevoEstado);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }

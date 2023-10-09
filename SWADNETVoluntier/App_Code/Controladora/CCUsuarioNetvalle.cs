@@ -24,7 +24,7 @@ public class CCUsuarioNetvalle
         foreach (DTOCUsuarioNetvalle.CUsuarioNetvalleRow drCUsuarioNetvalle in dtoCUsuarioNetvalle.CUsuarioNetvalle.Rows)
         {
             eCUsuarioNetvalle = new ECUsuarioNetvalle();
-            eCUsuarioNetvalle.NombresUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
+            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.ApellidosUsuarioNetvalle = drCUsuarioNetvalle.ApellidosUsuarioNetvalle.ToString().TrimEnd();
         }
         return eCUsuarioNetvalle;
@@ -38,7 +38,7 @@ public class CCUsuarioNetvalle
         {
             eCUsuarioNetvalle = new ECUsuarioNetvalle();
             eCUsuarioNetvalle.CodigoUsuarioNetvalle = drCUsuarioNetvalle.CodigoUsuarioNetvalle.ToString().TrimEnd();
-            eCUsuarioNetvalle.NombresUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
+            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.ApellidosUsuarioNetvalle = drCUsuarioNetvalle.ApellidosUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.CargoUsuarioNetvalle = drCUsuarioNetvalle.CargoUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.TarjetaUsuarioNetvalle = drCUsuarioNetvalle.TarjetaUsuarioNetvalle.ToString().TrimEnd();
@@ -55,7 +55,7 @@ public class CCUsuarioNetvalle
         {
             eCUsuarioNetvalle = new ECUsuarioNetvalle();
             eCUsuarioNetvalle.CodigoUsuarioNetvalle = drCUsuarioNetvalle.CodigoUsuarioNetvalle.ToString().TrimEnd();
-            eCUsuarioNetvalle.NombresUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
+            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.ApellidosUsuarioNetvalle = drCUsuarioNetvalle.ApellidosUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.CargoUsuarioNetvalle = drCUsuarioNetvalle.CargoUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.TarjetaUsuarioNetvalle = drCUsuarioNetvalle.TarjetaUsuarioNetvalle.ToString().TrimEnd();

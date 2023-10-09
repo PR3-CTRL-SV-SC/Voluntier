@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="SWADNETVoluntier" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51939/SWADNETVoluntier.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51939/SWADNETVoluntier.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51939/SWADNETVoluntier.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CCampania_O_Sede_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CCampania_O_Sede" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CCampania_O_Sede_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CCampania_O_SedeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CCampania_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CCampania_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CCampania_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CCampania_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CCampania_O_IdCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CCampania_O_IdCampania" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CCampania_O_IdCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CCampania_O_IdCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CCampania_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CCampania_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CCampania_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CCampania_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CCampania_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CCampania_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CCampania_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CCampania_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CCampania_A_Estado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CCampania_A_Estado" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CCampania_A_Estado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CCampania_A_EstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CCampania_A_Estado_Cancelado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CCampania_A_Estado_Cancelado" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CCampania_A_Estado_Cancelado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CCampania_A_Estado_CanceladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CParticipacion_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CParticipacion_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CParticipacion_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CParticipacion_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CParticipacion_O_PorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CParticipacion_O_PorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CParticipacion_O_PorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CParticipacion_O_PorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CParticipacion_O_PorCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CParticipacion_O_PorCampania" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CParticipacion_O_PorCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CParticipacion_O_PorCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CParticipacion_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CParticipacion_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CParticipacion_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CParticipacion_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CParticipacion_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CParticipacion_A" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CParticipacion_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CParticipacion_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CSolicitudes_O_Campania_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CSolicitudes_O_Campania" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CSolicitudes_O_Campania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CSolicitudes_O_CampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CSolicitudes_O_Usuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CSolicitudes_O_Usuario" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CSolicitudes_O_Usuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CSolicitudes_O_UsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CSolicitud_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CSolicitud_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CSolicitud_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CSolicitud_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CSolicitud_A_Estado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CSolicitud_A_Estado" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CSolicitud_A_Estado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CSolicitud_A_EstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuario_O_Codigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuario_O_Codigo" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuario_O_Codigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuario_O_CodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarios_O_Top_Horas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarios_O_Top_Horas" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarios_O_Top_Horas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarios_O_Top_HorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarios_O_Sede_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarios_O_Sede" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarios_O_Sede_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarios_O_SedeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CUsuario_A_Horas_Codigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CUsuario_A_Horas_Codigo" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Actualizar_CUsuario_A_Horas_Codigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_CUsuario_A_Horas_CodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarioNetvalle_O_Top_Sede_CodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Codigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarioNetvalle_O_Codigo" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Codigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarioNetvalle_O_CodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Tarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarioNetvalle_O_Tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Tarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CUsuarioNetvalle_O_TarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CUsuarioNetvalle_y_CUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CUsuarioNetvalle_y_CUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETVoluntier_Insertar_CUsuarioNetvalle_y_CUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_CUsuarioNetvalle_y_CUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISWADNETVoluntier">
+    <wsdl:operation name="Obtener_CCampania_O_Sede">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O_Sede" message="tns:ISWADNETVoluntier_Obtener_CCampania_O_Sede_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O_SedeResponse" message="tns:ISWADNETVoluntier_Obtener_CCampania_O_Sede_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CCampania_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O" message="tns:ISWADNETVoluntier_Obtener_CCampania_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_OResponse" message="tns:ISWADNETVoluntier_Obtener_CCampania_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CCampania_O_IdCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O_IdCampania" message="tns:ISWADNETVoluntier_Obtener_CCampania_O_IdCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O_IdCampaniaResponse" message="tns:ISWADNETVoluntier_Obtener_CCampania_O_IdCampania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CCampania_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CCampania_I" message="tns:ISWADNETVoluntier_Insertar_CCampania_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CCampania_IResponse" message="tns:ISWADNETVoluntier_Insertar_CCampania_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CCampania_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A" message="tns:ISWADNETVoluntier_Actualizar_CCampania_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_AResponse" message="tns:ISWADNETVoluntier_Actualizar_CCampania_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CCampania_A_Estado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A_Estado" message="tns:ISWADNETVoluntier_Actualizar_CCampania_A_Estado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A_EstadoResponse" message="tns:ISWADNETVoluntier_Actualizar_CCampania_A_Estado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CCampania_A_Estado_Cancelado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A_Estado_Cancelado" message="tns:ISWADNETVoluntier_Actualizar_CCampania_A_Estado_Cancelado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A_Estado_CanceladoResponse" message="tns:ISWADNETVoluntier_Actualizar_CCampania_A_Estado_Cancelado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CParticipacion_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O" message="tns:ISWADNETVoluntier_Obtener_CParticipacion_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_OResponse" message="tns:ISWADNETVoluntier_Obtener_CParticipacion_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CParticipacion_O_PorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O_PorUsuario" message="tns:ISWADNETVoluntier_Obtener_CParticipacion_O_PorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O_PorUsuarioResponse" message="tns:ISWADNETVoluntier_Obtener_CParticipacion_O_PorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CParticipacion_O_PorCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O_PorCampania" message="tns:ISWADNETVoluntier_Obtener_CParticipacion_O_PorCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O_PorCampaniaResponse" message="tns:ISWADNETVoluntier_Obtener_CParticipacion_O_PorCampania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CParticipacion_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CParticipacion_I" message="tns:ISWADNETVoluntier_Insertar_CParticipacion_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CParticipacion_IResponse" message="tns:ISWADNETVoluntier_Insertar_CParticipacion_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CParticipacion_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CParticipacion_A" message="tns:ISWADNETVoluntier_Actualizar_CParticipacion_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CParticipacion_AResponse" message="tns:ISWADNETVoluntier_Actualizar_CParticipacion_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CSolicitudes_O_Campania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CSolicitudes_O_Campania" message="tns:ISWADNETVoluntier_Obtener_CSolicitudes_O_Campania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CSolicitudes_O_CampaniaResponse" message="tns:ISWADNETVoluntier_Obtener_CSolicitudes_O_Campania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CSolicitudes_O_Usuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CSolicitudes_O_Usuario" message="tns:ISWADNETVoluntier_Obtener_CSolicitudes_O_Usuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CSolicitudes_O_UsuarioResponse" message="tns:ISWADNETVoluntier_Obtener_CSolicitudes_O_Usuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CSolicitud_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CSolicitud_I" message="tns:ISWADNETVoluntier_Insertar_CSolicitud_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CSolicitud_IResponse" message="tns:ISWADNETVoluntier_Insertar_CSolicitud_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CSolicitud_A_Estado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CSolicitud_A_Estado" message="tns:ISWADNETVoluntier_Actualizar_CSolicitud_A_Estado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CSolicitud_A_EstadoResponse" message="tns:ISWADNETVoluntier_Actualizar_CSolicitud_A_Estado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuario_O_Codigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuario_O_Codigo" message="tns:ISWADNETVoluntier_Obtener_CUsuario_O_Codigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuario_O_CodigoResponse" message="tns:ISWADNETVoluntier_Obtener_CUsuario_O_Codigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarios_O_Top_Horas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarios_O_Top_Horas" message="tns:ISWADNETVoluntier_Obtener_CUsuarios_O_Top_Horas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarios_O_Top_HorasResponse" message="tns:ISWADNETVoluntier_Obtener_CUsuarios_O_Top_Horas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarios_O_Sede">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarios_O_Sede" message="tns:ISWADNETVoluntier_Obtener_CUsuarios_O_Sede_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarios_O_SedeResponse" message="tns:ISWADNETVoluntier_Obtener_CUsuarios_O_Sede_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CUsuario_A_Horas_Codigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CUsuario_A_Horas_Codigo" message="tns:ISWADNETVoluntier_Actualizar_CUsuario_A_Horas_Codigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Actualizar_CUsuario_A_Horas_CodigoResponse" message="tns:ISWADNETVoluntier_Actualizar_CUsuario_A_Horas_Codigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo" message="tns:ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Top_Sede_CodigoResponse" message="tns:ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarioNetvalle_O_Codigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Codigo" message="tns:ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Codigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_CodigoResponse" message="tns:ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Codigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarioNetvalle_O_Tarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Tarjeta" message="tns:ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Tarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_TarjetaResponse" message="tns:ISWADNETVoluntier_Obtener_CUsuarioNetvalle_O_Tarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CUsuarioNetvalle_y_CUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CUsuarioNetvalle_y_CUsuario" message="tns:ISWADNETVoluntier_Insertar_CUsuarioNetvalle_y_CUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETVoluntier/Insertar_CUsuarioNetvalle_y_CUsuarioResponse" message="tns:ISWADNETVoluntier_Insertar_CUsuarioNetvalle_y_CUsuario_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISWADNETVoluntier" type="tns:ISWADNETVoluntier">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener_CCampania_O_Sede">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O_Sede" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CCampania_O">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CCampania_O_IdCampania">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CCampania_O_IdCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CCampania_I">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Insertar_CCampania_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CCampania_A">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CCampania_A_Estado">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A_Estado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CCampania_A_Estado_Cancelado">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Actualizar_CCampania_A_Estado_Cancelado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CParticipacion_O">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CParticipacion_O_PorUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O_PorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CParticipacion_O_PorCampania">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CParticipacion_O_PorCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CParticipacion_I">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Insertar_CParticipacion_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CParticipacion_A">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Actualizar_CParticipacion_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CSolicitudes_O_Campania">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CSolicitudes_O_Campania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CSolicitudes_O_Usuario">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CSolicitudes_O_Usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CSolicitud_I">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Insertar_CSolicitud_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CSolicitud_A_Estado">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Actualizar_CSolicitud_A_Estado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuario_O_Codigo">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuario_O_Codigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarios_O_Top_Horas">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarios_O_Top_Horas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarios_O_Sede">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarios_O_Sede" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_CUsuario_A_Horas_Codigo">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Actualizar_CUsuario_A_Horas_Codigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarioNetvalle_O_Codigo">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Codigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CUsuarioNetvalle_O_Tarjeta">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Obtener_CUsuarioNetvalle_O_Tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_CUsuarioNetvalle_y_CUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETVoluntier/Insertar_CUsuarioNetvalle_y_CUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SWADNETVoluntier">
+    <wsdl:port name="BasicHttpBinding_ISWADNETVoluntier" binding="tns:BasicHttpBinding_ISWADNETVoluntier">
+      <soap:address location="http://localhost:51939/SWADNETVoluntier.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

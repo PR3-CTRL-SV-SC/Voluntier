@@ -67,14 +67,14 @@ public class ADCParticipacion
     /// Metodo para insertar una Campaña
     /// </summary>
     /// <param name="eCParticipacion"></param>
-    public void Insertar_CParicipacion_I(ECParticipacion eCParticipacion)
+    public void Insertar_CParticipacion_I(ECParticipacion eCParticipacion)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
-            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_I");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampaniaParticipacion", DbType.DateTime, eCParticipacion.IdCampaniaParticipacion);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioParticipacion", DbType.DateTime, eCParticipacion.IdUsuarioParticipacion);
+            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CParticipacion_I");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampaniaParticipacion", DbType.Int32, eCParticipacion.IdCampaniaParticipacion);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioParticipacion", DbType.String, eCParticipacion.IdUsuarioParticipacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaRegistroParticipacion", DbType.DateTime, EPAEstaticos.FechaRegistro);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionParticipacion", DbType.DateTime, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoParticipacion", DbType.String, eCParticipacion.EstadoParticipacion);
@@ -84,7 +84,7 @@ public class ADCParticipacion
 
         catch (SqlException SQLEx)
         {
-            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Insertar_CParicipacion_I", SQLEx.ToString(), SQLEx.Message);
+            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Insertar_CParticipacion_I", SQLEx.ToString(), SQLEx.Message);
             throw new FaultException<EDefecto>(eDefectoAD);
         }
     }
@@ -99,8 +99,9 @@ public class ADCParticipacion
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CParticipacion_A");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idParticipacion", DbType.Int32, eCParticipacion.IdParticipacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampaniaParticipacion", DbType.Int32, eCParticipacion.IdCampaniaParticipacion);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioParticipacion", DbType.Int32, eCParticipacion.IdUsuarioParticipacion);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioParticipacion", DbType.String, eCParticipacion.IdUsuarioParticipacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionParticipacion", DbType.DateTime, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoParticipacion", DbType.String, eCParticipacion.EstadoParticipacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "horasParticipacion", DbType.Int32, eCParticipacion.HorasParticipacion);
@@ -118,23 +119,42 @@ public class ADCParticipacion
     /// </summary>
     /// <param name="idUsuario">ID del usuario</param>
     /// <returns>Retorna una lista de participaciones del usuario</returns>
-    public DTOCParticipacion Obtener_CParticipacion_PorUsuario(int idUsuario)
+    public DTOCParticipacion Obtener_CParticipacion_O_PorUsuario(string idUsuario)
     {
         DTOCParticipacion dTOCParticipacion = new DTOCParticipacion();
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CParticipacion_PorUsuario");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuario", DbType.Int32, idUsuario);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuario", DbType.String, idUsuario);
             BDSWADNETVoluntier.LoadDataSet(dbCommand, dTOCParticipacion, "CParticipacion");
         }
         catch (SqlException SQLEx)
         {
-            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Obtener_CParticipacion_PorUsuario", SQLEx.ToString(), SQLEx.Message);
+            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Obtener_CParticipacion_O_PorUsuario", SQLEx.ToString(), SQLEx.Message);
             throw new FaultException<EDefecto>(eDefectoAD);
         }
         return dTOCParticipacion;
     }
+
+    public DTOCParticipacion Obtener_CParticipacion_O_PorCampania(int idCampania)
+    {
+        DTOCParticipacion dTOCParticipacion = new DTOCParticipacion();
+        try
+        {
+            Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
+            DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CParticipacion_O_PorCampania");
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, idCampania);
+            BDSWADNETVoluntier.LoadDataSet(dbCommand, dTOCParticipacion, "CParticipacion");
+        }
+        catch (SqlException SQLEx)
+        {
+            EDefecto eDefectoAD = ConstruirErrorServicio(TTipoError.BaseDatos, "Obtener_CParticipacion_O_PorCampania", SQLEx.ToString(), SQLEx.Message);
+            throw new FaultException<EDefecto>(eDefectoAD);
+        }
+        return dTOCParticipacion;
+    }
+
 
     #endregion
 

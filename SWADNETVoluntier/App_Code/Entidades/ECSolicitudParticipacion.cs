@@ -13,7 +13,7 @@ public class ECSolicitudParticipacion
     [DataMember]
     public int IdSolicitud { get; set; }
     [DataMember]
-    public int IdUsuarioSolicitud { get; set; }
+    public string IdUsuarioSolicitud { get; set; }
     [DataMember]
     public int IdCampaniaSolicitud { get; set; }
     [DataMember]
@@ -24,7 +24,7 @@ public class ECSolicitudParticipacion
     public ECSolicitudParticipacion()
     {
         IdSolicitud = 0;
-        IdUsuarioSolicitud = 0;
+        IdUsuarioSolicitud = string.Empty;
         IdCampaniaSolicitud = 0;
         EstadoSolicitud = string.Empty;
     }

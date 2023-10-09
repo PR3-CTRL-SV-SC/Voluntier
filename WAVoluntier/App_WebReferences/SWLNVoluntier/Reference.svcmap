@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a7a4f11b-40c5-4755-b0ee-10df39125a8c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51956/SWLNVoluntier.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SWLNVoluntier.xsd" MetadataType="Schema" ID="e32ced67-4368-4254-a152-6478952f085c" SourceId="1" SourceUrl="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd3" />
+    <MetadataFile FileName="SWLNVoluntier1.xsd" MetadataType="Schema" ID="7de20212-2586-4204-a428-d4a86c301582" SourceId="1" SourceUrl="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd2" />
+    <MetadataFile FileName="SWLNVoluntier2.xsd" MetadataType="Schema" ID="c9f76d51-0daf-4fb3-9155-68b017bf53f2" SourceId="1" SourceUrl="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWLNVoluntier3.xsd" MetadataType="Schema" ID="78cf71b2-ccce-4540-a2f8-8b726f707148" SourceId="1" SourceUrl="http://localhost:51956/SWLNVoluntier.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWLNVoluntier.wsdl" MetadataType="Wsdl" ID="27f14c87-991f-4e8f-9628-57842089058c" SourceId="1" SourceUrl="http://localhost:51956/SWLNVoluntier.svc?wsdl" />
+    <MetadataFile FileName="SWLNVoluntier.disco" MetadataType="Disco" ID="af637a1d-2d70-4d99-95db-cf3867042ffb" SourceId="1" SourceUrl="http://localhost:51956/SWLNVoluntier.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
