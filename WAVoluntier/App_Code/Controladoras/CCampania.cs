@@ -28,7 +28,7 @@ public class CCampania : System.Web.UI.Page
     #region LNServicio
 
    
-    public ECCampania Obtener_RCampania_O_IdCampania_CC(int idCampania)
+    public ECCampania Obtener_CCampania_O_IdCampania_CC(int idCampania)
     {
         ECCampania ecCampania = new ECCampania();
         try
@@ -41,8 +41,7 @@ public class CCampania : System.Web.UI.Page
         }
         return ecCampania;
     }
-
-    public List<ECCampania> Obtener_RCampania_O_Sede_CC(string sedeCampania)
+    public List<ECCampania> Obtener_CCampania_O_Sede_CC(string sedeCampania)
     {
         List<ECCampania> lstEcCampania = new List<ECCampania>();
         try
@@ -68,6 +67,7 @@ public class CCampania : System.Web.UI.Page
         }
         return lstEcCampania;
     }
+
     #endregion
 
     #region Registro
@@ -90,47 +90,13 @@ public class CCampania : System.Web.UI.Page
         try
         {
             lnServicio.Actualizar_CCampania_A_Estado_Cancelado(CampaniaEliminar);
-            Context.Response.Redirect("../../WebForm/Administrador/PGestionCampanias.aspx");
+            Context.Response.Redirect("../../WebForm/Administrador/PCampaniasAdmin.aspx");
         }
         catch (FaultException<EDefecto> ex)
         {
             throw ex;
         }
     }
-    //public void Obtener_Organizacion_Ganadora(string nombreCampania, string nombreOrganizacion, string sedeOrganizacion)
-    //{
-    //    try
-    //    {
-    //        eUsuarios = new List<ERUsuario>();
-    //        lnServicio.Actualizar_RCampania_A_Estado(nombreCampania);
-    //        nombreOrganizacion = lnServicio.Obtener_RVoto_O_Organizacion(nombreCampania);
-    //        eUsuarios = lnServicio.Obtener_RUsuarios_O_Sede(sedeOrganizacion).ToList();
-    //        voto = new ERVoto();
-    //        //Session.UserCode            
-    //        foreach (var user in eUsuarios)
-    //        {
-    //            if (double.Parse(user.CreditosUsuario) > 0)
-    //            {
-    //                voto = lnServicio.Obtener_RVoto_O_Codigo_Campania(user.CodigoUsuario, nombreCampania);
-    //                if (voto == null || voto.OrganizacionVoto.Trim() == "")
-    //                {
-    //                    lnServicio.Insertar_RVoto_I(user.CodigoUsuario, nombreCampania, nombreOrganizacion, DateTime.Now, user.CreditosUsuario, EPAEstaticos.EstadoInvalido);
-    //                }
-    //                lnServicio.Actualizar_RVoto_A(user.CodigoUsuario, nombreCampania, nombreOrganizacion, DateTime.Now.Date, user.CreditosUsuario, "");
-    //                lnServicio.Actualizar_RUsuario_A_Creditos_Sede(user.CodigoUsuario);
-    //            }                
-                
-    //        }
-    //        Session["Campania"] = nombreCampania;
-    //        Session["Sede"] = sedeOrganizacion;
-    //        Session["GANADORA"] = nombreOrganizacion;
-    //        Context.Response.Redirect("../../WebForm/Administrador/PResultadoCampania.aspx");
-    //    }
-    //    catch (FaultException<EDefecto> ex)
-    //    {
-    //        throw ex;
-    //    }
-    //}
     #endregion
 
     #endregion
