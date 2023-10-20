@@ -84,10 +84,10 @@ Inherits="PLogin" %>
 <body>
   <div class="container">
     <h1>VOLUNTIER</h1>
+      <asp:Label ID="lblMensaje" runat="server" ForeColor="Red"></asp:Label>
     <form
+      runat="server"
       id="submitForm"
-      <%--action="/login"--%>
-      <%--method="post"--%>
       data-parsley-validate=""
       data-parsley-errors-messages-disabled="true"
       novalidate=""
@@ -100,10 +100,11 @@ Inherits="PLogin" %>
       />
       <div class="form-group required">
         <label for="username">Username / Email</label>
-        <input
+        <asp:TextBox
+          runat="server"
           type="text"
           class="form-control text-lowercase"
-          id="username"
+          ID="txtUsername"
           required=""
           name="username"
           value=""
@@ -126,9 +127,7 @@ Inherits="PLogin" %>
         />
       </div>
       <div class="form-group pt-1">
-        <button onclick="btnIniciar_Click" class="btn btn-primary btn-block" type="submit">
-          Log In
-        </button>
+        <asp:Button runat="server" ID="btnIniciar" OnClick="btnIniciar_Click" class="btn btn-primary btn-block" type="submit"/>
       </div>
     </form>
 

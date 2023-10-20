@@ -49,29 +49,16 @@ public class CSolicitud : System.Web.UI.Page
         return lstEcSolicitud;
     }
     #endregion
-    public void Editar_Solicitud(ECSolicitudParticipacion eCSolicitud)
+    public void Editar_Solicitud(int idSolicitud, string nuevoEstado)
     {
         try
         {
-            lnServicio.Actualizar_CSolicitud_A_Estado(eCSolicitud);
+            lnServicio.Actualizar_CSolicitud_A_Estado(idSolicitud, nuevoEstado);
         }
         catch (FaultException<EDefecto> ex)
         {
             throw ex;
         }
     }
-    public void Eliminar_Solicitud(int idSolicitud)
-    {
-        try
-        {
-            lnServicio.Eliminar_Solicitud(idSolicitud);
-        }
-        catch (FaultException<EDefecto> ex)
-        {
-            throw ex;
-        }
-    }
-
-
-        #endregion
+    #endregion
 }
