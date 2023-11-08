@@ -16,7 +16,6 @@ public class EPAEstaticos
     static public string EstadoInvalido = "IV";
     static public DateTime FechaModificacion = DateTime.Now;
     static public DateTime FechaRegistro = DateTime.Now;
-    static public double DonacionVoto = 0;
 
     public EPAEstaticos()
     {

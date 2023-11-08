@@ -1,0 +1,156 @@
+﻿.field {
+    text-align: center;
+}
+
+legend {
+    text-align: start;
+}
+
+.title {
+    margin-top: 30px;
+    padding: 10px;
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.lblTitle {
+    color: #610828;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: 20px;
+    color: #64072D;
+    cursor: pointer;
+}
+
+.container{
+    width: 90%;
+    margin: 2% auto;
+}
+
+.estado {
+    background-color: #E5E5E4; 
+    color: #64072D;
+    margin: 10px 0px;
+    padding: 10px;
+    transition: background 1s, color 1s;
+}
+
+    .estado:hover {
+        background-color: #64072D;
+        color: white;
+    }
+
+.lblEstado {
+    font-weight: bold;
+}
+
+.tablaDatos {
+    width: 100%;
+    background-color: #64072D;
+    margin-bottom: 10px;
+}
+
+.filaTitulos {
+    background-color: #64072D;
+    color: #FFFFFF;
+    font-weight: bolder;
+    padding: 10px 0px 10px 0px;
+}
+
+.tituloTabla {
+    padding: 5px;
+}
+
+.descripcion {
+    width: 70%;
+    background-color: #FFFFFF;
+    padding: 5px;
+    vertical-align: top;
+}
+
+.lblDescripcion {
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: small;
+}
+
+.fechas {
+    text-align: start;
+    background-color: #FFFFFF;
+    border-left: 3px solid #610828;
+    padding: 5px 0px 5px 5px;
+    vertical-align: top;
+}
+
+.fecha {
+    font-size: small;
+}
+
+.lblNotificacion {
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: small;
+    font-weight: bold;
+}
+
+.tablaSolicitudes {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.tablaSolicitudes tbody tr:hover {
+    transform: scale(1.02);
+    transition: transform 0.1s;
+}
+
+.datosSolicitud:nth-child(odd) {
+    background-color: #E5E5E4;
+    border-bottom: 2px solid #610828;
+}
+
+.datosSolicitud:nth-child(even) {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #610828;
+}
+
+.nombreSolicitud {
+    width: 70%;
+    text-align: start;
+    padding: 15px;
+}
+
+.acciones {
+    width: 30%;
+}
+
+.btnAceptar {
+    width: 45%;
+    padding: 5px;
+    background-color: forestgreen;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}
+
+.btnRechazar {
+    width: 45%;
+    padding: 5px;
+    background-color: #610828;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}

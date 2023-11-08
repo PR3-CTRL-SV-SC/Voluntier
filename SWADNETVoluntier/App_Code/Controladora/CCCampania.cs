@@ -11,6 +11,7 @@ public class CCCampania
     #region Metodos privados
     private ADCCampania adCCampania;
     #endregion
+
     #region Metodos publicos
     public CCCampania()
     {
@@ -109,9 +110,9 @@ public class CCCampania
         adCCampania.Actualizar_CCampania_A(eCCampania);
     }
 
-    public void Actualizar_CCampania_A_Estado(int IdCampania)
+    public void Actualizar_CCampania_A_Estado(int IdCampania, string estadoCampania)
     {
-        adCCampania.Actualizar_CCampania_A_Estado(IdCampania);
+        adCCampania.Actualizar_CCampania_A_Estado(IdCampania, estadoCampania);
     }
 
     public void Actualizar_CCampania_A_Estado_Cancelado(int IdCampania)

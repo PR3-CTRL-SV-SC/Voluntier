@@ -11,15 +11,20 @@
 
     .gridview tr td {
         padding: 5px;
-        text-align: center;
     }
 
-.btnCrear {
+.btnVentanas {
     cursor: pointer;
     background-color: #64072D;
     color: white;
     border: hidden;
     padding: 7px;
+}
+
+.lblNotificacion {
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    font-size: small;
+    font-weight: bold;
 }
 
 .title {
@@ -47,6 +52,7 @@
 }
 
 .contenedorBoton {
+    margin: 10px;
     text-align: center;
 }
 
@@ -55,6 +61,30 @@
     text-align: center;
     color: #64072D;
     margin: 20px 0 5px 0;
+}
+
+.colCampania {
+    width: 55%;
+    text-align: start;
+    font-weight: bold;
+}
+
+.colEstado {
+    width: 15%;
+    text-align: center;
+}
+
+.colOpciones {
+    padding: 10px;
+    text-align: center;
+}
+
+.btnOpciones {
+    height: 25px;
+    background-color: #64072D;
+    color: #FFFFFF;
+    border: 1px solid #64072D;
+    cursor: pointer;
 }
 
 .modal-container-notificacion {
@@ -86,8 +116,8 @@
     padding-top: 10px;
     padding-left: 5px;
     text-align: left;
-    width: 170px;
-    height: 100px;
+    width: 250px;
+    height: 160px;
     max-width: 100%;
     transform: translateY(-200%);
     transition: transform 1s ease;

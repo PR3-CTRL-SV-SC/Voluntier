@@ -155,13 +155,13 @@ public class CControlSV
             }
 
         }
-    }   
+    }
 
-    public void Actualizar_CCampania_A_Estado(int idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania, string nuevoEstado)
     {
         try
         {
-            aSNetControlSV.Actualizar_CCampania_A_Estado(idCampania);
+            aSNetControlSV.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
         }
         catch (EndpointNotFoundException EndPointEx)
         {
@@ -173,7 +173,7 @@ public class CControlSV
             FaultException feaultEx = CommEx as FaultException;
             if (feaultEx == null)
             {
-                aSNetControlSV.Actualizar_CCampania_A_Estado(idCampania);
+                aSNetControlSV.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
             }
             else
             {
@@ -183,7 +183,7 @@ public class CControlSV
             }
 
         }
-    }   
+    }
 
     public void Actualizar_CCampania_A_Estado_Cancelado(int idCampania)
     {
@@ -927,10 +927,6 @@ public class CControlSV
                 return usuarioNetvalle;
             }
         }
-        return usuarioNetvalle;
-
-
-
     }
 
 

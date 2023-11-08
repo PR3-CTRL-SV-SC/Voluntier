@@ -294,11 +294,11 @@ public class LNServicio
         }
     }
 
-    public void Actualizar_CCampania_A_Estado(int idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania, string nuevoEstado)
     {
         try
         {
-            sWLNVoluntier.Actualizar_CCampania_A_Estado(idCampania);
+            sWLNVoluntier.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
         }
         catch (FaultException<EDefecto> ex)
         {
@@ -316,7 +316,7 @@ public class LNServicio
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
                 {
-                    sWLNVoluntierClient.Actualizar_CCampania_A_Estado(idCampania);
+                    sWLNVoluntierClient.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
                 }
             }
             else
@@ -335,7 +335,7 @@ public class LNServicio
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CCampania_A_Estado", ex.Source, ex.Message);
             throw new FaultException<EDefecto>(eDefecto);
         }
-    }   
+    }
 
     public void Actualizar_CCampania_A_Estado_Cancelado(int idCampania)
     {

@@ -9,7 +9,7 @@
             <table style="width: 100%" align="center">
                 <tr>
                     <td>
-                        <fieldset style="width: 100%" align="center">
+                        <fieldset style="width: 98%" align="center">
                             <legend style="text-align: left"></legend>
                             <table width="100%">
                                 <tr id="ContentPlaceHolder1_CURecursosEstudiante_TRMenu">
@@ -22,7 +22,7 @@
                                                 <table cellpadding="0" cellspacing="0" style="border-width: 0;" runat="server">
                                                     <tr class="LBLContenido">
                                                         <td class="LBLContenido">
-                                                            <a href="PVotarOrganizaciones.aspx" class="Opcion">Campañas solidarias                                              
+                                                            <a href="../Usuario/PListaCampanias.aspx" class="Opcion">Campañas disponibles                                              
                                                             <h8 id="H1" runat="server">
                                                                 <b>
                                                                     <font color='red'>- Nuevo</font>
@@ -33,15 +33,14 @@
                                                     </tr>
                                                     <tr class="LBLContenido">
                                                         <td class="LBLContenido">
-                                                            <a href="PListadoGramos.aspx" class="Opcion">Registro de reciclaje                                               
-                                                            <h8 id="notificacionP" runat="server">
+                                                            <a href="../Usuario/PMisCampanias.aspx" class="Opcion">Mis solicitudes                                                
+                                                            <h8 id="H2" runat="server">
                                                                 <b>
                                                                     <font color='red'>- Nuevo</font>
                                                                 </b>
                                                             </h8>
                                                             </a>
                                                         </td>
-
                                                     </tr>
                                                 </table>
                                             </div>

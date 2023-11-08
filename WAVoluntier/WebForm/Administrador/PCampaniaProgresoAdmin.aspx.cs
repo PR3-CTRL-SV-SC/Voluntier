@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWLNVoluntier;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,74 +8,55 @@ using System.Web.UI.WebControls;
 
 public partial class WebForm_Administrador_PCampaniaProgresoAdmin : System.Web.UI.Page
 {
+    SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient();
+    ECCampania eCCampania = new ECCampania();
+    List<ECParticipacion> lstParticipantes = new List<ECParticipacion>();
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        eCCampania = sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(Convert.ToInt32(Session["codCampania"]));
+        lstParticipantes = sWLNVoluntierClient.Obtener_CParticipacion_O_PorCampania(Convert.ToInt32(Session["codCampania"])).ToList();
+
         if (!IsPostBack)
         {
-            // Valores dummy para simular una campaña
-            string titulo = "Título de la Campaña Dummy";
-            string descripcion = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-            DateTime fechaInicio = DateTime.Now.AddDays(7); // Fecha de inicio en una semana
-            DateTime fechaCierre = DateTime.Now.AddDays(30); // Fecha de cierre en 30 días
-
-            // Asigna los valores a los controles en la vista
-            lblTitulo.Text = titulo;
-            lblDescripcion.Text = descripcion;
-            lblFechas.Text = "Fecha de Inicio: " + fechaInicio.ToString("dd/MM/yyyy") + " - Fecha de Cierre: " + fechaCierre.ToString("dd/MM/yyyy");
-
-            // Crear una lista de estudiantes de ejemplo
-            List<Estudiante> estudiantes = new List<Estudiante>
+            if (eCCampania.EstadoCampania == SDatosGlobales.EN_CURSO)
             {
-                new Estudiante { NombreEstudiante = "Estudiante 1", ID = 1 },
-                new Estudiante { NombreEstudiante = "Estudiante 2", ID = 2 },
-                new Estudiante { NombreEstudiante = "Estudiante 3", ID = 3 }
-            };
+                lblEstado.Text = "EN CURSO";
+            }
+            else if (eCCampania.EstadoCampania == SDatosGlobales.FINALIZADO)
+            {
+                lblEstado.Text = "FINALIZADO";
+            }
+            lblTitulo.Text = eCCampania.NombreCampania;
+            lblDescripcion.Text = eCCampania.DescripcionCampania;
+            string mesInicio = eCCampania.FechaInicioCampania.Month.ToString();
+            string diaInicio = eCCampania.FechaInicioCampania.Day.ToString();
+            string anioInicio = eCCampania.FechaInicioCampania.Year.ToString();
 
-            // Vincular la lista de estudiantes al Repeater
-            rptSolicitudes.DataSource = estudiantes;
-            rptSolicitudes.DataBind();
+            string mesFin = eCCampania.FechaInicioCampania.Month.ToString();
+            string diaFin = eCCampania.FechaInicioCampania.Day.ToString();
+            string anioFin = eCCampania.FechaInicioCampania.Year.ToString();
+
+            string fechaInicio = SUtil.ConvertirFechas(diaInicio) + "/" + SUtil.ConvertirFechas(mesInicio) + "/" + anioInicio;
+            string fechaCierre = SUtil.ConvertirFechas(diaFin) + "/" + SUtil.ConvertirFechas(mesFin) + "/" + anioFin;
+
+            lblFechaInicio.Text = fechaInicio;
+            lblFechaCierre.Text = fechaCierre;
+            if (lstParticipantes.Count > 0 )
+            {
+                rptParticipantes.DataSource = lstParticipantes;
+                rptParticipantes.DataBind();
+
+            }
+            else
+            {
+                lblNotificacion.Text = "NO TIENES PARTICIPANTES";
+            }
         }
     }
 
-    protected void btnAceptar_Click(object sender, EventArgs e)
+    protected void btnAceptar_Command(object sender, CommandEventArgs e)
     {
-        // Obtener el botón que se presionó
-        Button btn = (Button)sender;
 
-        // Obtener el ID del estudiante
-        int id = Convert.ToInt32(btn.CommandArgument);
-
-        // Buscar el estudiante en la base de datos
-        // ...
-
-        // Actualizar el estado del estudiante
-        // ...
-
-        // Actualizar la lista de estudiantes
-        // ...
-    }
-
-    protected void btnDenegar_Click(object sender, EventArgs e)
-    {
-        // Obtener el botón que se presionó
-        Button btn = (Button)sender;
-
-        // Obtener el ID del estudiante
-        int id = Convert.ToInt32(btn.CommandArgument);
-
-        // Buscar el estudiante en la base de datos
-        // ...
-
-        // Actualizar el estado del estudiante
-        // ...
-
-        // Actualizar la lista de estudiantes
-        // ...
-    }
-
-    public class Estudiante
-    {
-        public int ID { get; set; }
-        public string NombreEstudiante { get; set; }
     }
 }

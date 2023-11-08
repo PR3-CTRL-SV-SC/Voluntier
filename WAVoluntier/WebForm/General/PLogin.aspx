@@ -127,7 +127,7 @@ Inherits="PLogin" %>
         />
       </div>
       <div class="form-group pt-1">
-        <asp:Button runat="server" ID="btnIniciar" OnClick="btnIniciar_Click" class="btn btn-primary btn-block" type="submit"/>
+        <asp:Button runat="server" ID="btnIniciar" OnClick="btnIniciar_Click" class="btn btn-primary btn-block" Text="Iniciar Sesion" type="submit"/>
       </div>
     </form>
 

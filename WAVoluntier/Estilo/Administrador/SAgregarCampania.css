@@ -1,12 +1,33 @@
-﻿.textEstatico {
-    color: #64072D;
-    font: bold;
-    width: auto;
-    height: 20px;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+﻿.tabla {
+    width: 100%;
 }
+
+.ContenedorCampos {
+    padding: 5px;
+}
+
+.ContenedorLabel {
+    width: 30%;
+    text-align: right;
+}
+
+.ContenedorInput {
+    padding: 5px;
+    width: 70%;
+}
+
+.textLabel {
+    color: #64072D;
+    font-weight: bold;
+    font-size: medium;
+}
+.textInput {
+    width: 95%;
+    color: black;
+    font-size: small;
+    resize: none;
+}
+
 .textEstaticoModal {
     color: black;
     font: bold;
@@ -100,59 +121,30 @@
     margin-top: 5px;
     margin-bottom: 5px
 }
-.btnAniadirOrg {
-    background-color: #610827;
-    color: #FFF;
-    border: 0;
-    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
-    cursor: pointer;
-    border-radius: 5px;
-    height: 22px;
-    width: 30%;
-    font: bold;
-    font-size: 15px;
-    margin-top: 10px;
-}
-.btnAddOrg {
-    background-color: #610827;
-    color: #FFF;
-    border: 0;
-    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
-    cursor: pointer;
-    border-radius: 5px;
-    height: 22px;
-    width: 22px;
-    font: bold;
-    margin-top: 10px;
-}
+
 .btnAddCampain {
+    width:50%;
+    border: 0;
+    margin-top: 10px;
     background-color: #610827;
     color: #FFF;
-    border: 0;
     font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
     cursor: pointer;
-    border-radius: 5px;
-    height: 25px;
     align-content:center;
-    width:50%;
     font: bold;
     font-size: 20px;
 }
-.divCentrogrv {
+
+.container {
     width: 90%;
-    margin-left: 2%;
-    text-align: center;
+    margin: 2% auto;
+    text-align:center;
 }
+
 .divCentro {
     width: 90%;
     margin: 2% auto;
     text-align: center;
-}
-.divIzquierda {
-    width: 90%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: left;
 }
 .btnMod {
     background-color: #610827;
@@ -160,10 +152,11 @@
     border: 0;
     font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
     cursor: pointer;
-    border-radius: 5px;
     height: 22px;
     width: auto;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWLNVoluntier;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,31 +8,45 @@ using System.Web.UI.WebControls;
 
 public partial class WebForm_Usuario_PListaCampanias : System.Web.UI.Page
 {
+    SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient();
+    List<ECCampania> lstCampanias;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        if(!IsPostBack)
         {
-            // Crear una lista de datos ficticios (dummies)
-            List<Campania> listaCampañas = new List<Campania>
-            {
-                new Campania { NombreCampaña = "Campaña 1", Descripcion = "Descripción de la Campaña 1", FechaInicio = new DateTime(2023, 1, 1), FechaCierre = new DateTime(2023, 1, 31) },
-                new Campania { NombreCampaña = "Campaña 2", Descripcion = "Descripción de la Campaña 2", FechaInicio = new DateTime(2023, 2, 15), FechaCierre = new DateTime(2023, 3, 15) },
-                new Campania { NombreCampaña = "Campaña 3", Descripcion = "Descripción de la Campaña 3", FechaInicio = new DateTime(2023, 4, 10), FechaCierre = new DateTime(2023, 4, 30) }
-                // Agrega más datos ficticios según sea necesario
-            };
-
-            // Vincular la lista de campañas al Repeater
-            rptCampañas.DataSource = listaCampañas;
-            rptCampañas.DataBind();
+            CargarDatos();
         }
     }
 
-    // Clase para representar una campaña
-    public class Campania
+    private void CargarDatos()
     {
-        public string NombreCampaña { get; set; }
-        public string Descripcion { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaCierre { get; set; }
+        lstCampanias = new List<ECCampania>();
+        try
+        {
+            lstCampanias = sWLNVoluntierClient.Obtener_CCampania_O().Where(c => c.EstadoCampania == "AP").OrderBy(c => c.FechaInicioCampania).ToList();
+
+            if (lstCampanias.Count < 1)
+            {
+                lblNotificacion.Text = "NO TIENES CAMPAÑAS DISPONIBLES";
+            }
+            else
+            {
+                rptCampañas.DataSource = lstCampanias;
+                rptCampañas.DataBind();
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    protected void btnVer_Command(object sender, CommandEventArgs e)
+    {
+        int IdCampania = Convert.ToInt32(e.CommandArgument);
+        Session["codCampania"] = IdCampania;
+        Session["Url"] = "PListaCampanias.aspx";
+        Response.Redirect("PCampania.aspx");
     }
 }

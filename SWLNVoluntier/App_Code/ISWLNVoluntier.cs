@@ -23,7 +23,7 @@ public interface ISWLNVoluntier
     [OperationContract]
     void Actualizar_CCampania_A(ECCampania eCCampania);
     [OperationContract]
-    void Actualizar_CCampania_A_Estado(int idCampania);
+    void Actualizar_CCampania_A_Estado(int idCampania, string nuevoEstado);
     [OperationContract]
     void Actualizar_CCampania_A_Estado_Cancelado(int idCampania);
     #endregion

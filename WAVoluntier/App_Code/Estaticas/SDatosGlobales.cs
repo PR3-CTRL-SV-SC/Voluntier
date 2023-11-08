@@ -16,12 +16,24 @@ public static class SDatosGlobales
     /// 
     public const string NOMBRE_APLICACION = "PROYECTO CONTROL SERVICIO SOCIAL";
 
-    public const string HABILITADO = "H";
-    public const string DESHABILITADO = "I";
-    public const string ELIMINAR = "E";
-    public const string NOMBRE_HABILITADO = "Habilitar";
-    public const string NOMBRE_DESHABILITADO = "Inhabilitar";
-    public const string NOMBRE_ELIMINAR = "Eliminar";
+    public static readonly string PENDIENTE = "PE";
+    public static readonly string APROBADO = "AP";
+    public static readonly string RECHAZADO = "RE";
+    public static readonly string EN_CURSO = "EC";
+    public static readonly string FINALIZADO = "FN";
+    public static readonly string CANCELADO = "CA";
+
+    #endregion
+
+    #region Estados Participacion
+
+    /// <summary>
+    /// Códigos de estados utilizados dentro del sistema
+    /// </summary>
+    /// 
+
+    public static readonly string SIN_TIEMPO = "ST";
+    public static readonly string CON_TIEMPO = "cT";
 
     #endregion
 
@@ -67,27 +79,12 @@ public static class SDatosGlobales
 
     #endregion
 
-
-
     #region Valores SI NO
 
     public static readonly string SI = "S";
     public static readonly string NO = "N";
 
     #endregion
-
-    #region Estados Solicitud
-
-    public static readonly string APROBADO = "AP";
-
-    public static readonly string PENDIENTE = "PE";
-
-    public static readonly string RECHAZADO = "RE";
-
-    public static readonly string CANCELADO = "CA";
-
-    #endregion
-
 
     #region Archivos
 

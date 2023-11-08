@@ -103,7 +103,7 @@ public class ADCCampania
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaInicioCampania", DbType.DateTime, eCCampania.FechaInicioCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaFinCampania", DbType.DateTime, eCCampania.FechaFinCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "sedeCampania", DbType.String, eCCampania.SedeCampania);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, EPAEstaticos.EstadoActiva);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, eCCampania.EstadoCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.DateTime, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaRegistroCampania", DbType.DateTime, EPAEstaticos.FechaRegistro);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioCreador", DbType.String, eCCampania.IdUsuarioCreador);
@@ -133,7 +133,7 @@ public class ADCCampania
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaInicioCampania", DbType.DateTime, eCCampania.FechaInicioCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaFinCampania", DbType.DateTime, eCCampania.FechaFinCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "sedeCampania", DbType.String, eCCampania.SedeCampania);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, EPAEstaticos.EstadoActiva);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, eCCampania.EstadoCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }
@@ -149,14 +149,14 @@ public class ADCCampania
     /// Actualiza el estado de una campaña a 'FINALIAZADA'
     /// </summary>
     /// <param name="eCCampania"></param>
-    public void Actualizar_CCampania_A_Estado(int idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania, string estadoCampania)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CCampania_A_Estado");
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, idCampania);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampaniaF", DbType.String, EPAEstaticos.EstadoFinalizada);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoCampania", DbType.String, estadoCampania);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionCampania", DbType.String, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }

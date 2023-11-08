@@ -1,68 +1,64 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PCampania.aspx.cs" Inherits="WebForm_Usuario_PCampania" MasterPageFile="~/PaginaMaestra/MPInicio.master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PCampania.aspx.cs" Inherits="WebForm_Usuario_PCampania" MasterPageFile="~/PaginaMaestra/MPInicio.master" EnableEventValidation="true" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../../Estilo/Administrador/SAgregarCampania.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
-    <link href="../../Estilo/Administrador/SModalAgregarCampania.css" rel="stylesheet" />
-    <style type="text/css">
-        .container {
-            width: 100%;
-            /*max-width: 80%;*/ /* Ajusta el ancho máximo según tus preferencias */
-            text-align: center;
-            justify-content: center;
-            /*background: #1e1e1e;*/
-            border-radius: 10px;
-            padding: 20px 40px;
-            box-sizing: border-box;
-        }
-
-        .title {
-            font-weight: bold;
-            color: #1e1e1e;
-            font-size: 24px; /* Tamaño de fuente del título */
-        }
-
-        .descripcion {
-            font-size: 16px; /* Tamaño de fuente de la descripción */
-            margin-top: 10px;
-        }
-
-        .fechas {
-            font-size: 14px; /* Tamaño de fuente de las fechas */
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .btn-postular {
-            background: #6c63ff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-            font-size: 16px; /* Tamaño de fuente del botón */
-            margin-top: 10px;
-            text-decoration: none; /* Quita la decoración de enlace */
-        }
-
-        .btn-postular:hover {
-            background: #1e1e1e;
-        }
-    </style>
+    <link href="../../Estilo/Usuario/SCampania.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
-        <asp:Label ID="lblTitulo" CssClass="title" runat="server"></asp:Label>
-        <div class="descripcion">
-            <asp:Label ID="lblDescripcion" runat="server"></asp:Label>
-        </div>
-        <div class="fechas">
-            <asp:Label ID="lblFechas" runat="server"></asp:Label>
-        </div>
-        <div class="btn-postular-container"> 
-            <a href="#" class="btn-postular">POSTULAR</a>
-        </div>
-    </div>
+    <form id="form1" runat="server">
+        <fieldset class="field">
+            <div class="title">
+                <asp:Label ID="lblCampania" runat="server" CssClass="lblCampania"></asp:Label>
+                <p class="cerrar">
+                    <asp:Button ID="btnAtras" runat="server" CssClass="link" Text="X" OnClick="btnAtras_Click"/>
+                </p>
+            </div>
+            <div class="container">
+                <table class="tablaDatos">
+                    <tr class="filaTitulos">
+                        <td class="tituloTabla">
+                            DESCRIPCION
+                        </td>
+                        <td class="tituloTabla">
+                            FECHAS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="descripcion">
+                            <asp:Label ID="lblDescripcion" runat="server" CssClass="lblDescripcion"></asp:Label>
+
+                        </td>
+                        <td class="fechas">
+                            <label><b>Fecha de Inicio:</b></label>
+                            <asp:Label ID="lblFechaInicio" runat="server" CssClass="fecha"><%# Eval("FechaInicio", "{0:dd/MM/yyyy}") %></asp:Label>
+                            <br />
+                            <br />
+                            <label><b>Fecha de Cierre:</b></label>
+                            <asp:Label ID="lblFechaCierre" runat="server" CssClass="fecha"><%# Eval("FechaCierre", "{0:dd/MM/yyyy}") %></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                <div class="ContenedorBoton">
+                    <asp:Button ID="btnPostular" CssClass="btnPostular" runat="server" Text="Postular" OnClick="btnPostular_Click" />
+                </div>
+            </div>
+            <%--Modal Aceptar--%>
+            <div class="modal-container-notificacion" id="modalNotificacionContainer">
+                <div class="modal-notificacion" id="modalNotificacion">
+                    <asp:ImageButton ID="btnCerrar" CssClass="btnCerrar" ImageUrl="~/Imagenes/close.png" runat="server" OnClick="btnCerrar_Click"></asp:ImageButton>
+                    <div class="contenedor">
+                        <p class="lblModalTitulo centrar">¿ESTAS SEGURO DE QUERER POSTULARTE A ESTA CAMPAÑA?</p>
+                        <p class="LBLContenido centrar">
+                            <b><asp:Label ID="lblModalCampania" runat="server"></asp:Label></b>
+                        </p>
+                        <p class="lblAviso">DESPUES NO PODRAS CANCELAR TU SOLICITUD</p>
+                        <div class="centrar">
+                            <asp:Button ID="btnConfirmar" runat="server" CssClass="btnConfirmar" Text="Confirmar" OnClick="btnConfirmar_Click" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="../../Guiones/JModalAgregarCampania.js"></script>
+        </fieldset>
+    </form>
 </asp:Content>

@@ -8,9 +8,6 @@ using System.Web.UI.WebControls;
 
 public partial class PLogin : System.Web.UI.Page
 {
-    //SWLNRecicladoClient swLNReciclado = new SWLNRecicladoClient();
-    //ERUsuarioNetvalle eUsuarioNetvalle = new ERUsuarioNetvalle();
-
     SWLNVoluntierClient swLNVoluntier = new SWLNVoluntierClient();
     ECUsuario eCUsuario = new ECUsuario();
     protected void Page_Load(object sender, EventArgs e)
@@ -20,7 +17,6 @@ public partial class PLogin : System.Web.UI.Page
 
     protected void btnIniciar_Click(object sender, EventArgs e)
     {
-        Console.WriteLine("Hola");
         swLNVoluntier = new SWLNVoluntierClient();
         eCUsuario = new ECUsuario();
         eCUsuario = swLNVoluntier.Obtener_CUsuario_O_Codigo(txtUsername.Text.Trim());
@@ -31,17 +27,18 @@ public partial class PLogin : System.Web.UI.Page
             if (eCUsuario.RolUsuario == "AD")
             {
                 Session["Rol"] = "ADMINISTRATIVO";
-                Response.Redirect("/WebForm/Administrador/PAgregarCampania.aspx");
+                Session["Sede"] = "C";
+                Response.Redirect("/WebForm/Administrador/PMenuAdministrador.aspx");
             }
             if (eCUsuario.RolUsuario == "ES")
             {
                 Session["Rol"] = "ESTUDIANTE";
-                Console.WriteLine("Estudiante");
+                Response.Redirect("/WebForm/Usuario/PMenuEstudiante.aspx");
             }
         }
         else
         {
-
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('VERIFIQUE LA INFORMACION INGRESADA')", true);
         }
     }
 }

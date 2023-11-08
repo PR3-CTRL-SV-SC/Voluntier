@@ -153,11 +153,11 @@ public class ASNETControlSV
         }
     }
 
-    public void Actualizar_CCampania_A_Estado(int idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania, string nuevoEstado)
     {
         try
         {
-            swADNETVoluntier.Actualizar_CCampania_A_Estado(idCampania);
+            swADNETVoluntier.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
         }
         catch (EndpointNotFoundException EndPointEx)
         {
@@ -169,7 +169,7 @@ public class ASNETControlSV
             FaultException feaultEx = CommEx as FaultException;
             if (feaultEx == null)
             {
-                swADNETVoluntier.Actualizar_CCampania_A_Estado(idCampania);
+                swADNETVoluntier.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
             }
             else
             {

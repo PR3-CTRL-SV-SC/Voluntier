@@ -47,10 +47,10 @@ public class SWADNETVoluntier : ISWADNETVoluntier
         cCCampania.Actualizar_CCampania_A(eCCampania);
     }
 
-    public void Actualizar_CCampania_A_Estado(int idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania, string estadoCampania)
     {
         CCCampania cCCampania = new CCCampania();
-        cCCampania.Actualizar_CCampania_A_Estado(idCampania);
+        cCCampania.Actualizar_CCampania_A_Estado(idCampania, estadoCampania);
     }
 
     public void Actualizar_CCampania_A_Estado_Cancelado(int idCampania)

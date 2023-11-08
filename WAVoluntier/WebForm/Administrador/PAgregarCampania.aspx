@@ -4,89 +4,92 @@
     <link href="../../Estilo/Administrador/SAgregarCampania.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
     <link href="../../Estilo/Administrador/SModalAgregarCampania.css" rel="stylesheet" />
-     <style type="text/css">
-        
-
-        .container {
-            width: 100%;
-            /*max-width: 40%;*/
-            text-align: left; /* Alinear el contenido a la izquierda */
-            /*background: #1e1e1e;*/
-            border-radius: 10px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-weight: bold;
-            margin-bottom: 20px; /* Agregamos espacio inferior al título */
-        }
-
-        .form-group {
-            margin-bottom: 20px; /* Agregamos espacio inferior a cada grupo de formulario */
-        }
-
-        label {
-            display: block; /* Hacer que las etiquetas ocupen una línea completa */
-            font-weight: bold;
-            margin-bottom: 5px; /* Agregamos espacio inferior a las etiquetas */
-        }
-
-        .form-control {
-            color: #f0f0f0;
-            width: 100%;
-            padding: 10px;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            border: 1px solid #f0f0f0;
-            box-sizing: border-box;
-        }
-
-        .form-control:focus {
-            background-color: #1e1e1e;
-            border-color: #6c63ff;
-        }
-
-        .btn {
-            width: 100%;
-            background: #6c63ff;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #1e1e1e;
-        }
-    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <form id="form1" runat="server">
+    <form id="form1" runat="server">
+        <div class="divCentro title">
+            <label class="lblCampaniaEditAdd">Agregar Campaña</label>
+            <p class="cerrar">
+                <a class="link" href="PGestionCampanias.aspx">X</a>
+            </p>
+        </div>
         <div class="container">
-            <h1>Formulario de Agregar Campaña</h1>
-            <div class="form-group">
-                <label for="txbNombreCmpania">Nombre de la Campaña:</label>
-                <asp:TextBox ID="txbNombreCmpania" CssClass="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txbDescripcion">Descripción:</label>
-                <asp:TextBox ID="txbDescripcion" CssClass="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txbFechaInicio">Fecha de Inicio:</label>
-                <asp:TextBox ID="txbFechaInicio" CssClass="form-control" TextMode="Date" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txbFechaFin">Fecha de Cierre:</label>
-                <asp:TextBox ID="txbFechaFin" CssClass="form-control" TextMode="Date" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Button ID="btnGuardarCampania" CssClass="btn btn-primary" Text="Guardar Campaña" runat="server" OnClick="btnIniciar_Click" />
+            <table class="tabla">
+                <tr>
+                    <td colspan="2">
+                        <asp:Label ID="lblExep" runat="server" ForeColor="Red"></asp:Label>
+                    </td>
+                </tr>
+                <tr class="ContenedorCampos">
+                    <td class="ContenedorLabel">
+                        <asp:Label CssClass="textLabel" Text="Nombre de la Campaña:" runat="server"></asp:Label>
+                    </td>
+                    <td class="ContenedorInput">
+                        <asp:TextBox ID="txbNombreCmpania" CssClass="textInput" runat="server" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr class="ContenedorCampos">
+                    <td class="ContenedorLabel">
+                        <asp:Label CssClass="textLabel" Text="Descripción:" runat="server"></asp:Label>
+                    </td>
+                    <td class="ContenedorInput">
+                        <asp:TextBox ID="txbDescripcion" CssClass="textInput NoResize" runat="server" TextMode="MultiLine" Rows="5" Columns="50"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr class="ContenedorCampos">
+                    <td class="ContenedorLabel">
+                        <asp:Label CssClass="textLabel" Text="Fecha de Inicio:" runat="server"></asp:Label>
+                    </td>
+                    <td class="ContenedorInput">
+                        <asp:TextBox ID="txbFechaInicio" CssClass="textInput" TextMode="Date" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr class="ContenedorCampos">
+                    <td class="ContenedorLabel">
+                        <asp:Label CssClass="textLabel" Text="Fecha de Cierre:" runat="server"></asp:Label>
+                    </td>
+                    <td class="ContenedorInput">
+                        <asp:TextBox ID="txbFechaFin" CssClass="textInput" TextMode="Date" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                    </td>
+                </tr>
+            </table>
+            <asp:Button ID="btnGuardarCampania" CssClass="btnAddCampain" Text="Guardar Campaña" runat="server" OnClick="btnGuardarCampania_Click" />
+        </div>
+        <!--Modal-->
+        <div class="modal-container" id="modalNotificacionContainer">
+            <div class="modal" id="modalNotificacion">
+                <div>
+                    <div>
+                        <div class="divCentro">
+                            <asp:Label CssClass="lblCampaniaEditAdd" Text="¿ESTA SEGURO QUE DESEA REGISTRAR?" runat="server"></asp:Label>
+                        </div>
+                        <br />
+                        <div class="divIzquierda">
+                            <asp:Label CssClass="textLabel" Text="Nombre de Campaña: " runat="server"></asp:Label>
+                            <asp:Label CssClass="textInput" ID="lblDatosNombreCampania" runat="server"></asp:Label>
+                            <br />
+                            <asp:Label CssClass="textLabel" Text="Descripción: " runat="server"></asp:Label>
+                            <asp:Label CssClass="textInput" ID="lblDatosDescripcionCampania" runat="server"></asp:Label>
+                            <br />
+                            <asp:Label CssClass="textLabel" Text="Fecha Inicio: " runat="server"></asp:Label>
+                            <asp:Label CssClass="textInput" ID="lblFechaInicio" runat="server"></asp:Label>
+                            <br />
+                            <asp:Label CssClass="textLabel" Text="Fecha Cierre: " runat="server"></asp:Label>
+                            <asp:Label CssClass="textInput" ID="lblFechaCierre" runat="server"></asp:Label>
+                            <br />
+                        </div>
+                        <div class="divCentro">
+                            <asp:Button ID="btnConfirmar" runat="server" Text="ACEPTAR" CssClass="btnMod" OnClick="btnConfirmar_Click"/>
+                            <asp:Button ID="btnCancelar" runat="server" Text="CANCELAR" CssClass="btnMod" OnClick="btnCancelar_Click"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="../../Guiones/JModalAgregarCampania.js"></script>
     </form>
 </asp:Content>

@@ -10,20 +10,15 @@ using System.Web;
 [DataContract]
 public class EPAEstaticos
 {
-    [DataMember]
     static public string EstadoActiva = "AC";
-    [DataMember]
     static public string EstadoCancelada = "CA";
-    [DataMember]
     static public string EstadoFinalizada = "FI";
-    [DataMember]
     static public string EstadoValido = "VA";
+    static public string EstadoInvalido = "IV";
     [DataMember]
     static public DateTime FechaModificacion = DateTime.Now;
     [DataMember]
     static public DateTime FechaRegistro = DateTime.Now;
-    [DataMember]
-    static public double DonacionVoto = 0;
 
     public EPAEstaticos()
     {

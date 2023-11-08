@@ -1,0 +1,37 @@
+﻿.camp-item {
+    text-align: center;
+    list-style-type: none;
+    margin: 10px 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    margin-top: 5px;
+}
+
+.fechas {
+    width: 100%;
+    margin-top: 5px;
+    background-color: #610828;
+}
+
+.fecha {
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.btnVer {
+    margin-top: 10px;
+    background-color: #610828;
+    color: white;
+    border: 1px solid #610828;
+    font-weight: bold;
+}

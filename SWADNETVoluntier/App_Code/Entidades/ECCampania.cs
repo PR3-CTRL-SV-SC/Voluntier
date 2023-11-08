@@ -45,8 +45,6 @@ public class ECCampania
         SedeCampania = string.Empty;
         FechaRegistroCampania = DateTime.MinValue;
         FechaModificacionCampania = DateTime.MinValue;
-        IdUsuarioCreador = string.Empty;        
+        IdUsuarioCreador = string.Empty;
     }
-
-
 }

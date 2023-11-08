@@ -43,10 +43,10 @@ public class SWLNVoluntier : ISWLNVoluntier
         CControlSV cControlSV = new CControlSV();
         cControlSV.Actualizar_CCampania_A(eCCampania);
     }
-    public void Actualizar_CCampania_A_Estado(int idCampania)
+    public void Actualizar_CCampania_A_Estado(int idCampania, string nuevoEstado)
     {
         CControlSV cControlSV = new CControlSV();
-        cControlSV.Actualizar_CCampania_A_Estado(idCampania);
+        cControlSV.Actualizar_CCampania_A_Estado(idCampania, nuevoEstado);
     }
     public void Actualizar_CCampania_A_Estado_Cancelado(int idCampania)
     {

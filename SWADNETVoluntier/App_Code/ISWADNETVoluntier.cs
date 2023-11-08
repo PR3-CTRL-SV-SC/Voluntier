@@ -22,7 +22,7 @@ public interface ISWADNETVoluntier
     [OperationContract]
     void Actualizar_CCampania_A(ECCampania eCCampania);
     [OperationContract]
-    void Actualizar_CCampania_A_Estado(int idCampania);
+    void Actualizar_CCampania_A_Estado(int idCampania, string estadoCampania);
     [OperationContract]
     void Actualizar_CCampania_A_Estado_Cancelado(int idCampania);
     #endregion

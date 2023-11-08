@@ -1,70 +1,41 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PListaCampanias.aspx.cs" Inherits="WebForm_Usuario_PListaCampanias" MasterPageFile="~/PaginaMaestra/MPInicio.master"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../../Estilo/Administrador/SAgregarCampania.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
-    <link href="../../Estilo/Administrador/SModalAgregarCampania.css" rel="stylesheet" />
-     <style type="text/css">
-        
-
-    .container {
-    width: 100%;
-    /*max-width: 80%;*/ /* Ajusta el ancho máximo según tus preferencias */
-    text-align: center;
-    justify-content: center;
-    /*background: #1e1e1e;*/
-    border-radius: 10px;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    }
-    .camp-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .camp-item {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .titulo {
-        font-weight: bold;
-        font-size: 20px; /* Tamaño de fuente del título */
-        color: #6c63ff; /* Color del título */
-    }
-
-    .descripcion {
-        font-size: 16px; /* Tamaño de fuente de la descripción */
-        margin-top: 10px;
-    }
-
-    .fechas {
-        font-size: 14px; /* Tamaño de fuente de las fechas */
-    }
-
-    .fecha {
-        display: block;
-        margin-top: 5px;
-    }
-     </style>
+    <link href="../../Estilo/Usuario/SListaCampanias.css" rel="stylesheet" />
+    <link href="../../Estilo/Usuario/SOrganizacionUsuario.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
-        <h1 class="title">Listado de Campañas</h1>
-        <ul class="camp-list">
-            <asp:Repeater ID="rptCampañas" runat="server">
-                <ItemTemplate>
-                    <li class="camp-item">
-                        <span class="titulo"><%# Eval("NombreCampaña") %></span>
-                        <div class="descripcion"><%# Eval("Descripcion") %></div>
-                        <div class="fechas">
-                            <span class="fecha">Fecha de Inicio: <%# Eval("FechaInicio", "{0:dd/MM/yyyy}") %> - Fecha de Cierre: <%# Eval("FechaCierre", "{0:dd/MM/yyyy}") %></span>
-                        </div>
-                    </li>
-                </ItemTemplate>
-            </asp:Repeater>
-        </ul>
-    </div>
+    <form id="form" runat="server">
+        <fieldset class="field">
+            <div class="title">
+                <label class="lblTitle">Listado de Campañas</label>
+                <p class="cerrar">
+                    <a class="link" href="PMenuEstudiante.aspx">X</a>
+                </p>
+            </div>
+            <div id="div1" runat="server" class="containerLista">
+                <fieldset>
+                    <asp:Label ID="lblNotificacion" runat="server" CssClass="lblNotificacion"></asp:Label>
+                    <ul class="camp-list">
+                        <asp:Repeater ID="rptCampañas" runat="server" >
+                            <ItemTemplate>
+                                <li class="camp-item">
+                                    <span class="lblTituloCampania"><%# Eval("NombreCampania") %></span>
+                                    <div class="lblDescripcion">
+                                        <span><%# Eval("DescripcionCampania") %></span>
+                                        <table class="containerFechas">
+                                            <td class="fecha"><b>Fecha de Inicio:</b> <%# Eval("FechaInicioCampania", "{0:dd/MM/yyyy}") %></td>
+                                            <td class="fecha"><b>Fecha de Cierre:</b> <%# Eval("FechaFinCampania", "{0:dd/MM/yyyy}") %></td>
+                                        </table>
+                                        <asp:Button ID="btnVer" CssClass="btnVer" runat="server" Text="Ver informacion" OnCommand="btnVer_Command" CommandArgument='<%# Eval("IdCampania")%>' />
+                                    </div>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </fieldset>
+            </div>
+        </fieldset>
+    </form>
 </asp:Content>
-
