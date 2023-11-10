@@ -34,7 +34,8 @@
                         <Columns>
                             <asp:BoundField DataField="IdCampania" HeaderText="ID" Visible="false"/>
                             <asp:BoundField DataField="NombreCampania" HeaderText="CAMPAÑA" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colCampania" />
-                            <asp:BoundField DataField="EstadoSolicitud" HeaderText="SOLICITUD" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colSolicitud" />
+                            <asp:BoundField DataField="EstadoCampania" HeaderText="ESTADO" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colSolicitud" />
+                            <asp:BoundField DataField="EstadoSolicitud" HeaderText="SOLICITUD" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colSolicitud" Visible="false"/>
                             <asp:BoundField DataField="HorasParticipacion" HeaderText="HORAS" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colHora" />
                             <asp:TemplateField HeaderStyle-CssClass="colTitulo">
                                 <ItemTemplate >

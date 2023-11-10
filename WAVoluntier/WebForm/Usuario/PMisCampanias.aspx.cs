@@ -61,7 +61,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
         {
             lstCampanias.Add(sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(solicitud.IdCampaniaSolicitud));
         }
-        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, s.EstadoSolicitud, HorasParticipacion = "-" }).ToList();
+        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, EstadoCampania = SUtil.TransformarEstados(c.EstadoCampania) ,s.EstadoSolicitud, HorasParticipacion = "-" }).ToList();
         if (lstTabla.Count > 0)
         {
             gvListaCampanias.DataSource = lstTabla;
@@ -82,7 +82,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
         {
             lstCampanias.Add(sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(participacion.IdCampaniaParticipacion));
         }
-        var lstTabla = lstCampanias.Join(lstParticipacion, c => c.IdCampania, p => p.IdCampaniaParticipacion, (c, p) => new { c.IdCampania, c.NombreCampania, EstadoSolicitud = p.EstadoParticipacion, p.HorasParticipacion }).ToList();
+        var lstTabla = lstCampanias.Join(lstParticipacion, c => c.IdCampania, p => p.IdCampaniaParticipacion, (c, p) => new { c.IdCampania, c.NombreCampania, EstadoCampania = SUtil.TransformarEstados(c.EstadoCampania), EstadoSolicitud = p.EstadoParticipacion, p.HorasParticipacion }).ToList();
         if (lstTabla.Count > 0)
         {
             gvListaCampanias.DataSource = lstTabla;
@@ -103,7 +103,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
         {
             lstCampanias.Add(sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(solicitud.IdCampaniaSolicitud));
         }
-        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, s.EstadoSolicitud, HorasParticipacion = "-" }).ToList();
+        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, EstadoCampania = SUtil.TransformarEstados(c.EstadoCampania), s.EstadoSolicitud, HorasParticipacion = "-" }).ToList();
         if (lstTabla.Count > 0)
         {
             gvListaCampanias.DataSource = lstTabla;

@@ -32,9 +32,9 @@ public partial class WebForm_Usuario_PCampania : System.Web.UI.Page
             string diaInicio = eCCampania.FechaInicioCampania.Day.ToString();
             string anioInicio = eCCampania.FechaInicioCampania.Year.ToString();
 
-            string mesFin = eCCampania.FechaInicioCampania.Month.ToString();
-            string diaFin = eCCampania.FechaInicioCampania.Day.ToString();
-            string anioFin = eCCampania.FechaInicioCampania.Year.ToString();
+            string mesFin = eCCampania.FechaFinCampania.Month.ToString();
+            string diaFin = eCCampania.FechaFinCampania.Day.ToString();
+            string anioFin = eCCampania.FechaFinCampania.Year.ToString();
 
             string fechaInicio = SUtil.ConvertirFechas(diaInicio) + "/" + SUtil.ConvertirFechas(mesInicio) + "/" + anioInicio;
             string fechaCierre = SUtil.ConvertirFechas(diaFin) + "/" + SUtil.ConvertirFechas(mesFin) + "/" + anioFin;

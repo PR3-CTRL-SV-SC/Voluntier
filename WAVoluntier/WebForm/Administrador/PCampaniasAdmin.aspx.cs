@@ -64,7 +64,7 @@ public partial class WebForm_Administrador_PCampaniasAdmin : System.Web.UI.Page
                     lblNotificacion.Text = "NO TIENES SOLICITUDES";
                     ClientScript.RegisterStartupScript(this.GetType(), "ocultarTbSol", "document.getElementById('tbSolicitudes').style.display = 'none';", true);
                 }
-                ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('" + lstRechazados.Count + "');", true);
+                //ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('" + lstRechazados.Count + "');", true);
                 if (lstAceptados.Count > 0 || lstRechazados.Count > 0)
                 {
                     rptAceptados.DataSource = lstAceptados;
@@ -93,6 +93,7 @@ public partial class WebForm_Administrador_PCampaniasAdmin : System.Web.UI.Page
             eCParticipacion.IdCampaniaParticipacion = Convert.ToInt32(Session["codCampania"]);
             eCParticipacion.IdUsuarioParticipacion = idUsuario;
             eCParticipacion.EstadoParticipacion = SDatosGlobales.SIN_TIEMPO;
+            eCParticipacion.HorasParticipacion = "00:00";
             sWLNVoluntierClient.Insertar_CParticipacion_I(eCParticipacion);
             sWLNVoluntierClient.Actualizar_CSolicitud_A_Estado(idSolicitud, SDatosGlobales.APROBADO);
             Response.Redirect(Request.RawUrl);

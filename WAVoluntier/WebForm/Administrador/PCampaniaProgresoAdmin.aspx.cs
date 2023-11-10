@@ -122,7 +122,7 @@ public partial class WebForm_Administrador_PCampaniaProgresoAdmin : System.Web.U
         eCParticipacion = new ECParticipacion();
         eCParticipacion = sWLNVoluntierClient.Obtener_CParticipacion_O_PorUsuario(idUsuario).Where(p => p.IdCampaniaParticipacion == Convert.ToInt32(Session["codCampania"].ToString())).First();
         eCParticipacion.HorasParticipacion = txtHoras.Text + ":" + txtMinutos.Text;
-        ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('"+ eCParticipacion.HorasParticipacion +"');",true ) ;
+        //ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('"+ eCParticipacion.HorasParticipacion +"');",true ) ;
         sWLNVoluntierClient.Actualizar_CParticipacion_A(eCParticipacion);
         Response.Redirect(Request.RawUrl);
     }

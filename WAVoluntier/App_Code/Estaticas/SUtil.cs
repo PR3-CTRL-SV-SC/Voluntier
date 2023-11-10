@@ -25,34 +25,27 @@ public static class SUtil
         return ver;
     }
 
-    public static string NombreCampaniasConvert(string nombreCampania, string sede, string fechaFin)
+    public static string TransformarEstados(string estado)
     {
         string result = "";
-        switch (sede.ToUpper())
+        switch (estado.ToUpper())
         {
-            case "COCHABAMBA":
-                result = "CB-";
+            case "PE":
+                result = "PENDIENTE";
                 break;
-            case "LA PAZ":
-                result = "LP-";
+            case "AP":
+                result = "APROBADA";
                 break;
-            case "SANTA CRUZ":
-                result = "SC-";
+            case "EC":
+                result = "EN CURSO";
+                break;
+            case "FN":
+                result = "FINALIZADA";
                 break;
             default:
-                result = "DF-";
+                result = "CANCELADA";
                 break;
         }
-        DateTime convertFecha = DateTime.Parse(fechaFin.Trim());
-        if (convertFecha.Month <= 6) 
-        { 
-            result = result + nombreCampania.Trim().ToUpper() + "-1_" + convertFecha.Year.ToString(); 
-        }
-        else 
-        {
-            result = result + nombreCampania.Trim().ToUpper() + "-2_" + convertFecha.Year.ToString(); 
-        }
-        
         return result;
     }
 
