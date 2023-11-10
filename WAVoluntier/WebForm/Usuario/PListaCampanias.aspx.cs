@@ -67,7 +67,7 @@ public partial class WebForm_Usuario_PListaCampanias : System.Web.UI.Page
 
     protected void timerControl_Tick(object sender, EventArgs e)
     {
-        ClientScript.RegisterStartupScript(this.GetType(), "avisoTimer", "alert('EMPEZO EL EVENTO');", true);
+        //ClientScript.RegisterStartupScript(this.GetType(), "avisoTimer", "alert('EMPEZO EL EVENTO');", true);
         controlarCampanias();
     }
 }
