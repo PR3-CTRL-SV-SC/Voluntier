@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="17.0">
+ <Targets>
+  <Target Name="C:\Users\Rami\AppData\Local\Temp\tmp19C6.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="CAutenticar" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Obtener_Empleado_Id_Emp_SedeAcademica(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CAutenticar.cs" Line="61">'CAutenticar.Obtener_Empleado_Id_Emp_SedeAcademica(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_EmpleadoFotografia(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CAutenticar.cs" Line="73">'CAutenticar.Obtener_EmpleadoFotografia(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CCampania" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Editar_Campania(SWLNVoluntier.ECCampania)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CCampania.cs" Line="83">'CCampania.Editar_Campania(ECCampania)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Eliminar_Campania(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CCampania.cs" Line="95">'CCampania.Eliminar_Campania(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CCampania_O_CC()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CCampania.cs" Line="64">'CCampania.Obtener_CCampania_O_CC()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CCampania_O_IdCampania_CC(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CCampania.cs" Line="38">'CCampania.Obtener_CCampania_O_IdCampania_CC(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CCampania_O_Sede_CC(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CCampania.cs" Line="51">'CCampania.Obtener_CCampania_O_Sede_CC(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CParticipacion" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Editar_Participacion(SWLNVoluntier.ECParticipacion)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CParticipacion.cs" Line="65">'CParticipacion.Editar_Participacion(ECParticipacion)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CParticipacion_O_IdCampania_CC(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CParticipacion.cs" Line="35">'CParticipacion.Obtener_CParticipacion_O_IdCampania_CC(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CParticipacion_O_IdUsuario_CC(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CParticipacion.cs" Line="49">'CParticipacion.Obtener_CParticipacion_O_IdUsuario_CC(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CSolicitud" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Editar_Solicitud(System.Int32,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CSolicitud.cs" Line="58">'CSolicitud.Editar_Solicitud(int, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CSolicitud_O_IdCampania_CC(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CSolicitud.cs" Line="32">'CSolicitud.Obtener_CSolicitud_O_IdCampania_CC(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Obtener_CSolicitud_O_IdUsuario_CC(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CSolicitud.cs" Line="45">'CSolicitud.Obtener_CSolicitud_O_IdUsuario_CC(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CUsuario" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Obtener_RUsuario_O_Codigo_CU(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Univalle\Semestre 6\Proyecto 3\VoluntierSinModificaciones\Voluntier\WAVoluntier\App_Code\Controladoras" File="CUsuario.cs" Line="36">'CUsuario.Obtener_RUsuario_O_Codigo_CU(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LNServicio" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2023-11-09 09:56:43Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'LNServicio' because it creates members of the following IDisposable types: 'SWLNVoluntierClient'. If 'LNServicio' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

@@ -85,6 +85,8 @@
                             <br />
                         </div>
                         <div class="divCentro">
+                            <asp:Label runat="server" ForeColor="Red"  Text="El modificar esta campaña se volvera a esperar confirmacion de administracion"></asp:Label>
+                            <br />
                             <asp:Button ID="btnConfirmar" runat="server" Text="ACEPTAR" CssClass="btnMod" OnClick="btnConfirmar_Click"/>
                             <asp:Button ID="btnCancelar" runat="server" Text="CANCELAR" CssClass="btnMod" OnClick="btnCancelar_Click"/>
                         </div>

@@ -127,7 +127,7 @@ public class CControlSV
             }
 
         }
-    }   
+    }
 
     public void Actualizar_CCampania_A(ECCampania ecCampania)
     {
@@ -211,7 +211,7 @@ public class CControlSV
             }
 
         }
-    }   
+    }
 
     public List<ECCampania> Obtener_CCampania_O_Sede(string sedeCampania)
     {
@@ -246,9 +246,9 @@ public class CControlSV
     #endregion
 
     #region CParticipacion
-    
+
     public List<ECParticipacion> Obtener_CParticipacion_O()
-    { 
+    {
         List<ECParticipacion> lstEcParticipacion = new List<ECParticipacion>();
         try
         {
@@ -307,7 +307,7 @@ public class CControlSV
 
             }
         }
-    }   
+    }
 
     public void Actualizar_CParticipacion_A(ECParticipacion ecParticipacion)
     {
@@ -338,7 +338,7 @@ public class CControlSV
 
             }
         }
-    }   
+    }
 
     public List<ECParticipacion> Obtener_CParticipacion_O_PorUsuario(string idUsuario)
     {
@@ -371,7 +371,7 @@ public class CControlSV
 
             }
         }
-        return lstEcParticipacion;  
+        return lstEcParticipacion;
     }
 
     public List<ECParticipacion> Obtener_CParticipacion_O_PorCampania(int idCampania)
@@ -404,13 +404,13 @@ public class CControlSV
                 //throw feaultEx;
             }
         }
-        return lstEcParticipacion;  
-    }   
+        return lstEcParticipacion;
+    }
 
     #endregion
 
     #region CSolicitud
-    
+
     public List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Campania(int idCampania)
     {
         List<ECSolicitudParticipacion> lstEcSolicitudParticipacion = new List<ECSolicitudParticipacion>();
@@ -442,9 +442,9 @@ public class CControlSV
 
             }
         }
-        return lstEcSolicitudParticipacion; 
-        
-    }   
+        return lstEcSolicitudParticipacion;
+
+    }
 
     public List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Usuario(string idUsuario)
     {
@@ -477,7 +477,7 @@ public class CControlSV
 
             }
         }
-        return lstEcSolicitudParticipacion;     
+        return lstEcSolicitudParticipacion;
     }
 
     public void Insertar_CSolicitud_I(ECSolicitudParticipacion ecSolicitudParticipacion)
@@ -509,7 +509,7 @@ public class CControlSV
 
             }
         }
-    }   
+    }
 
     public void Actualizar_CSolicitud_A_Estado(int idSolicitud, string nuevoEstado)
     {
@@ -539,7 +539,7 @@ public class CControlSV
                 //throw feaultEx;
 
             }
-        }   
+        }
     }
     #endregion
 
@@ -577,7 +577,7 @@ public class CControlSV
 
             }
         }
-        return ecUsuario;   
+        return ecUsuario;
     }
 
     public List<ECUsuario> Obtener_CUsuarios_O_Top_Horas(string sedeUsuarioNetvalle)
@@ -612,11 +612,11 @@ public class CControlSV
 
             }
         }
-        return lstEcUsuario;    
+        return lstEcUsuario;
     }
 
     public List<ECUsuario> Obtener_CUsuarios_O_Sede(string sedeUsuarioNetvalle)
-    { 
+    {
         List<ECUsuario> lstEcUsuario = new List<ECUsuario>();
         try
         {
@@ -647,7 +647,7 @@ public class CControlSV
 
             }
         }
-        return lstEcUsuario;        
+        return lstEcUsuario;
     }
 
     public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, int Horas)
@@ -679,7 +679,7 @@ public class CControlSV
                 //throw feaultEx;
 
             }
-        }       
+        }
     }
 
     #endregion
@@ -718,27 +718,25 @@ public class CControlSV
                 //throw feaultEx;
             }
         }
-        return ecUsuarioNetvalle;       
+        return ecUsuarioNetvalle;
 
     }
 
-    public void Insertar_CUsuarioNetvalle_y_CUsuario(string rolUsuario,
+    public void Insertar_CUsuarioNetvalle_y_CUsuario(
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
         string cargoUsuarioNetvalle,
-        string tarjetaUsuarioNetvalle,
         string sedeUsuarioNetvalle)
     {
         try
         {
-            aSNetControlSV.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario,
+            aSNetControlSV.Insertar_CUsuarioNetvalle_y_CUsuario(
                        codigoUsuarioNetvalle,
                               nombresUsuarioNetvalle,
                                      apellidosUsuarioNetvalle,
                                             cargoUsuarioNetvalle,
-                                                   tarjetaUsuarioNetvalle,
-                                                          sedeUsuarioNetvalle);
+                                                sedeUsuarioNetvalle);
         }
         catch (EndpointNotFoundException EndPointEx)
         {
@@ -754,12 +752,11 @@ public class CControlSV
             if (feaultEx == null)
             {
 
-                aSNetControlSV.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario,
+                aSNetControlSV.Insertar_CUsuarioNetvalle_y_CUsuario(
                            codigoUsuarioNetvalle,
                                   nombresUsuarioNetvalle,
                                          apellidosUsuarioNetvalle,
                                                 cargoUsuarioNetvalle,
-                                                       tarjetaUsuarioNetvalle,
                                                               sedeUsuarioNetvalle);
             }
             else
@@ -768,7 +765,7 @@ public class CControlSV
                 throw new FaultException<EDefecto>(eDefecto);
                 //throw feaultEx;
             }
-        }           
+        }
     }
 
 
@@ -878,7 +875,6 @@ public class CControlSV
 
                 usuarioNetvalle.CodigoUsuarioNetvalle = codigoUsuario;
                 usuarioNetvalle.SedeUsuarioNetvalle = codigoSedeAcademica;
-                usuarioNetvalle.TarjetaUsuarioNetvalle = tarjeta;
                 usuarioNetvalle.CargoUsuarioNetvalle = "Estudiante";
 
                 usuarioNetvalle.EstadoUsuarioNetvalle = char.Parse(EPAEstaticos.EstadoActiva);
@@ -908,7 +904,6 @@ public class CControlSV
 
                     usuarioNetvalle.CodigoUsuarioNetvalle = codigoUsuario;
                     usuarioNetvalle.SedeUsuarioNetvalle = codigoSedeAcademica;
-                    usuarioNetvalle.TarjetaUsuarioNetvalle = tarjeta;
                     usuarioNetvalle.CargoUsuarioNetvalle = "Administrador";
 
                     usuarioNetvalle.EstadoUsuarioNetvalle = char.Parse(EPAEstaticos.EstadoActiva);

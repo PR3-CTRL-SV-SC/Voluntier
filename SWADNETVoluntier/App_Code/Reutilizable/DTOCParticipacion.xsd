@@ -2,15 +2,16 @@
 <xs:schema id="DTOCParticipacion" targetNamespace="http://tempuri.org/DTOCParticipacion.xsd" xmlns:mstns="http://tempuri.org/DTOCParticipacion.xsd" xmlns="http://tempuri.org/DTOCParticipacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BDVoluntierConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDVoluntierConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BDVoluntierConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BDVoluntierConnectionString6" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDVoluntierConnectionString6 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BDVoluntierConnectionString6.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="voluntierConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="voluntierConnectionString1 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.voluntierConnectionString1.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CParticipacionTableAdapter" GeneratorDataComponentClassName="CParticipacionTableAdapter" Name="CParticipacion" UserDataComponentName="CParticipacionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BDVoluntierConnectionString6 (Web.config)" DbObjectName="BDVoluntier.dbo.CParticipacion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="voluntierConnectionString1 (Web.config)" DbObjectName="voluntier.dbo.CParticipacion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[CParticipacion] WHERE (([IdParticipacion] = @Original_IdParticipacion))</CommandText>
@@ -21,15 +22,14 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[CParticipacion] ([IdParticipacion], [IdCampaniaParticipacion], [IdUsuarioParticipacion], [FechaRegistroParticipacion], [FechaModificacionParticipacion], [EstadoParticipacion], [HorasParticipacion]) VALUES (@IdParticipacion, @IdCampaniaParticipacion, @IdUsuarioParticipacion, @FechaRegistroParticipacion, @FechaModificacionParticipacion, @EstadoParticipacion, @HorasParticipacion)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[CParticipacion] ([IdCampaniaParticipacion], [IdUsuarioParticipacion], [FechaRegistroParticipacion], [FechaModificacionParticipacion], [EstadoParticipacion], [HorasParticipacion]) VALUES (@IdCampaniaParticipacion, @IdUsuarioParticipacion, @FechaRegistroParticipacion, @FechaModificacionParticipacion, @EstadoParticipacion, @HorasParticipacion)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdCampaniaParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdCampaniaParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdUsuarioParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdUsuarioParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IdUsuarioParticipacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IdUsuarioParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FechaRegistroParticipacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FechaRegistroParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FechaModificacionParticipacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FechaModificacionParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EstadoParticipacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EstadoParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HorasParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HorasParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@HorasParticipacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="HorasParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -41,15 +41,14 @@
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[CParticipacion] SET [IdParticipacion] = @IdParticipacion, [IdCampaniaParticipacion] = @IdCampaniaParticipacion, [IdUsuarioParticipacion] = @IdUsuarioParticipacion, [FechaRegistroParticipacion] = @FechaRegistroParticipacion, [FechaModificacionParticipacion] = @FechaModificacionParticipacion, [EstadoParticipacion] = @EstadoParticipacion, [HorasParticipacion] = @HorasParticipacion WHERE (([IdParticipacion] = @Original_IdParticipacion))</CommandText>
+                    <CommandText>UPDATE [dbo].[CParticipacion] SET [IdCampaniaParticipacion] = @IdCampaniaParticipacion, [IdUsuarioParticipacion] = @IdUsuarioParticipacion, [FechaRegistroParticipacion] = @FechaRegistroParticipacion, [FechaModificacionParticipacion] = @FechaModificacionParticipacion, [EstadoParticipacion] = @EstadoParticipacion, [HorasParticipacion] = @HorasParticipacion WHERE (([IdParticipacion] = @Original_IdParticipacion))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdCampaniaParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdCampaniaParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdUsuarioParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdUsuarioParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IdUsuarioParticipacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IdUsuarioParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FechaRegistroParticipacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FechaRegistroParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FechaModificacionParticipacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FechaModificacionParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EstadoParticipacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EstadoParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HorasParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HorasParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@HorasParticipacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="HorasParticipacion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdParticipacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdParticipacion" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
@@ -75,28 +74,34 @@
   <xs:element name="DTOCParticipacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOCParticipacion" msprop:Generator_DataSetName="DTOCParticipacion">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CParticipacion" msprop:Generator_RowClassName="CParticipacionRow" msprop:Generator_RowEvHandlerName="CParticipacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CParticipacionRowDeleted" msprop:Generator_RowDeletingName="CParticipacionRowDeleting" msprop:Generator_RowEvArgName="CParticipacionRowChangeEvent" msprop:Generator_TablePropName="CParticipacion" msprop:Generator_RowChangedName="CParticipacionRowChanged" msprop:Generator_UserTableName="CParticipacion" msprop:Generator_RowChangingName="CParticipacionRowChanging" msprop:Generator_TableClassName="CParticipacionDataTable" msprop:Generator_TableVarName="tableCParticipacion">
+        <xs:element name="CParticipacion" msprop:Generator_RowEvHandlerName="CParticipacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CParticipacionRowDeleted" msprop:Generator_RowDeletingName="CParticipacionRowDeleting" msprop:Generator_RowEvArgName="CParticipacionRowChangeEvent" msprop:Generator_TablePropName="CParticipacion" msprop:Generator_RowChangedName="CParticipacionRowChanged" msprop:Generator_RowChangingName="CParticipacionRowChanging" msprop:Generator_TableClassName="CParticipacionDataTable" msprop:Generator_RowClassName="CParticipacionRow" msprop:Generator_TableVarName="tableCParticipacion" msprop:Generator_UserTableName="CParticipacion">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdParticipacion" msprop:Generator_UserColumnName="IdParticipacion" msprop:Generator_ColumnPropNameInTable="IdParticipacionColumn" msprop:Generator_ColumnPropNameInRow="IdParticipacion" msprop:Generator_ColumnVarNameInTable="columnIdParticipacion" type="xs:int" />
-              <xs:element name="IdCampaniaParticipacion" msprop:Generator_UserColumnName="IdCampaniaParticipacion" msprop:Generator_ColumnPropNameInTable="IdCampaniaParticipacionColumn" msprop:Generator_ColumnPropNameInRow="IdCampaniaParticipacion" msprop:Generator_ColumnVarNameInTable="columnIdCampaniaParticipacion" type="xs:int" />
-              <xs:element name="IdUsuarioParticipacion" msprop:Generator_UserColumnName="IdUsuarioParticipacion" msprop:Generator_ColumnPropNameInTable="IdUsuarioParticipacionColumn" msprop:Generator_ColumnPropNameInRow="IdUsuarioParticipacion" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioParticipacion">
+              <xs:element name="IdParticipacion" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="IdParticipacion" msprop:Generator_ColumnPropNameInTable="IdParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnIdParticipacion" msprop:Generator_UserColumnName="IdParticipacion" type="xs:int" />
+              <xs:element name="IdCampaniaParticipacion" msprop:Generator_ColumnPropNameInRow="IdCampaniaParticipacion" msprop:Generator_ColumnPropNameInTable="IdCampaniaParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnIdCampaniaParticipacion" msprop:Generator_UserColumnName="IdCampaniaParticipacion" type="xs:int" />
+              <xs:element name="IdUsuarioParticipacion" msprop:Generator_ColumnPropNameInRow="IdUsuarioParticipacion" msprop:Generator_ColumnPropNameInTable="IdUsuarioParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnIdUsuarioParticipacion" msprop:Generator_UserColumnName="IdUsuarioParticipacion">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="14" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FechaRegistroParticipacion" msprop:Generator_UserColumnName="FechaRegistroParticipacion" msprop:Generator_ColumnPropNameInTable="FechaRegistroParticipacionColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistroParticipacion" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroParticipacion" type="xs:dateTime" />
-              <xs:element name="FechaModificacionParticipacion" msprop:Generator_UserColumnName="FechaModificacionParticipacion" msprop:Generator_ColumnPropNameInTable="FechaModificacionParticipacionColumn" msprop:Generator_ColumnPropNameInRow="FechaModificacionParticipacion" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionParticipacion" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="EstadoParticipacion" msprop:Generator_UserColumnName="EstadoParticipacion" msprop:Generator_ColumnPropNameInTable="EstadoParticipacionColumn" msprop:Generator_ColumnPropNameInRow="EstadoParticipacion" msprop:Generator_ColumnVarNameInTable="columnEstadoParticipacion">
+              <xs:element name="FechaRegistroParticipacion" msprop:Generator_ColumnPropNameInRow="FechaRegistroParticipacion" msprop:Generator_ColumnPropNameInTable="FechaRegistroParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnFechaRegistroParticipacion" msprop:Generator_UserColumnName="FechaRegistroParticipacion" type="xs:dateTime" />
+              <xs:element name="FechaModificacionParticipacion" msprop:Generator_ColumnPropNameInRow="FechaModificacionParticipacion" msprop:Generator_ColumnPropNameInTable="FechaModificacionParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnFechaModificacionParticipacion" msprop:Generator_UserColumnName="FechaModificacionParticipacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EstadoParticipacion" msprop:Generator_ColumnPropNameInRow="EstadoParticipacion" msprop:Generator_ColumnPropNameInTable="EstadoParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoParticipacion" msprop:Generator_UserColumnName="EstadoParticipacion">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HorasParticipacion" msprop:Generator_UserColumnName="HorasParticipacion" msprop:Generator_ColumnPropNameInTable="HorasParticipacionColumn" msprop:Generator_ColumnPropNameInRow="HorasParticipacion" msprop:Generator_ColumnVarNameInTable="columnHorasParticipacion" type="xs:int" />
+              <xs:element name="HorasParticipacion" msprop:Generator_ColumnPropNameInRow="HorasParticipacion" msprop:Generator_ColumnPropNameInTable="HorasParticipacionColumn" msprop:Generator_ColumnVarNameInTable="columnHorasParticipacion" msprop:Generator_UserColumnName="HorasParticipacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

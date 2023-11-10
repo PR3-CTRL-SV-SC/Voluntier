@@ -43,24 +43,34 @@ public partial class PAgregarCampania : System.Web.UI.Page
             }
             else
             {
-                if (txbFechaInicio.Text != "" || txbFechaFin.Text != "")
+                string fechaInicio = txbFechaInicio.Text;
+                string fechaFinal = txbFechaFin.Text;
+                if (fechaInicio == "" || fechaFinal == "")
                 {
-                    if (DateTime.Parse(txbFechaInicio.Text) < DateTime.Parse(txbFechaFin.Text))
-                    {
-                        lblDatosNombreCampania.Text = txbNombreCmpania.Text;
-                        lblDatosDescripcionCampania.Text = txbDescripcion.Text;
-                        lblFechaInicio.Text = txbFechaInicio.Text;
-                        lblFechaCierre.Text = txbFechaFin.Text;
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "Abrir()", true);
-                    }
-                    else
-                    {
-                        lblExep.Text = "La fecha final no puede ser menor o igual a la fecha inicial";
-                    }
+                    lblExep.Text = "Los campos de fechas no pueden estar vacios";
                 }
                 else
                 {
-                    lblExep.Text = "Los campos de fechas no pueden estar vacios";
+                    if (DateTime.Parse(fechaInicio) <= DateTime.Today || DateTime.Parse(fechaFinal) <= DateTime.Today)
+                    {
+                        lblExep.Text = "Las fechas tienen que ser posteriores al a fecha actual";
+                    }
+                    else
+                    {
+                        if (DateTime.Parse(txbFechaInicio.Text) < DateTime.Parse(txbFechaFin.Text))
+                        {
+                            lblDatosNombreCampania.Text = txbNombreCmpania.Text;
+                            lblDatosDescripcionCampania.Text = txbDescripcion.Text;
+                            lblFechaInicio.Text = txbFechaInicio.Text;
+                            lblFechaCierre.Text = txbFechaFin.Text;
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "Abrir()", true);
+                            lblExep.Text = "";
+                        }
+                        else
+                        {
+                            lblExep.Text = "La fecha final tiene que ser posterior a la fecha inicial";
+                        }
+                    }
                 }
             }
         }

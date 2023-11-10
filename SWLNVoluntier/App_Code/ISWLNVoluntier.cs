@@ -67,12 +67,11 @@ public interface ISWLNVoluntier
     [OperationContract]
     ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Codigo(string codigoUsuarioNetvalle);
     [OperationContract]
-    void Insertar_CUsuarioNetvalle_y_CUsuario(string rolUsuario,
+    void Insertar_CUsuarioNetvalle_y_CUsuario(
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
         string cargoUsuarioNetvalle,
-        string tarjetaUsuarioNetvalle,
         string sedeUsuarioNetvalle);
     #endregion
 

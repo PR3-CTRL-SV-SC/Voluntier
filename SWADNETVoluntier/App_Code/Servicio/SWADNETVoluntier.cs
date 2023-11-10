@@ -181,15 +181,14 @@ public class SWADNETVoluntier : ISWADNETVoluntier
         eCUsuarioNetvalle = cCUsuarioNetvalle.Obtener_CUsuarioNetvalle_O_Tarjeta(tarjetaUsuarioNetvalle);
         return eCUsuarioNetvalle;
     }
-    public void Insertar_CUsuarioNetvalle_y_CUsuario(string roleUsuario, string codigoUsuarioNetvalle, string nombresUsuarioNetvalle, string apellidosUsuarioNetvalle, string cargoUsuarioNetvalle, string tarjetaUsuarioNetvalle, string sedeUsuarioNetvalle)
+    public void Insertar_CUsuarioNetvalle_y_CUsuario(string codigoUsuarioNetvalle, string nombresUsuarioNetvalle, string apellidosUsuarioNetvalle, string cargoUsuarioNetvalle, string sedeUsuarioNetvalle)
     {
         CCUsuarioNetvalle cCUsuarioNetvalle = new CCUsuarioNetvalle();
-        cCUsuarioNetvalle.Insertar_CUsuarioNetvalle_y_CUsuario(roleUsuario,
+        cCUsuarioNetvalle.Insertar_CUsuarioNetvalle_y_CUsuario(
         codigoUsuarioNetvalle,
         nombresUsuarioNetvalle,
         apellidosUsuarioNetvalle,
         cargoUsuarioNetvalle,
-        tarjetaUsuarioNetvalle,
         sedeUsuarioNetvalle);
     }
     #endregion

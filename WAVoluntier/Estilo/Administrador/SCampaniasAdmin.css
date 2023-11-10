@@ -108,7 +108,7 @@ legend {
 
 .tablaSolicitudes {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     border-collapse: collapse;
 }
 
@@ -153,4 +153,13 @@ legend {
     color: white;
     border: 0px;
     cursor: pointer;
+}
+
+.tbResultados {
+    width: 100%;
+    vertical-align: top;
+}
+
+.divLista {
+    vertical-align: top;
 }

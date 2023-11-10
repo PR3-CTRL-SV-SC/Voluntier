@@ -113,12 +113,10 @@ public class ADCUsuarioNetvalle
 
     #region Insertar_CUsuarioNetvalle_y_CUsuario
     public void Insertar_CUsuarioNetvalle_y_CUsuario(
-        string rolUsuario,
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
         string cargoUsuarioNetvalle,
-        string tarjetaUsuarioNetvalle,
         string sedeUsuarioNetvalle)
     {
         DTOCUsuarioNetvalle dtoCUsuarioNetvalle = new DTOCUsuarioNetvalle();
@@ -126,12 +124,10 @@ public class ADCUsuarioNetvalle
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CUsuarioNetvalle_CUsuaro_I");
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "rolUsuario", DbType.String, rolUsuario);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "codigoUsuarioNetvalle", DbType.String, codigoUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "nombresUsuarioNetvalle", DbType.String, nombresUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "apellidosUsuarioNetvalle", DbType.String, apellidosUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "cargoUsuarioNetvalle", DbType.String, cargoUsuarioNetvalle);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "tarjetaUsuarioNetvalle", DbType.String, tarjetaUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "sedeUsuarioNetvalle", DbType.String, sedeUsuarioNetvalle);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionUsuarioNetvalle", DbType.DateTime, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaRegistroUsuarioNetvalle", DbType.DateTime, EPAEstaticos.FechaRegistro);

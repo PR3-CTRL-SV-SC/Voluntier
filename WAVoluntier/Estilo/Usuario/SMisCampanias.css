@@ -38,11 +38,33 @@
     margin: 2% auto;
 }
 
+.estado {
+    background-color: #E5E5E4;
+    color: #64072D;
+    margin: 10px 0px;
+    padding: 10px;
+    transition: background 1s, color 1s;
+}
+
+    .estado:hover {
+        background-color: #64072D;
+        color: white;
+    }
+
+.lblHoras {
+    font-weight: bold;
+}
+
 .lblOpcion {
     color: #610828;
     text-align: center;
     font-weight: bold;
     font-size: medium;
+}
+
+.divHoras {
+    width: 100%;
+    text-align: end;
 }
 
 .btnOpciones {

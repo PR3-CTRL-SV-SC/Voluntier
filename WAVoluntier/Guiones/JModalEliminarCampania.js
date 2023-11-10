@@ -11,7 +11,3 @@ function Cerrar() {
     notificacion.classList.remove('show');
     notificacionContainer.classList.remove('show');
 }
-
-
-//Cierra el modal notificación
-cerrarNotificacion.addEventListener('click', Cerrar);

@@ -24,7 +24,7 @@ public class CCUsuarioNetvalle
         foreach (DTOCUsuarioNetvalle.CUsuarioNetvalleRow drCUsuarioNetvalle in dtoCUsuarioNetvalle.CUsuarioNetvalle.Rows)
         {
             eCUsuarioNetvalle = new ECUsuarioNetvalle();
-            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
+            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombreUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.ApellidosUsuarioNetvalle = drCUsuarioNetvalle.ApellidosUsuarioNetvalle.ToString().TrimEnd();
         }
         return eCUsuarioNetvalle;
@@ -38,10 +38,9 @@ public class CCUsuarioNetvalle
         {
             eCUsuarioNetvalle = new ECUsuarioNetvalle();
             eCUsuarioNetvalle.CodigoUsuarioNetvalle = drCUsuarioNetvalle.CodigoUsuarioNetvalle.ToString().TrimEnd();
-            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
+            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombreUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.ApellidosUsuarioNetvalle = drCUsuarioNetvalle.ApellidosUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.CargoUsuarioNetvalle = drCUsuarioNetvalle.CargoUsuarioNetvalle.ToString().TrimEnd();
-            eCUsuarioNetvalle.TarjetaUsuarioNetvalle = drCUsuarioNetvalle.TarjetaUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.SedeUsuarioNetvalle = drCUsuarioNetvalle.SedeUsuarioNetvalle.ToString().TrimEnd();
         }
         return eCUsuarioNetvalle;
@@ -55,30 +54,27 @@ public class CCUsuarioNetvalle
         {
             eCUsuarioNetvalle = new ECUsuarioNetvalle();
             eCUsuarioNetvalle.CodigoUsuarioNetvalle = drCUsuarioNetvalle.CodigoUsuarioNetvalle.ToString().TrimEnd();
-            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombresUsuarioNetvalle.ToString().TrimEnd();
+            eCUsuarioNetvalle.NombreUsuarioNetvalle = drCUsuarioNetvalle.NombreUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.ApellidosUsuarioNetvalle = drCUsuarioNetvalle.ApellidosUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.CargoUsuarioNetvalle = drCUsuarioNetvalle.CargoUsuarioNetvalle.ToString().TrimEnd();
-            eCUsuarioNetvalle.TarjetaUsuarioNetvalle = drCUsuarioNetvalle.TarjetaUsuarioNetvalle.ToString().TrimEnd();
             eCUsuarioNetvalle.SedeUsuarioNetvalle = drCUsuarioNetvalle.SedeUsuarioNetvalle.ToString().TrimEnd();
         }
         return eCUsuarioNetvalle;
     }
 
-    public void Insertar_CUsuarioNetvalle_y_CUsuario(string roleUsuario,
+    public void Insertar_CUsuarioNetvalle_y_CUsuario(
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
         string cargoUsuarioNetvalle,
-        string tarjetaUsuarioNetvalle,
         string sedeUsuarioNetvalle)
     {
         ECUsuarioNetvalle eCUsuarioNetvalle = new ECUsuarioNetvalle();
-        adCUsuarioNetvalle.Insertar_CUsuarioNetvalle_y_CUsuario(roleUsuario,
+        adCUsuarioNetvalle.Insertar_CUsuarioNetvalle_y_CUsuario(
         codigoUsuarioNetvalle,
         nombresUsuarioNetvalle,
         apellidosUsuarioNetvalle,
         cargoUsuarioNetvalle,
-        tarjetaUsuarioNetvalle,
         sedeUsuarioNetvalle);
 
     }

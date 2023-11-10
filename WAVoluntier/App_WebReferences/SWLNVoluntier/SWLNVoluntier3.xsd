@@ -280,12 +280,10 @@
   <xs:element name="Insertar_CUsuarioNetvalle_y_CUsuario">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="rolUsuario" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="codigoUsuarioNetvalle" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nombresUsuarioNetvalle" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="apellidosUsuarioNetvalle" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="cargoUsuarioNetvalle" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="tarjetaUsuarioNetvalle" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="sedeUsuarioNetvalle" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>

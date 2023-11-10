@@ -20,8 +20,6 @@ public class ECUsuarioNetvalle
     [DataMember]
     public string CargoUsuarioNetvalle { get; set; }
     [DataMember]
-    public string TarjetaUsuarioNetvalle { get; set; }
-    [DataMember]
     public string SedeUsuarioNetvalle { get; set; }
     [DataMember]
     public DateTime FechaRegistroUsuarioNetvalle { get; set; }
@@ -36,7 +34,6 @@ public class ECUsuarioNetvalle
         NombreUsuarioNetvalle = string.Empty;
         ApellidosUsuarioNetvalle = string.Empty;
         CargoUsuarioNetvalle = string.Empty;
-        TarjetaUsuarioNetvalle = string.Empty;
         SedeUsuarioNetvalle = string.Empty;
         FechaRegistroUsuarioNetvalle = DateTime.MinValue;
         FechaModificacionUsuarioNetvalle = DateTime.MinValue;

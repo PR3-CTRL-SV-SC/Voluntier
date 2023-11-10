@@ -1000,17 +1000,16 @@ public class LNServicio
         return eCUsuarioNetvalle;
     }
 
-    public void Insertar_CUsuarioNetvalle_y_CUsuario(string rolUsuario,
+    public void Insertar_CUsuarioNetvalle_y_CUsuario(
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
         string cargoUsuarioNetvalle,
-        string tarjetaUsuarioNetvalle,
         string sedeUsuarioNetvalle)
     {
         try
         {
-            sWLNVoluntier.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario, codigoUsuarioNetvalle, nombresUsuarioNetvalle, apellidosUsuarioNetvalle, cargoUsuarioNetvalle, tarjetaUsuarioNetvalle, sedeUsuarioNetvalle);
+            sWLNVoluntier.Insertar_CUsuarioNetvalle_y_CUsuario(codigoUsuarioNetvalle, nombresUsuarioNetvalle, apellidosUsuarioNetvalle, cargoUsuarioNetvalle, sedeUsuarioNetvalle);
         }
         catch (FaultException<EDefecto> ex)
         {
@@ -1028,7 +1027,7 @@ public class LNServicio
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
                 {
-                    sWLNVoluntierClient.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario, codigoUsuarioNetvalle, nombresUsuarioNetvalle, apellidosUsuarioNetvalle, cargoUsuarioNetvalle, tarjetaUsuarioNetvalle, sedeUsuarioNetvalle);
+                    sWLNVoluntierClient.Insertar_CUsuarioNetvalle_y_CUsuario(codigoUsuarioNetvalle, nombresUsuarioNetvalle, apellidosUsuarioNetvalle, cargoUsuarioNetvalle, sedeUsuarioNetvalle);
                 }
             }
             else

@@ -16,6 +16,10 @@
             </div>
             <div id="div1" runat="server" class="containerLista">
                 <fieldset>
+                    <div class="estado">
+                        <asp:Label ID="lblHoras" runat="server" CssClass="lblHoras"></asp:Label>
+                    </div>
+
                     <div class="contenedorBotones">
                         <asp:Button ID="btnPendientes" CssClass="btnOpciones" runat="server" Text="Pendientes" OnClick="btnPendientes_Click"/>
                         <asp:Button ID="btnAprobados" CssClass="btnOpciones" runat="server" Text="Aprobados" OnClick="btnAprobados_Click"/>
@@ -24,13 +28,14 @@
                     <asp:Label ID="lblOpciones" runat="server" CssClass="lblOpcion"></asp:Label>
                     <hr />
                     <asp:Label ID="lblNotificacion" runat="server" CssClass="lblNotificacion"></asp:Label>
+
                     
                     <asp:GridView ID="gvListaCampanias" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" >
                         <Columns>
                             <asp:BoundField DataField="IdCampania" HeaderText="ID" Visible="false"/>
                             <asp:BoundField DataField="NombreCampania" HeaderText="CAMPAÑA" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colCampania" />
                             <asp:BoundField DataField="EstadoSolicitud" HeaderText="SOLICITUD" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colSolicitud" />
-                            <asp:BoundField DataField="Horas" HeaderText="HORAS" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colHora" />
+                            <asp:BoundField DataField="HorasParticipacion" HeaderText="HORAS" HeaderStyle-CssClass="colTitulo" ItemStyle-CssClass="colHora" />
                             <asp:TemplateField HeaderStyle-CssClass="colTitulo">
                                 <ItemTemplate >
                                     <asp:Button CssClass="btnVer" runat="server" OnCommand="btnVer_Command" Text="Ver" CommandArgument='<%# Eval("IdCampania") %>'/>

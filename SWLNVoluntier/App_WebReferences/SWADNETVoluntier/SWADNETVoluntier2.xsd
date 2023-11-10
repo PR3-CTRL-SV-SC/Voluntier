@@ -33,7 +33,7 @@
       <xs:element minOccurs="0" name="EstadoParticipacion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaModificacionParticipacion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaRegistroParticipacion" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="HorasParticipacion" type="xs:int" />
+      <xs:element minOccurs="0" name="HorasParticipacion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdCampaniaParticipacion" type="xs:int" />
       <xs:element minOccurs="0" name="IdParticipacion" type="xs:int" />
       <xs:element minOccurs="0" name="IdUsuarioParticipacion" nillable="true" type="xs:string" />
@@ -79,7 +79,6 @@
       <xs:element minOccurs="0" name="FechaRegistroUsuarioNetvalle" type="xs:dateTime" />
       <xs:element minOccurs="0" name="NombreUsuarioNetvalle" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SedeUsuarioNetvalle" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TarjetaUsuarioNetvalle" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ECUsuarioNetvalle" nillable="true" type="tns:ECUsuarioNetvalle" />

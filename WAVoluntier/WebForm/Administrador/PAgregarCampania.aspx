@@ -53,7 +53,7 @@
                         <asp:Label CssClass="textLabel" Text="Fecha de Cierre:" runat="server"></asp:Label>
                     </td>
                     <td class="ContenedorInput">
-                        <asp:TextBox ID="txbFechaFin" CssClass="textInput" TextMode="Date" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                        <asp:TextBox ID="txbFechaFin" CssClass="textInput" TextMode="Date" runat="server"></asp:TextBox>
                     </td>
                 </tr>
             </table>

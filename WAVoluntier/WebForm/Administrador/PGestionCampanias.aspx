@@ -32,7 +32,7 @@
                             <asp:BoundField DataField="EstadoCampania" HeaderText="ESTADO"  ItemStyle-CssClass="colEstado"/>
                             <asp:TemplateField ItemStyle-CssClass="colOpciones">
                                 <ItemTemplate>
-                                    <asp:Button CssClass="btnOpciones" runat="server" CommandName="btnVer" Text="Ver" CommandArgument='<%# Eval("IdCampania") + "|" + Eval("EstadoCampania") %>' />
+                                    <asp:Button CssClass="btnOpciones" runat="server" CommandName="btnInformacion" Text="Ver" CommandArgument='<%# Eval("IdCampania") + "|" + Eval("EstadoCampania") %>' />
                                     <asp:Button CssClass="btnOpciones" runat="server" CommandName="btnActualizar" Text="Actualizar" CommandArgument='<%# Eval("IdCampania") %>' />
                                     <asp:Button CssClass="btnOpciones" runat="server" CommandName="btnEliminar" Text="Eliminar" CommandArgument='<%# Eval("IdCampania") + "|" + Container.DataItemIndex %>' />
                                 </ItemTemplate>

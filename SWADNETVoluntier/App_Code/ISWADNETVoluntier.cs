@@ -62,6 +62,7 @@ public interface ISWADNETVoluntier
     [OperationContract]
     void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horasUsuario);
     #endregion
+    
     #region Tabla : CUsuarioNetvalle
     [OperationContract]
     ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo(string sedeUsuarioNetvalle, string codigoUsuarioNetvalle);
@@ -70,11 +71,11 @@ public interface ISWADNETVoluntier
     [OperationContract]
     ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Tarjeta(string tarjetaUsuarioNetvalle);
     [OperationContract]
-    void Insertar_CUsuarioNetvalle_y_CUsuario(string rolUsuario, string codigoUsuarioNetvalle, string nombresUsuarioNetvalle, string apellidosUsuarioNetvalle, string cargoUsuarioNetvalle, string tarjetaUsuarioNetvalle, string sedeUsuarioNetvalle);
+    void Insertar_CUsuarioNetvalle_y_CUsuario(string codigoUsuarioNetvalle, string nombresUsuarioNetvalle, string apellidosUsuarioNetvalle, string cargoUsuarioNetvalle, string sedeUsuarioNetvalle);
     #endregion
 
 
-   
+
 }
 
 //// Use a data contract as illustrated in the sample below to add composite types to service operations.

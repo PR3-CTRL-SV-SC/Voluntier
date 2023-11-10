@@ -1,5 +1,6 @@
 ﻿using SWLNVoluntier;
 using System;
+using System.Activities;
 using System.Collections.Generic;
 using System.IdentityModel.Metadata;
 using System.Linq;
@@ -21,25 +22,36 @@ public partial class PGestionCampanias : System.Web.UI.Page
         {
             try
             {
+                eCCampanias = sWLNVoluntierClient.Obtener_CCampania_O().ToList();
                 if (Session["Rol"].ToString() == "ADMINISTRATIVO")
                 {
                     btnCampaniasPropuestas.Visible = true;
+                    var campañasActivas = eCCampanias.Where(c => c.EstadoCampania == SDatosGlobales.APROBADO || c.EstadoCampania == SDatosGlobales.EN_CURSO || c.EstadoCampania == SDatosGlobales.FINALIZADO).OrderBy(c => c.FechaInicioCampania).ToList();
+
+                    if (campañasActivas.Count < 1)
+                    {
+                        lblNotificacion.Text = "NO EXISTEN CAMPAÑAS ACTIVAS O EN CURSO";
+                    }
+                    else
+                    {
+                        gvListaCampanias.DataSource = campañasActivas;
+                        gvListaCampanias.DataBind();
+                    }
                 }
                 else
                 {
                     btnCampaniasPropuestas.Visible = false;
-                }
-                eCCampanias = sWLNVoluntierClient.Obtener_CCampania_O().ToList();
-                var campañasActivas = eCCampanias.Where(c => c.EstadoCampania == SDatosGlobales.APROBADO || c.EstadoCampania == SDatosGlobales.EN_CURSO || c.EstadoCampania == SDatosGlobales.FINALIZADO).ToList();
+                    var campañasActivas = eCCampanias.Where(c => c.IdUsuarioCreador == Session["Codigo"].ToString()).OrderBy(c => c.FechaInicioCampania).ToList();
 
-                if (campañasActivas.Count < 1)
-                {
-                    lblNotificacion.Text = "NO EXISTEN CAMPAÑAS ACTIVAS O EN CURSO";
-                }
-                else
-                {
-                    gvListaCampanias.DataSource = campañasActivas;
-                    gvListaCampanias.DataBind();
+                    if (campañasActivas.Count < 1)
+                    {
+                        lblNotificacion.Text = "NO EXISTEN CAMPAÑAS ACTIVAS O EN CURSO";
+                    }
+                    else
+                    {
+                        gvListaCampanias.DataSource = campañasActivas;
+                        gvListaCampanias.DataBind();
+                    }
                 }
             }
             catch (Exception ex)
@@ -56,9 +68,10 @@ public partial class PGestionCampanias : System.Web.UI.Page
 
     protected void gvListaCampanias_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "btnVer")
+        if (e.CommandName == "btnInformacion")
         {
             string argument = e.CommandArgument.ToString();
+            ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('"+ argument.ToString() +"');", true);
             string[] arguments = argument.Split('|');
 
             if (arguments.Length == 2)
@@ -67,7 +80,7 @@ public partial class PGestionCampanias : System.Web.UI.Page
                 string estado = arguments[1];
                 Session["codCampania"] = idCampania;
 
-                if(estado == SDatosGlobales.APROBADO)
+                if(estado == SDatosGlobales.APROBADO || estado == SDatosGlobales.PENDIENTE)
                 {
                     Response.Redirect("PCampaniasAdmin.aspx");
                 }

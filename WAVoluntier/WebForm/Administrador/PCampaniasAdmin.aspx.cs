@@ -10,54 +10,73 @@ public partial class WebForm_Administrador_PCampaniasAdmin : System.Web.UI.Page
 {
     ECCampania eCCampania = new ECCampania();
     SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient();
-    List<ECSolicitudParticipacion> lstSolicitudes = new List<ECSolicitudParticipacion>();
-    List<ECUsuario> lstUsuarios = new List<ECUsuario>();
+    List<ECSolicitudParticipacion> lstSolicitudes;
+    List<ECUsuarioNetvalle> lstUsuarios = new List<ECUsuarioNetvalle>();
     ECParticipacion eCParticipacion;
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        lstSolicitudes = new List<ECSolicitudParticipacion>();
         eCCampania = sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(Convert.ToInt32(Session["codCampania"]));
-        lstSolicitudes = sWLNVoluntierClient.Obtener_CSolicitudes_O_Campania(Convert.ToInt32(Session["codCampania"])).Where(s => s.EstadoSolicitud == SDatosGlobales.PENDIENTE ).ToList();
+        lstSolicitudes = sWLNVoluntierClient.Obtener_CSolicitudes_O_Campania(Convert.ToInt32(Session["codCampania"])).ToList();
 
         if (!IsPostBack)
         {
-            if (eCCampania.EstadoCampania == SDatosGlobales.APROBADO)
-            {
-                lblEstado.Text = "APROBADO";
-            }
             lblTitulo.Text = eCCampania.NombreCampania;
             lblDescripcion.Text = eCCampania.DescripcionCampania;
             string mesInicio = eCCampania.FechaInicioCampania.Month.ToString();
             string diaInicio = eCCampania.FechaInicioCampania.Day.ToString();
             string anioInicio = eCCampania.FechaInicioCampania.Year.ToString();
 
-            string mesFin = eCCampania.FechaInicioCampania.Month.ToString();
-            string diaFin = eCCampania.FechaInicioCampania.Day.ToString();
-            string anioFin = eCCampania.FechaInicioCampania.Year.ToString();
+            string mesFin = eCCampania.FechaFinCampania.Month.ToString();
+            string diaFin = eCCampania.FechaFinCampania.Day.ToString();
+            string anioFin = eCCampania.FechaFinCampania.Year.ToString();
 
             string fechaInicio = SUtil.ConvertirFechas(diaInicio) + "/" + SUtil.ConvertirFechas(mesInicio) + "/" + anioInicio;
             string fechaCierre = SUtil.ConvertirFechas(diaFin) + "/" + SUtil.ConvertirFechas(mesFin) + "/" + anioFin;
 
             lblFechaInicio.Text = fechaInicio;
             lblFechaCierre.Text = fechaCierre;
-
-            foreach (ECSolicitudParticipacion solicitud in lstSolicitudes)
+            if (eCCampania.EstadoCampania == SDatosGlobales.PENDIENTE)
             {
-                lstUsuarios.Add(sWLNVoluntierClient.Obtener_CUsuario_O_Codigo(solicitud.IdUsuarioSolicitud));
+                ClientScript.RegisterStartupScript(this.GetType(), "ocultarTbSol", "document.getElementById('tbSolicitudes').style.display = 'none';", true);
+                lblNotificacion.Text = "NO PUEDES RECIBIR SOLICITUDES HASTA QUE LA CAMPAÑA SEA APROBADA";
             }
-
-            //var lstDatosSolicitud = lstSolicitudes.Join(lstSolicitudes, s => s.IdUsuarioSolicitud, u => u.IdUsuarioSolicitud, (s, u) => new { s, u }).ToList();
-            if (lstSolicitudes.Count > 0)
+            if (eCCampania.EstadoCampania == SDatosGlobales.APROBADO)
             {
-                rptSolicitudes.DataSource = lstSolicitudes;
-                rptSolicitudes.DataBind();
-
+                lblEstado.Text = "APROBADO";
+                foreach (ECSolicitudParticipacion solicitud in lstSolicitudes)
+                {
+                    {
+                        lstUsuarios.Add(sWLNVoluntierClient.Obtener_CUsuarioNetvalle_O_Codigo(solicitud.IdUsuarioSolicitud));
+                    }
+                }
+                var lstSolicitudesNombre = lstSolicitudes.Where(s => s.EstadoSolicitud == SDatosGlobales.PENDIENTE).Join(lstUsuarios, s => s.IdUsuarioSolicitud.ToUpper(), u => u.CodigoUsuarioNetvalle.ToUpper(), (s, u) => new { s.IdSolicitud, s.IdUsuarioSolicitud, NombreCompleto = u.NombreUsuarioNetvalle + " " + u.ApellidosUsuarioNetvalle }).ToList();
+                var lstAceptados = lstSolicitudes.Where(s => s.EstadoSolicitud == SDatosGlobales.APROBADO).Join(lstUsuarios, s => s.IdUsuarioSolicitud.ToUpper(), u => u.CodigoUsuarioNetvalle.ToUpper(), (s, u) => new { NombreCompleto = u.NombreUsuarioNetvalle + " " + u.ApellidosUsuarioNetvalle }).ToList();
+                var lstRechazados = lstSolicitudes.Where(s => s.EstadoSolicitud == SDatosGlobales.RECHAZADO).Join(lstUsuarios, s => s.IdUsuarioSolicitud.ToUpper(), u => u.CodigoUsuarioNetvalle.ToUpper(), (s, u) => new { NombreCompleto = u.NombreUsuarioNetvalle + " " + u.ApellidosUsuarioNetvalle }).ToList();
+                if (lstSolicitudesNombre.Count > 0)
+                {
+                    rptSolicitudes.DataSource = lstSolicitudesNombre;
+                    rptSolicitudes.DataBind();
+                }
+                else
+                {
+                    lblNotificacion.Text = "NO TIENES SOLICITUDES";
+                    ClientScript.RegisterStartupScript(this.GetType(), "ocultarTbSol", "document.getElementById('tbSolicitudes').style.display = 'none';", true);
+                }
+                ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('" + lstRechazados.Count + "');", true);
+                if (lstAceptados.Count > 0 || lstRechazados.Count > 0)
+                {
+                    rptAceptados.DataSource = lstAceptados;
+                    rptAceptados.DataBind();
+                    rptRechazados.DataSource = lstRechazados;
+                    rptRechazados.DataBind();
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "OcultarTbRes", "document.getElementById('tbResultados').style.display = 'none';", true);
+                }
             }
-            else
-            {
-                lblNotificacion.Text = "NO TIENES SOLICITUDES";
-            }
-            
         }
     }
 
@@ -82,7 +101,8 @@ public partial class WebForm_Administrador_PCampaniasAdmin : System.Web.UI.Page
 
     protected void btnDenegar_Command(object sender, CommandEventArgs e)
     {
-        sWLNVoluntierClient.Actualizar_CSolicitud_A_Estado(Convert.ToInt32(Session["codCampania"]), SDatosGlobales.RECHAZADO);
+        int idSolicitud = Convert.ToInt32(e.CommandArgument);
+        sWLNVoluntierClient.Actualizar_CSolicitud_A_Estado(idSolicitud, SDatosGlobales.RECHAZADO);
         Response.Redirect(Request.RawUrl);
     }
 }

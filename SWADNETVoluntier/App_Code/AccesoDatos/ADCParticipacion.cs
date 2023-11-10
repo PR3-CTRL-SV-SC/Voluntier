@@ -38,8 +38,8 @@ public class ADCParticipacion
     #endregion
 
     #region Metodos publicos
-    
-    
+
+
     /// <summary>
     /// Obtener todas las campañas
     /// </summary>
@@ -104,7 +104,7 @@ public class ADCParticipacion
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idUsuarioParticipacion", DbType.String, eCParticipacion.IdUsuarioParticipacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "fechaModificacionParticipacion", DbType.DateTime, EPAEstaticos.FechaModificacion);
             BDSWADNETVoluntier.AddInParameter(dbCommand, "estadoParticipacion", DbType.String, eCParticipacion.EstadoParticipacion);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "horasParticipacion", DbType.Int32, eCParticipacion.HorasParticipacion);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "horasParticipacion", DbType.String, eCParticipacion.HorasParticipacion);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }
         catch (SqlException SQLEx)

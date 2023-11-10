@@ -44,9 +44,9 @@
                     </tr>
                 </table>
                 <fieldset>
-                    <legend>Lista de solicitudes</legend>
+                    <legend>Lista de participantes</legend>
                     <asp:Label ID="lblNotificacion" runat="server" CssClass="lblNotificacion"></asp:Label>
-                    <table class="tablaSolicitudes">
+                    <table ID="tbParticipantes" class="tablaSolicitudes">
                         <thead>
                             <tr class="filaTitulos">
                                 <th class="tituloTabla">
@@ -61,12 +61,12 @@
                         <asp:Repeater ID="rptParticipantes" runat="server">
                             <ItemTemplate>
                                 <tr class="datosSolicitud">
-                                    <td class="nombreSolicitud"><%# Eval("IdUsuarioParticipacion") %></td>
+                                    <td class="nombreSolicitud"><%# Eval("NombreCompleto") %></td>
                                     <td class="acciones">
-                                        <asp:TextBox ID="txtHoras" runat="server" CssClass="txtHoras" TextMode="Number" placeholder="HH"></asp:TextBox>
+                                        <asp:TextBox ID="txtHoras" runat="server" CssClass="txtHoras" TextMode="Number" placeholder="HH" Text='<%# Eval("Horas") %>'></asp:TextBox>
                                         <span><b> : </b></span>
-                                        <asp:TextBox ID="txtMinutos" runat="server" CssClass="txtHoras" TextMode="Number" placeholder="MM"></asp:TextBox>
-                                        <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnCommand="btnAceptar_Command" CommandArgument='<%# Eval("IdUsuarioParticipacion") %>' CssClass="btnAceptar" />
+                                        <asp:TextBox ID="txtMinutos" runat="server" CssClass="txtHoras" TextMode="Number" placeholder="MM" Text='<%# Eval("Minutos") %>'></asp:TextBox>
+                                        <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CommandName="Aceptar" OnCommand="btnAceptar_Command" CommandArgument='<%# Eval("IdUsuarioParticipacion") + "|" + Container.ItemIndex %>' CssClass="btnAceptar" />
                                     </td>
                                 </tr>
                             </ItemTemplate>

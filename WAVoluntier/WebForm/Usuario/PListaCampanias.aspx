@@ -7,6 +7,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form" runat="server">
+    <asp:ScriptManager ID="ContentPlaceHolder1_ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:Timer ID="timerControl" Enabled="true" Interval="30000" OnTick="timerControl_Tick" runat="server"></asp:Timer>
         <fieldset class="field">
             <div class="title">
                 <label class="lblTitle">Listado de Campañas</label>

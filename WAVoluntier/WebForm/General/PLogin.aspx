@@ -114,17 +114,16 @@ Inherits="PLogin" %>
         <label
           class="d-flex flex-row align-items-center"
           for="password"
-          >Password
+          >Rol
          </label
         >
-        <input
-          type="password"
-          class="form-control"
-          required=""
-          id="password"
-          name="password"
-          value=""
-        />
+        <asp:DropDownList ID="cmbRol" runat="server" class="form-control text-lowercase" AutoPostBack="true">
+            <asp:ListItem Text="" Value="" />
+            <asp:ListItem Text="Administrativo" Value="AD" />
+            <asp:ListItem Text="Docente" Value="DO" />
+            <asp:ListItem Text="Estudiante" Value="ES" />
+        </asp:DropDownList>
+
       </div>
       <div class="form-group pt-1">
         <asp:Button runat="server" ID="btnIniciar" OnClick="btnIniciar_Click" class="btn btn-primary btn-block" Text="Iniciar Sesion" type="submit"/>

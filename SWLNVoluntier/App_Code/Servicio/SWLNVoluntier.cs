@@ -130,14 +130,14 @@ public class SWLNVoluntier : ISWLNVoluntier
         List<ECUsuario> lstECUsuario = new List<ECUsuario>();
         lstECUsuario = cControlSV.Obtener_CUsuarios_O_Top_Horas(sedeUsuarioNetvalle);
         return lstECUsuario;
-    }   
+    }
     public List<ECUsuario> Obtener_CUsuarios_O_Sede(string sedeUsuarioNetvalle)
     {
         CControlSV cControlSV = new CControlSV();
         List<ECUsuario> lstECUsuario = new List<ECUsuario>();
         lstECUsuario = cControlSV.Obtener_CUsuarios_O_Sede(sedeUsuarioNetvalle);
         return lstECUsuario;
-    }   
+    }
     public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horas)
     {
         CControlSV cControlSV = new CControlSV();
@@ -146,28 +146,26 @@ public class SWLNVoluntier : ISWLNVoluntier
     #endregion
 
     #region CUsuarioNetvalle
-    public ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Codigo (string codigoUsuarioNetvalle)
+    public ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Codigo(string codigoUsuarioNetvalle)
     {
         CControlSV cControlSV = new CControlSV();
         ECUsuarioNetvalle eCUsuarioNetvalle = new ECUsuarioNetvalle();
         eCUsuarioNetvalle = cControlSV.Obtener_CUsuarioNetvalle_O_Codigo(codigoUsuarioNetvalle);
         return eCUsuarioNetvalle;
-    }   
-    public void Insertar_CUsuarioNetvalle_y_CUsuario(string rolUsuario,
+    }
+    public void Insertar_CUsuarioNetvalle_y_CUsuario(
                string codigoUsuarioNetvalle,
                       string nombresUsuarioNetvalle,
                              string apellidosUsuarioNetvalle,
                                     string cargoUsuarioNetvalle,
-                                           string tarjetaUsuarioNetvalle,
                                                   string sedeUsuarioNetvalle)
     {
         CControlSV cControlSV = new CControlSV();
-        cControlSV.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario,
+        cControlSV.Insertar_CUsuarioNetvalle_y_CUsuario(
                        codigoUsuarioNetvalle,
                                   nombresUsuarioNetvalle,
                                              apellidosUsuarioNetvalle,
                                                         cargoUsuarioNetvalle,
-                                                                   tarjetaUsuarioNetvalle,
                                                                               sedeUsuarioNetvalle);
     }
     #endregion
@@ -182,9 +180,9 @@ public class SWLNVoluntier : ISWLNVoluntier
         return lstEUsuarioCompleja;
     }
     #endregion
-    
 
-    //Añadidas
+
+    //AÃ±adidas
     public string Descifrado(string Texto, string Tipo)
     {
         return "";

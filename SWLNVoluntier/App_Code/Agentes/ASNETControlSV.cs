@@ -64,7 +64,7 @@ public class ASNETControlSV
 
         }
         return lstEcCampania;
-    }   
+    }
 
     public ECCampania Obtener_CCampania_O_IdCampania(int idCampania)
     {
@@ -410,7 +410,7 @@ public class ASNETControlSV
             }
 
         }
-        return lstEcSolicitudParticipacion; 
+        return lstEcSolicitudParticipacion;
     }
 
     public List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Usuario(string idUsuario)
@@ -443,7 +443,7 @@ public class ASNETControlSV
 
         }
         return lstEcSolicitudParticipacion;
-    }   
+    }
 
     public void Insertar_CSolicitud_I(ECSolicitudParticipacion eCSolicitudParticipacion)
     {
@@ -540,7 +540,7 @@ public class ASNETControlSV
         return eCUsuario;
     }
 
-    public List<ECUsuario> Obtener_CUsuarios_O_Top_Horas (string sedeUsuarioNetvalle)
+    public List<ECUsuario> Obtener_CUsuarios_O_Top_Horas(string sedeUsuarioNetvalle)
     {
         List<ECUsuario> lstEcUsuario = new List<ECUsuario>();
         try
@@ -570,7 +570,7 @@ public class ASNETControlSV
 
         }
         return lstEcUsuario;
-    }   
+    }
 
     public List<ECUsuario> Obtener_CUsuarios_O_Sede(string sedeUsuarioNetvalle)
     {
@@ -602,7 +602,7 @@ public class ASNETControlSV
 
         }
         return lstEcUsuario;
-    }   
+    }
 
     public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, int Horas)
     {
@@ -636,7 +636,7 @@ public class ASNETControlSV
 
     #endregion
     #region CUsuarioNetvalle
-    
+
     public ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Codigo(string CodigoUsuarioNetvalle)
     {
         ECUsuarioNetvalle eCUsuarioNetvalle = new ECUsuarioNetvalle();
@@ -667,24 +667,23 @@ public class ASNETControlSV
 
         }
         return eCUsuarioNetvalle;
-    }   
+    }
 
-    public void Insertar_CUsuarioNetvalle_y_CUsuario(string rolUsuario,
+    public void Insertar_CUsuarioNetvalle_y_CUsuario(
         string codigoUsuarioNetvalle,
         string nombresUsuarioNetvalle,
         string apellidosUsuarioNetvalle,
         string cargoUsuarioNetvalle,
-        string tarjetaUsuarioNetvalle,
+
         string sedeUsuarioNetvalle)
     {
         try
         {
-            swADNETVoluntier.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario,
+            swADNETVoluntier.Insertar_CUsuarioNetvalle_y_CUsuario(
                 codigoUsuarioNetvalle,
                 nombresUsuarioNetvalle,
                 apellidosUsuarioNetvalle,
                 cargoUsuarioNetvalle,
-                tarjetaUsuarioNetvalle,
                 sedeUsuarioNetvalle);
         }
         catch (EndpointNotFoundException EndPointEx)
@@ -700,12 +699,11 @@ public class ASNETControlSV
             FaultException feaultEx = CommEx as FaultException;
             if (feaultEx == null)
             {
-                swADNETVoluntier.Insertar_CUsuarioNetvalle_y_CUsuario(rolUsuario,
+                swADNETVoluntier.Insertar_CUsuarioNetvalle_y_CUsuario(
                 codigoUsuarioNetvalle,
                 nombresUsuarioNetvalle,
                 apellidosUsuarioNetvalle,
                 cargoUsuarioNetvalle,
-                tarjetaUsuarioNetvalle,
                 sedeUsuarioNetvalle);
             }
             else
@@ -715,7 +713,7 @@ public class ASNETControlSV
             }
 
         }
-    }   
+    }
 
     #endregion
 

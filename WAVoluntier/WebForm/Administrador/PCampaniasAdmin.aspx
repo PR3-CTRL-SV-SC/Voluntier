@@ -21,12 +21,8 @@
                 </div>
                 <table class="tablaDatos">
                     <tr class="filaTitulos">
-                        <td class="tituloTabla">
-                            DESCRIPCION
-                        </td>
-                        <td class="tituloTabla">
-                            FECHAS
-                        </td>
+                        <td class="tituloTabla">DESCRIPCION</td>
+                        <td class="tituloTabla">FECHAS</td>
                     </tr>
                     <tr>
                         <td class="descripcion">
@@ -46,7 +42,7 @@
                 <fieldset>
                     <legend>Lista de solicitudes</legend>
                     <asp:Label ID="lblNotificacion" runat="server" CssClass="lblNotificacion"></asp:Label>
-                    <table class="tablaSolicitudes">
+                    <table ID="tbSolicitudes" class="tablaSolicitudes">
                         <thead>
                             <tr class="filaTitulos">
                                 <th class="tituloTabla">
@@ -61,10 +57,10 @@
                         <asp:Repeater ID="rptSolicitudes" runat="server">
                             <ItemTemplate>
                                 <tr class="datosSolicitud">
-                                    <td class="nombreSolicitud"><%# Eval("IdUsuarioSolicitud") %></td>
+                                    <td class="nombreSolicitud"><%# Eval("NombreCompleto") %></td>
                                     <td class="acciones">
                                         <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnCommand="btnAceptar_Command" CommandArgument='<%# Eval("IdUsuarioSolicitud") + "|" + Eval("IdSolicitud") %>' CssClass="btnAceptar" />
-                                        <asp:Button ID="btnDenegar" runat="server" Text="Denegar" OnCommand="btnDenegar_Command" CommandArgument='<%# Eval("IdUsuarioSolicitud") %>' CssClass="btnRechazar" />
+                                        <asp:Button ID="btnDenegar" runat="server" Text="Denegar" OnCommand="btnDenegar_Command" CommandArgument='<%# Eval("IdSolicitud") %>' CssClass="btnRechazar" />
                                     </td>
                                 </tr>
                             </ItemTemplate>
@@ -72,6 +68,54 @@
                         </tbody>
                     </table>
                 </fieldset>
+                <table id="tbResultados" class="tbResultados">
+                    <tr>
+                        <td class="divLista">
+                            <fieldset>
+                                <legend>Lista de Aceptados</legend>
+                                <table class="tablaSolicitudes">
+                                    <thead>
+                                        <tr class="filaTitulos">
+                                            <th class="tituloTabla">
+                                                ESTUDIANTE
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <asp:Repeater ID="rptAceptados" runat="server">
+                                        <ItemTemplate>
+                                            <tr class="datosSolicitud">
+                                                <td class="nombreSolicitud"><%# Eval("NombreCompleto") %></td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </td>
+                        <td class="divLista">
+                            <fieldset>
+                                <legend>Lista de Rechazados</legend>
+                                <table class="tablaSolicitudes">
+                                    <thead>
+                                        <tr class="filaTitulos">
+                                            <th class="tituloTabla">ESTUDIANTE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <asp:Repeater ID="rptRechazados" runat="server">
+                                            <ItemTemplate>
+                                                <tr class="datosSolicitud">
+                                                    <td class="nombreSolicitud"><%# Eval("NombreCompleto") %></td>
+                                                </tr>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </fieldset>
     </form>

@@ -16,7 +16,7 @@ public class ECParticipacion
     [DataMember]
     public int IdCampaniaParticipacion { get; set; }
     [DataMember]
-    public string IdUsuarioParticipacion{ get; set; }
+    public string IdUsuarioParticipacion { get; set; }
     [DataMember]
     public DateTime FechaRegistroParticipacion { get; set; }
     [DataMember]
@@ -24,7 +24,7 @@ public class ECParticipacion
     [DataMember]
     public string EstadoParticipacion { get; set; }
     [DataMember]
-    public int HorasParticipacion { get; set; }
+    public string HorasParticipacion { get; set; }
 
     #endregion
     public ECParticipacion()
@@ -35,6 +35,6 @@ public class ECParticipacion
         FechaRegistroParticipacion = DateTime.MinValue;
         FechaModificacionParticipacion = DateTime.MinValue;
         EstadoParticipacion = string.Empty;
-        HorasParticipacion = 0;
+        HorasParticipacion = string.Empty;
     }
 }

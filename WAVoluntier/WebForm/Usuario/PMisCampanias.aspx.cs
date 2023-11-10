@@ -12,6 +12,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
     List<ECCampania> lstCampanias = new List<ECCampania>();
     List<ECSolicitudParticipacion> lstSolicitudes = new List<ECSolicitudParticipacion>();
     List<ECParticipacion> lstParticipacion = new List<ECParticipacion>();
+    List<ECParticipacion> lstPartiHoras = new List<ECParticipacion>();
 
     private void LimpiarDatos()
     {
@@ -21,6 +22,34 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
         gvListaCampanias.DataSource = null;
         gvListaCampanias.DataBind();
         lblNotificacion.Text = "";
+    }
+
+    private void CargarHoras ()
+    {
+        lstPartiHoras = sWLNVoluntierClient.Obtener_CParticipacion_O_PorUsuario(Session["Codigo"].ToString()).ToList();
+        if (lstPartiHoras.Count > 0)
+        {
+            int totalMinutos = 0;
+            string totalTiempo = "00:00";
+            foreach (var item in lstPartiHoras)
+            {
+                var tiempo = item.HorasParticipacion.Split(':');
+                if (tiempo.Length == 2)
+                {
+                    int h = Convert.ToInt32(tiempo[0]);
+                    int m = Convert.ToInt32(tiempo[1]);
+
+                    totalMinutos += (h * 60) + m;
+                    totalTiempo = string.Format("{0:D2}:{1:D2}", totalMinutos / 60, totalMinutos % 60);
+
+                }
+            }
+            lblHoras.Text = totalTiempo + " /150:00 Horas";
+        }
+        else
+        {
+            lblHoras.Text = "0 /150 Horas";
+        }
     }
     
     private void CargarPendientes()
@@ -32,7 +61,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
         {
             lstCampanias.Add(sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(solicitud.IdCampaniaSolicitud));
         }
-        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, s.EstadoSolicitud, Horas = "-" }).ToList();
+        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, s.EstadoSolicitud, HorasParticipacion = "-" }).ToList();
         if (lstTabla.Count > 0)
         {
             gvListaCampanias.DataSource = lstTabla;
@@ -48,12 +77,12 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
     {
         LimpiarDatos();
         lblOpciones.Text = "Lista de Solicitudes Aprobadas";
-        lstParticipacion = sWLNVoluntierClient.Obtener_CParticipacion_O_PorUsuario(Session["Codigo"].ToString()).Where(p => p.EstadoParticipacion == SDatosGlobales.APROBADO).ToList();
+        lstParticipacion = sWLNVoluntierClient.Obtener_CParticipacion_O_PorUsuario(Session["Codigo"].ToString()).ToList();
         foreach (ECParticipacion participacion in lstParticipacion)
         {
             lstCampanias.Add(sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(participacion.IdCampaniaParticipacion));
         }
-        var lstTabla = lstCampanias.Join(lstParticipacion, c => c.IdCampania, p => p.IdCampaniaParticipacion, (c, p) => new { c.IdCampania, c.NombreCampania, p.EstadoParticipacion, p.HorasParticipacion }).ToList();
+        var lstTabla = lstCampanias.Join(lstParticipacion, c => c.IdCampania, p => p.IdCampaniaParticipacion, (c, p) => new { c.IdCampania, c.NombreCampania, EstadoSolicitud = p.EstadoParticipacion, p.HorasParticipacion }).ToList();
         if (lstTabla.Count > 0)
         {
             gvListaCampanias.DataSource = lstTabla;
@@ -74,7 +103,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
         {
             lstCampanias.Add(sWLNVoluntierClient.Obtener_CCampania_O_IdCampania(solicitud.IdCampaniaSolicitud));
         }
-        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, s.EstadoSolicitud, Horas = "-" }).ToList();
+        var lstTabla = lstCampanias.Join(lstSolicitudes, c => c.IdCampania, s => s.IdCampaniaSolicitud, (c, s) => new { c.IdCampania, c.NombreCampania, s.EstadoSolicitud, HorasParticipacion = "-" }).ToList();
         if (lstTabla.Count > 0)
         {
             gvListaCampanias.DataSource = lstTabla;
@@ -89,6 +118,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         CargarAprobados();
+        CargarHoras();
     }
     
     protected void btnPendientes_Click(object sender, EventArgs e)
