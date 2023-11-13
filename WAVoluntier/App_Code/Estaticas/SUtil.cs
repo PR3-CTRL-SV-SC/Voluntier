@@ -42,6 +42,10 @@ public static class SUtil
             case "FN":
                 result = "FINALIZADA";
                 break;
+            case "RE":
+                result = "RECHAZADA";
+                break;
+
             default:
                 result = "CANCELADA";
                 break;

@@ -26,7 +26,7 @@ public partial class PGestionCampanias : System.Web.UI.Page
                 if (Session["Rol"].ToString() == "ADMINISTRATIVO")
                 {
                     btnCampaniasPropuestas.Visible = true;
-                    var campañasActivas = eCCampanias.Where(c => c.EstadoCampania == SDatosGlobales.APROBADO || c.EstadoCampania == SDatosGlobales.EN_CURSO || c.EstadoCampania == SDatosGlobales.FINALIZADO).OrderBy(c => c.FechaInicioCampania).ToList();
+                    var campañasActivas = eCCampanias.Where(c => c.EstadoCampania == SDatosGlobales.APROBADO || c.EstadoCampania == SDatosGlobales.EN_CURSO || c.EstadoCampania == SDatosGlobales.FINALIZADO).OrderBy(c => c.FechaInicioCampania).Select(c => new { c.IdCampania, c.NombreCampania, c.DescripcionCampania, c.EstadoCampania, EstadoTexto = SUtil.TransformarEstados(c.EstadoCampania)}).ToList();
 
                     if (campañasActivas.Count < 1)
                     {
@@ -41,7 +41,7 @@ public partial class PGestionCampanias : System.Web.UI.Page
                 else
                 {
                     btnCampaniasPropuestas.Visible = false;
-                    var campañasActivas = eCCampanias.Where(c => c.IdUsuarioCreador == Session["Codigo"].ToString()).OrderBy(c => c.FechaInicioCampania).ToList();
+                    var campañasActivas = eCCampanias.Where(c => c.IdUsuarioCreador == Session["Codigo"].ToString()).OrderBy(c => c.FechaInicioCampania).Select(c => new { c.IdCampania, c.NombreCampania, c.DescripcionCampania ,c.EstadoCampania, EstadoTexto = SUtil.TransformarEstados(c.EstadoCampania)}).ToList();
 
                     if (campañasActivas.Count < 1)
                     {
@@ -71,7 +71,6 @@ public partial class PGestionCampanias : System.Web.UI.Page
         if (e.CommandName == "btnInformacion")
         {
             string argument = e.CommandArgument.ToString();
-            ClientScript.RegisterStartupScript(this.GetType(), "alertita", "alert('"+ argument.ToString() +"');", true);
             string[] arguments = argument.Split('|');
 
             if (arguments.Length == 2)
@@ -80,7 +79,7 @@ public partial class PGestionCampanias : System.Web.UI.Page
                 string estado = arguments[1];
                 Session["codCampania"] = idCampania;
 
-                if(estado == SDatosGlobales.APROBADO || estado == SDatosGlobales.PENDIENTE)
+                if (estado == SDatosGlobales.APROBADO || estado == SDatosGlobales.PENDIENTE || estado == SDatosGlobales.RECHAZADO)
                 {
                     Response.Redirect("PCampaniasAdmin.aspx");
                 }

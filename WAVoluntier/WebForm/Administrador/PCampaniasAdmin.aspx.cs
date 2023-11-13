@@ -42,7 +42,7 @@ public partial class WebForm_Administrador_PCampaniasAdmin : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.GetType(), "ocultarTbSol", "document.getElementById('tbSolicitudes').style.display = 'none';", true);
                 lblNotificacion.Text = "NO PUEDES RECIBIR SOLICITUDES HASTA QUE LA CAMPAÑA SEA APROBADA";
             }
-            if (eCCampania.EstadoCampania == SDatosGlobales.APROBADO)
+            else if (eCCampania.EstadoCampania == SDatosGlobales.APROBADO)
             {
                 lblEstado.Text = "APROBADO";
                 foreach (ECSolicitudParticipacion solicitud in lstSolicitudes)
@@ -76,6 +76,13 @@ public partial class WebForm_Administrador_PCampaniasAdmin : System.Web.UI.Page
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "OcultarTbRes", "document.getElementById('tbResultados').style.display = 'none';", true);
                 }
+            }
+            else
+            {
+                lblEstado.Text = "RECHAZADO";
+                ClientScript.RegisterStartupScript(this.GetType(), "ocultarTbSol", "document.getElementById('tbSolicitudes').style.display = 'none';", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "OcultarTbRes", "document.getElementById('tbResultados').style.display = 'none';", true);
+                lblNotificacion.Text = "NO PUEDES RECIBIR SOLICITUDES YA QUE LA CAMPAÑA FUE RECHAZADA";
             }
         }
     }

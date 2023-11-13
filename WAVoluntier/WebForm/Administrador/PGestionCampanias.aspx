@@ -29,7 +29,7 @@
                             <asp:BoundField Visible="false" DataField="DescripcionCampania" HeaderText="DESCRIPCION"  />
                             <asp:BoundField Visible="false" DataField="FechaInicioCampania" HeaderText="FECHAINICIO" DataFormatString="{0:d}" />
                             <asp:BoundField Visible="false" DataField="FechaFinCampania" HeaderText="FECHAFIN" DataFormatString="{0:d}"/>
-                            <asp:BoundField DataField="EstadoCampania" HeaderText="ESTADO"  ItemStyle-CssClass="colEstado"/>
+                            <asp:BoundField DataField="EstadoTexto" HeaderText="ESTADO"  ItemStyle-CssClass="colEstado"/>
                             <asp:TemplateField ItemStyle-CssClass="colOpciones">
                                 <ItemTemplate>
                                     <asp:Button CssClass="btnOpciones" runat="server" CommandName="btnInformacion" Text="Ver" CommandArgument='<%# Eval("IdCampania") + "|" + Eval("EstadoCampania") %>' />
