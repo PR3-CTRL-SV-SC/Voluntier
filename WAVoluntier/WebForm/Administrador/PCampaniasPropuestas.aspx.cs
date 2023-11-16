@@ -69,7 +69,7 @@ public partial class WebForm_Administrador_PCampaniasPropuestas : System.Web.UI.
                 int itemId = Convert.ToInt32(argumentParts[0]);
                 string nombre = argumentParts[1];
                 Session["codCampania"] = itemId;
-
+                //ClientScript.RegisterStartupScript(this.GetType(), "probando", "alert(" + itemId +");", true);
                 lblCampaniaAceptada.Text = nombre.ToString();
             }
         }
