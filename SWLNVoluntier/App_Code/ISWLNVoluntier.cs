@@ -1,11 +1,7 @@
 ﻿using SWADNETVoluntier;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService" in both code and config file together.
 [ServiceContract]
@@ -44,7 +40,7 @@ public interface ISWLNVoluntier
     #region CSolicitudParticipacion
     [OperationContract]
     List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Campania(int idCampania);
-    [OperationContract] 
+    [OperationContract]
     List<ECSolicitudParticipacion> Obtener_CSolicitudes_O_Usuario(string idUsuario);
     [OperationContract]
     void Insertar_CSolicitud_I(ECSolicitudParticipacion eCSolicitudParticipacion);
@@ -60,7 +56,7 @@ public interface ISWLNVoluntier
     [OperationContract]
     List<ECUsuario> Obtener_CUsuarios_O_Sede(string sedeUsuarioNetvalle);
     [OperationContract]
-    void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horas);
+    void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, string horas);
     #endregion
 
     #region CUsuarioNetvalle

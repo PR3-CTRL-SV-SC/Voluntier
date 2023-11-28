@@ -1,12 +1,8 @@
 ﻿using Microsoft.Practices.EnterpriseLibrary.Data;
-using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
 using System.ServiceModel;
-using System.Web;
 
 /// <summary>
 /// Summary description for ADCSolicitudParticipacion
@@ -54,7 +50,7 @@ public class ADCSolicitudParticipacion
             BDSWADNETVoluntier.AddInParameter(dbCommand, "idCampania", DbType.Int32, idCampania);
             BDSWADNETVoluntier.LoadDataSet(dbCommand, dtoCSolicitud, "CSolicitudParticipacion");
 
-           
+
         }
         catch (SqlException SQLEx)
         {
@@ -134,5 +130,5 @@ public class ADCSolicitudParticipacion
 
 
     #endregion
-    
+
 }

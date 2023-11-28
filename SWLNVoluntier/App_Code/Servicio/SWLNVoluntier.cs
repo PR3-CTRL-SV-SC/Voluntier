@@ -1,11 +1,6 @@
 ﻿using SWADNETVoluntier;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service" in code, svc and config file together.
 public class SWLNVoluntier : ISWLNVoluntier
@@ -138,7 +133,7 @@ public class SWLNVoluntier : ISWLNVoluntier
         lstECUsuario = cControlSV.Obtener_CUsuarios_O_Sede(sedeUsuarioNetvalle);
         return lstECUsuario;
     }
-    public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horas)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, string horas)
     {
         CControlSV cControlSV = new CControlSV();
         cControlSV.Actualizar_CUsuario_A_Horas_Codigo(codigoUsuario, horas);

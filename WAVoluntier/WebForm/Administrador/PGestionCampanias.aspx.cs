@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 public partial class PGestionCampanias : System.Web.UI.Page
 {
-    private int Id_Campania = 0;
+    private int Id_Campania;
     SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient();
     List<ECCampania> eCCampanias;
 
@@ -105,6 +105,7 @@ public partial class PGestionCampanias : System.Web.UI.Page
             {
                 int idCampania = Convert.ToInt32(arguments[0]);
                 int rowIndex = Convert.ToInt32(arguments[1]);
+                Session["EliminarCampania"] = idCampania;
                 lblCampaniaEliminar.Text = gvListaCampanias.Rows[rowIndex].Cells[1].Text;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "Abrir()", true);
             }
@@ -113,7 +114,7 @@ public partial class PGestionCampanias : System.Web.UI.Page
 
     protected void btnEliminar_Click(object sender, EventArgs e)
     {
-        sWLNVoluntierClient.Actualizar_CCampania_A_Estado_Cancelado(Id_Campania);
+        sWLNVoluntierClient.Actualizar_CCampania_A_Estado_Cancelado(Convert.ToInt32(Session["EliminarCampania"]));
         Response.Redirect("PGestionCampanias.aspx");
     }
     

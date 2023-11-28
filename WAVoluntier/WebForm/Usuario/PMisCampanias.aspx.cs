@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
 {
+    ECUsuario eCUsuario = new ECUsuario();
     SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient();
     List<ECCampania> lstCampanias = new List<ECCampania>();
     List<ECSolicitudParticipacion> lstSolicitudes = new List<ECSolicitudParticipacion>();
@@ -44,6 +45,7 @@ public partial class WebForm_Usuario_PMisCampanias : System.Web.UI.Page
 
                 }
             }
+            eCUsuario.HorasUsuario = totalTiempo;
             lblHoras.Text = totalTiempo + " /150:00 Horas";
         }
         else

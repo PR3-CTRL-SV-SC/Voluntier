@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI.WebControls;
-using System.Web.UI;
-using System.Text.RegularExpressions;
-using System.ServiceModel;
 using SWLNVoluntier;
+using System.ServiceModel;
 
 /// <summary>
 /// Summary description for CCampania
@@ -25,7 +18,7 @@ public class CUsuario : System.Web.UI.Page
 
     #region LNServicio
 
-    
+
     public ECUsuario Obtener_RUsuario_O_Codigo_CU(string Codigo)
     {
         ECUsuario erUsuario = new ECUsuario();
@@ -40,7 +33,7 @@ public class CUsuario : System.Web.UI.Page
         return erUsuario;
 
     }
-    
+
     #endregion
 
     #endregion

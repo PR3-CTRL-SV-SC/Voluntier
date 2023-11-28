@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService" in both code and config file together.
 [ServiceContract]
@@ -60,9 +55,9 @@ public interface ISWADNETVoluntier
     [OperationContract]
     List<ECUsuario> Obtener_CUsuarios_O_Sede(string sedeUsuarioNetvalle);
     [OperationContract]
-    void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horasUsuario);
+    void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, string horasUsuario);
     #endregion
-    
+
     #region Tabla : CUsuarioNetvalle
     [OperationContract]
     ECUsuarioNetvalle Obtener_CUsuarioNetvalle_O_Top_Sede_Codigo(string sedeUsuarioNetvalle, string codigoUsuarioNetvalle);

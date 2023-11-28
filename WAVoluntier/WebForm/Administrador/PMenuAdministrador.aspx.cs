@@ -22,7 +22,7 @@ public partial class PMenuEstudiante : System.Web.UI.Page
             {
                 sWLNVoluntierClient.Actualizar_CCampania_A_Estado(item.IdCampania, SDatosGlobales.EN_CURSO);
             }
-            else if (item.FechaFinCampania > DateTime.Now)
+            else if (item.FechaFinCampania < DateTime.Now)
             {
                 sWLNVoluntierClient.Actualizar_CCampania_A_Estado(item.IdCampania, SDatosGlobales.FINALIZADO);
             }

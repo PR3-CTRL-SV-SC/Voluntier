@@ -1,12 +1,8 @@
-﻿using System;
+﻿using SWLNVoluntier;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI.WebControls;
-using SWLNVoluntier;
-using System.Web.UI;
-using System.Text.RegularExpressions;
 using System.ServiceModel;
+using System.Web.UI.WebControls;
 
 /// <summary>
 /// Summary description for CCampania
@@ -16,7 +12,7 @@ public class CCampania : System.Web.UI.Page
     LNServicio lnServicio = new LNServicio();
     List<ECUsuario> eUsuarios = new List<ECUsuario>();
     ECCampania ECCampania = new ECCampania();
-    
+
     public CCampania()
     {
         //
@@ -27,7 +23,7 @@ public class CCampania : System.Web.UI.Page
     #region Metodos publicos
     #region LNServicio
 
-   
+
     public ECCampania Obtener_CCampania_O_IdCampania_CC(int idCampania)
     {
         ECCampania ecCampania = new ECCampania();

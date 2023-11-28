@@ -1,10 +1,7 @@
-﻿using System;
+﻿using SWADNETVoluntier;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.ServiceModel;
-using System.Web;
-using SWADNETVoluntier;
 
 /// <summary>
 /// Summary description for ASNETControlSV
@@ -604,7 +601,7 @@ public class ASNETControlSV
         return lstEcUsuario;
     }
 
-    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, int Horas)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, string Horas)
     {
         try
         {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for CCUsuario
@@ -63,7 +60,7 @@ public class CCUsuario
         return lsteCUsuario;
     }
 
-    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, int Horas)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, string Horas)
     {
         adCUsuario.Actualizar_CUsuario_A_Horas_Codigo(Codigo, Horas);
     }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using SWLNVoluntier;
+using System;
 using System.ServiceModel;
-using System.Web;
-using SWLNVoluntier;
 
 /// <summary>
 /// Descripción breve de CAutenticar

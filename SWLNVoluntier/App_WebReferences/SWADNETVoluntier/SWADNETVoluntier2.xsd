@@ -58,7 +58,7 @@
   <xs:complexType name="ECUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="CodigoUsuario" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="HorasUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="HorasUsuario" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="RolUsuario" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+﻿using System.Collections.Generic;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service" in code, svc and config file together.
 public class SWADNETVoluntier : ISWADNETVoluntier
@@ -151,7 +145,7 @@ public class SWADNETVoluntier : ISWADNETVoluntier
         return lsteCUsuario;
     }
 
-    public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horasUsuario)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, string horasUsuario)
     {
         CCUsuario cCUsuario = new CCUsuario();
         cCUsuario.Actualizar_CUsuario_A_Horas_Codigo(codigoUsuario, horasUsuario);

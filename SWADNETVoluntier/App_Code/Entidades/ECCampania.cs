@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Web;
 
 
 /// <summary>
@@ -32,7 +29,7 @@ public class ECCampania
     public DateTime FechaModificacionCampania { get; set; }
     [DataMember]
     public string IdUsuarioCreador { get; set; }
-    
+
     #endregion
 
     public ECCampania()

@@ -1,12 +1,11 @@
-﻿using System;
+﻿using SWADNETVoluntier;
+using SWVoluntier;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using System.Web;
 using System.Web.UI.WebControls;
 using System.Xml;
-using SWADNETVoluntier;
-using SWVoluntier;
 
 /// <summary>
 /// Summary description for CControlSV
@@ -650,7 +649,7 @@ public class CControlSV
         return lstEcUsuario;
     }
 
-    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, int Horas)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, string Horas)
     {
         try
         {
@@ -787,7 +786,6 @@ public class CControlSV
                 ecUsuarioNetvalle = new ECUsuarioNetvalle();
                 ecUsuarioNetvalle = aSNetControlSV.Obtener_CUsuarioNetvalle_O_Codigo(ecUsuario.CodigoUsuario);
                 eUsuarioCompleja.NombreCompleto = ecUsuarioNetvalle.NombreUsuarioNetvalle + " " + ecUsuarioNetvalle.ApellidosUsuarioNetvalle;
-                eUsuarioCompleja.Horas = ecUsuario.HorasUsuario;
                 lstEUsuarioCompleja.Add(eUsuarioCompleja);
             }
             return lstEUsuarioCompleja;
@@ -809,7 +807,7 @@ public class CControlSV
                     ecUsuarioNetvalle = new ECUsuarioNetvalle();
                     ecUsuarioNetvalle = aSNetControlSV.Obtener_CUsuarioNetvalle_O_Codigo(erUsuario.CodigoUsuario);
                     eUsuarioCompleja.NombreCompleto = ecUsuarioNetvalle.NombreUsuarioNetvalle + " " + ecUsuarioNetvalle.ApellidosUsuarioNetvalle;
-                    eUsuarioCompleja.Horas = erUsuario.HorasUsuario;
+                    eUsuarioCompleja.Horas = Convert.ToInt32(erUsuario.HorasUsuario);
                     lstEUsuarioCompleja.Add(eUsuarioCompleja);
                 }
                 return lstEUsuarioCompleja;

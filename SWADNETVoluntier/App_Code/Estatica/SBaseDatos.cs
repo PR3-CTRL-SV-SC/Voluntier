@@ -1,6 +1,5 @@
 ﻿using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Runtime.Serialization;
-using System.Web;
 
 /// <summary>
 /// Descripción breve de SBaseDatos

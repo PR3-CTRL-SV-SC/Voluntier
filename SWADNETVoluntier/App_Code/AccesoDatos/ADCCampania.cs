@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Data;
 using System.Data.Common;
-using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Data.SqlClient;
 using System.ServiceModel;
 
@@ -13,7 +9,7 @@ using System.ServiceModel;
 /// </summary>
 public class ADCCampania
 {
-    
+
     #region Metodos privados
     /// <summary>
     /// Contruir el Error del servicio > metodo

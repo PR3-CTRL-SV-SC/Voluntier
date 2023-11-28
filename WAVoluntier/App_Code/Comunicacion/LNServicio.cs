@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using System.Web;
 
 /// <summary>
 /// Summary description for LNServicio
@@ -17,7 +16,7 @@ public class LNServicio
     }
     #endregion
     #region Variables miembro
-    private  SWLNVoluntierClient sWLNVoluntier;
+    private SWLNVoluntierClient sWLNVoluntier;
     #endregion
 
     #region Constructor
@@ -106,12 +105,13 @@ public class LNServicio
                 EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CCampania_O", comunicationExeption.Message, comunicationExeption.Message);
                 throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
-        catch (ObjectDisposedException objectDisposedException) 
+        }
+        catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CCampania_O", objectDisposedException.ToString() , objectDisposedException.Message);
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CCampania_O", objectDisposedException.ToString(), objectDisposedException.Message);
             throw new FaultException<EDefecto>(eDefecto);
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CCampania_O", ex.Source, ex.Message);
             throw new FaultException<EDefecto>(eDefecto);
@@ -195,12 +195,13 @@ public class LNServicio
                 EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CCampania_O_IdCampania", comunicationExeption.Message, comunicationExeption.Message);
                 throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CCampania_O_IdCampania", objectDisposedException.ToString(), objectDisposedException.Message);
             throw new FaultException<EDefecto>(eDefecto);
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CCampania_O_IdCampania", ex.Source, ex.Message);
             throw new FaultException<EDefecto>(eDefecto);
@@ -248,8 +249,8 @@ public class LNServicio
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Insertar_CCampania_I", ex.Source, ex.Message);
             throw new FaultException<EDefecto>(eDefecto);
-        }        
-    }       
+        }
+    }
 
     public void Actualizar_CCampania_A(ECCampania eCCampania)
     {
@@ -614,16 +615,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CSolicitudes_O_Campania", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -633,18 +634,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CSolicitudes_O_Campania", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CSolicitudes_O_Campania", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Obtener_CSolicitudes_O_Campania", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CSolicitudes_O_Campania", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CSolicitudes_O_Campania", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CSolicitudes_O_Campania", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         return lstEcSolicitudParticipacion;
     }
@@ -658,16 +660,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CSolicitudes_O_Usuario", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -677,18 +679,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CSolicitudes_O_Usuario", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CSolicitudes_O_Usuario", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Obtener_CSolicitudes_O_Usuario", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CSolicitudes_O_Usuario", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CSolicitudes_O_Usuario", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto);   
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CSolicitudes_O_Usuario", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         return lstEcSolicitudParticipacion;
     }
@@ -701,16 +704,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Insertar_CSolicitud_I", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -720,18 +723,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Insertar_CSolicitudParticipacion_I", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Insertar_CSolicitudParticipacion_I", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
         }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Insertar_CSolicitudParticipacion_I", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Insertar_CSolicitudParticipacion_I", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Insertar_CSolicitudParticipacion_I", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Insertar_CSolicitudParticipacion_I", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
     }
 
@@ -743,16 +747,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Actualizar_CSolicitud_A_Estado", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CSolicitud_A_Estado", ex.Message, ex.StackTrace);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -762,18 +766,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Actualizar_CSolicitud_A_Estado", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CSolicitud_A_Estado", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Actualizar_CSolicitud_A_Estado", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Actualizar_CSolicitud_A_Estado", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Actualizar_CSolicitud_A_Estado", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CSolicitud_A_Estado", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
     }
     #endregion
@@ -788,16 +793,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuario_O_Codigo", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuario_O_Codigo", ex.Message, ex.StackTrace);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -807,18 +812,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuario_O_Codigo", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuario_O_Codigo", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Obtener_CUsuario_O_Codigo", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CUsuario_O_Codigo", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuario_O_Codigo", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuario_O_Codigo", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         return eCUsuario;
     }
@@ -832,16 +838,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuarios_O_Top_Horas", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarios_O_Top_Horas", ex.Message, ex.StackTrace);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -851,18 +857,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuarios_O_Top_Horas", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarios_O_Top_Horas", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Obtener_CUsuarios_O_Top_Horas", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CUsuarios_O_Top_Horas", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuarios_O_Top_Horas", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarios_O_Top_Horas", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         return lstEcUsuario;
     }
@@ -876,16 +883,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuarios_O_Sede", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarios_O_Sede", ex.Message, ex.StackTrace);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -895,23 +902,24 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuarios_O_Sede", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarios_O_Sede", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Obtener_CUsuarios_O_Sede", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Obtener_CUsuarios_O_Sede", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Obtener_CUsuarios_O_Sede", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarios_O_Sede", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         return lstEcUsuario;
     }
 
-    public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, int horas)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string codigoUsuario, string horas)
     {
         try
         {
@@ -919,16 +927,16 @@ public class LNServicio
         }
         catch (FaultException<EDefecto> ex)
         {
-            throw new FaultException<EDefecto>(ConstruirDefecto(ex)); 
+            throw new FaultException<EDefecto>(ConstruirDefecto(ex));
         }
         catch (EndpointNotFoundException ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Actualizar_CUsuario_A_Horas_Codigo", ex.Message, ex.StackTrace);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CUsuario_A_Horas_Codigo", ex.Message, ex.StackTrace);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         catch (CommunicationException comunicationExeption)
         {
-            FaultException faultException = comunicationExeption as FaultException; 
+            FaultException faultException = comunicationExeption as FaultException;
             if (faultException != null)
             {
                 using (SWLNVoluntierClient sWLNVoluntierClient = new SWLNVoluntierClient())
@@ -938,18 +946,19 @@ public class LNServicio
             }
             else
             {
-                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Actualizar_CUsuario_A_Horas_Codigo", comunicationExeption.Message, comunicationExeption.Message);
-                throw new FaultException<EDefecto>(eDefecto); 
+                EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CUsuario_A_Horas_Codigo", comunicationExeption.Message, comunicationExeption.Message);
+                throw new FaultException<EDefecto>(eDefecto);
             }
-        } 
+        }
         catch (ObjectDisposedException objectDisposedException)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion,"Actualizar_CUsuario_A_Horas_Codigo", objectDisposedException.ToString() , objectDisposedException.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
-        }catch (Exception ex)
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Comunicacion, "Actualizar_CUsuario_A_Horas_Codigo", objectDisposedException.ToString(), objectDisposedException.Message);
+            throw new FaultException<EDefecto>(eDefecto);
+        }
+        catch (Exception ex)
         {
-            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla,"Actualizar_CUsuario_A_Horas_Codigo", ex.Source, ex.Message);
-            throw new FaultException<EDefecto>(eDefecto); 
+            EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Actualizar_CUsuario_A_Horas_Codigo", ex.Source, ex.Message);
+            throw new FaultException<EDefecto>(eDefecto);
         }
     }
     #endregion
@@ -995,7 +1004,7 @@ public class LNServicio
         catch (Exception ex)
         {
             EDefecto eDefecto = ConstruirDefecto(TTipoDefecto.Falla, "Obtener_CUsuarioNetvalle_O_Codigo", ex.Source, ex.Message);
-            throw new FaultException<EDefecto> (eDefecto);
+            throw new FaultException<EDefecto>(eDefecto);
         }
         return eCUsuarioNetvalle;
     }

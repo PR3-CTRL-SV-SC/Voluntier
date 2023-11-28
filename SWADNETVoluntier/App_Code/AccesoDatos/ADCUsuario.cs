@@ -1,12 +1,8 @@
 ﻿using Microsoft.Practices.EnterpriseLibrary.Data;
-using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
 using System.ServiceModel;
-using System.Web;
 
 /// <summary>
 /// Summary description for ADCUsuario
@@ -111,14 +107,14 @@ public class ADCUsuario
     /// </summary>
     /// <param name="Codigo"></param>
     /// <param name="Horas"></param>
-    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, int Horas)
+    public void Actualizar_CUsuario_A_Horas_Codigo(string Codigo, string Horas)
     {
         try
         {
             Database BDSWADNETVoluntier = SBaseDatos.BDSWADNETVoluntier;
             DbCommand dbCommand = BDSWADNETVoluntier.GetStoredProcCommand("CUsuario_A_Horas_Codigo");
             BDSWADNETVoluntier.AddInParameter(dbCommand, "codigoUsuario", DbType.String, Codigo);
-            BDSWADNETVoluntier.AddInParameter(dbCommand, "horasUsuario", DbType.Int32, Horas);
+            BDSWADNETVoluntier.AddInParameter(dbCommand, "horasUsuario", DbType.String, Horas);
             BDSWADNETVoluntier.ExecuteNonQuery(dbCommand);
         }
 

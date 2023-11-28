@@ -63,9 +63,9 @@
                                 <tr class="datosSolicitud">
                                     <td class="nombreSolicitud"><%# Eval("NombreCompleto") %></td>
                                     <td class="acciones">
-                                        <asp:TextBox ID="txtHoras" runat="server" CssClass="txtHoras" TextMode="Number" placeholder="HH" Text='<%# Eval("Horas") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txtHoras" runat="server" CssClass="txtHoras" TextMode="Number" required="true" MaxLength="2" placeholder="HH" Text='<%# Eval("Horas") %>'></asp:TextBox>
                                         <span><b> : </b></span>
-                                        <asp:TextBox ID="txtMinutos" runat="server" CssClass="txtHoras" TextMode="Number" placeholder="MM" Text='<%# Eval("Minutos") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txtMinutos" runat="server" CssClass="txtHoras" TextMode="Number" required="true" MaxLength="2" placeholder="MM" Text='<%# Eval("Minutos") %>'></asp:TextBox>
                                         <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CommandName="Aceptar" OnCommand="btnAceptar_Command" CommandArgument='<%# Eval("IdUsuarioParticipacion") + "|" + Container.ItemIndex %>' CssClass="btnAceptar" />
                                     </td>
                                 </tr>
